@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🇨🇭 스위스 이동경로 완전정복</title>
+<title>🇨🇭 스위스 7박 8일 완벽 가이드 & 가계부</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -27,38 +27,18 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
   position:relative;
 }
 
-/* 카드 상단 비주얼 영역 */
-.pc-visual{
-  height:220px;
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  position:relative;
-  overflow:hidden;
-}
-.pc-visual::before{
-  content:'';position:absolute;inset:0;
-  background:inherit;filter:blur(0px);
-}
+.pc-visual{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.pc-visual::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(0px);}
 .pc-emoji{font-size:4rem;position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));}
 .pc-tagline{font-size:.78rem;color:rgba(255,255,255,.85);margin-top:10px;position:relative;z-index:1;font-weight:500;letter-spacing:.5px;}
 
-/* 카드 하단 정보 */
 .pc-info{background:#fff;padding:20px 22px 18px;}
 .pc-name{font-size:1.1rem;font-weight:900;color:var(--ink);line-height:1.3;}
 .pc-desc{font-size:.84rem;color:#555;margin-top:6px;line-height:1.6;}
 .pc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
 .pc-tag{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:12px;font-family:'DM Mono',monospace;}
 
-/* 구글 이미지 버튼 */
-.pc-btn{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  width:100%;margin-top:14px;padding:12px;
-  background:linear-gradient(135deg,#1a73e8,#1557b0);
-  color:#fff;border:none;border-radius:10px;
-  font-size:.88rem;font-weight:700;cursor:pointer;
-  font-family:'Noto Sans KR',sans-serif;
-  transition:opacity .15s;text-decoration:none;
-}
+.pc-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:14px;padding:12px;background:linear-gradient(135deg,#1a73e8,#1557b0);color:#fff;border:none;border-radius:10px;font-size:.88rem;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:opacity .15s;text-decoration:none;}
 .pc-btn:hover{opacity:.9;}
 .pc-btn-g{background:linear-gradient(135deg,#ea4335,#c5221f);}
 
@@ -72,18 +52,15 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
 .day-header .s{color:#ffe;border-bottom-color:rgba(255,240,160,.45);}
 .day-header .s:hover{color:#fff;border-bottom-color:#fff;}
 
-/* ── HERO ── */
-.hero{background:var(--red);color:#fff;text-align:center;padding:32px 20px 22px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.03) 30px,rgba(255,255,255,.03) 60px);}
-.hero h1{font-size:1.65rem;font-weight:900;letter-spacing:-.5px;position:relative;}
-.hero p{margin-top:5px;font-size:.84rem;opacity:.85;position:relative;}
-.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:3px 13px;font-size:.76rem;margin-bottom:10px;font-family:'DM Mono',monospace;position:relative;}
-.hint{margin-top:9px;font-size:.76rem;opacity:.72;position:relative;}
+/* ── HEADER & LAYOUT ── */
+header { background: #d32f2f; color: white; padding: 20px; text-align: center; border-radius: 15px 15px 0 0; position: relative; margin-bottom: 20px; }
+.btn-expense { position: absolute; top: 15px; left: 15px; background: #fff; font-size: 0.9rem; font-weight: bold; color: #1565c0; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.header-right-btns { position: absolute; top: 15px; right: 15px; display: flex; gap: 8px; }
+.header-btn { background: #fff; font-size: 1.1rem; font-weight: bold; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: 0.2s; display: flex; align-items: center; justify-content: center; }
+.btn-edit { color: #333; }
+.btn-save { color: #d32f2f; }
+.header-btn:hover, .btn-expense:hover { background: #f8f9fa; transform: scale(1.05); }
 
-/* ── LEGEND ── */
-.legend{background:#fff;border-bottom:2px solid var(--border);padding:11px 20px;display:flex;flex-wrap:wrap;gap:7px 14px;font-size:.76rem;justify-content:center;}
-
-/* ── LAYOUT ── */
 .wrap{max-width:680px;margin:0 auto;padding:18px 13px 100px;}
 .day-block{background:#fff;border-radius:16px;margin-bottom:22px;box-shadow:0 3px 16px rgba(0,0,0,.08);overflow:hidden;border:1px solid var(--border);}
 .day-header{background:var(--red);color:#fff;padding:13px 20px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
@@ -93,59 +70,22 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
 .sec{padding:18px 20px 0;}
 .sec-title{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brown);margin-bottom:13px;display:flex;align-items:center;gap:6px;}
 .sec-title::after{content:'';flex:1;height:1px;background:var(--border);}
-.steps{position:relative;padding-left:16px;}
-.steps::before{content:'';position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,var(--red),var(--border));border-radius:2px;}
-.step{position:relative;padding-left:22px;padding-bottom:17px;}
-.step:last-child{padding-bottom:4px;}
-.dot{position:absolute;left:-10px;top:5px;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--red);z-index:1;background:#fff;}
-.dot.g{box-shadow:0 0 0 2px var(--green);background:var(--green);}
-.dot.b{box-shadow:0 0 0 2px var(--blue);background:var(--blue);}
-.dot.o{box-shadow:0 0 0 2px var(--gold);background:var(--gold);}
-.dot.t{box-shadow:0 0 0 2px var(--teal);background:var(--teal);}
-.dot.r{box-shadow:0 0 0 2px var(--red);background:var(--red);}
-.stime{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--red);margin-bottom:2px;}
-.smain{font-size:.92rem;font-weight:700;color:var(--ink);line-height:1.4;}
-.ssub{font-size:.81rem;color:#555;margin-top:3px;line-height:1.5;}
-.tr{display:inline-flex;align-items:center;gap:3px;font-size:.73rem;font-weight:600;padding:2px 9px;border-radius:20px;margin:5px 0 3px;font-family:'DM Mono',monospace;}
-.tt{background:#E3F2FD;color:#1565C0;border:1px solid #90CAF9;}
-.tc{background:#F3E5F5;color:#6A1B9A;border:1px solid #CE93D8;}
-.tb{background:#E0F7FA;color:#00695C;border:1px solid #80DEEA;}
-.tw{background:#F1F8E9;color:#2E7D32;border:1px solid #A5D6A7;}
-.ta{background:#FFF3E0;color:#E65100;border:1px solid #FFCC80;}
-.tg{background:#FCE4EC;color:#880E4F;border:1px solid #F48FB1;}
-.dur{display:inline-flex;align-items:center;gap:4px;font-size:.7rem;color:#777;margin-left:5px;}
-.db{width:38px;height:4px;background:#DDD;border-radius:2px;overflow:hidden;}
-.df{height:100%;background:var(--gold);border-radius:2px;}
-.tip{background:var(--light-gold);border:1px dashed var(--gold);border-radius:10px;padding:9px 13px;margin:7px 0 3px;font-size:.8rem;color:#5D4000;}
-.tip strong{color:var(--dark-red);}
-.warn{background:#FFF5F5;border:2px solid #FC8181;border-radius:10px;padding:9px 13px;margin:9px 20px 14px;font-size:.81rem;color:#C53030;line-height:1.6;}
-.warn strong{display:block;margin-bottom:2px;}
-.food{border-top:1px solid var(--warm-gray);padding:13px 20px;display:flex;gap:10px;flex-wrap:wrap;background:#FFFBF0;}
-.fi{flex:1;min-width:130px;font-size:.81rem;line-height:1.5;}
-.fl{font-size:.67rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--brown);margin-bottom:2px;}
-.fn{font-weight:700;font-size:.86rem;}
-.fo{color:#666;}
-.hotel{display:flex;align-items:center;gap:8px;padding:9px 20px 11px;background:var(--warm-gray);border-top:1px solid var(--border);font-size:.81rem;color:var(--brown);}
-.hotel strong{color:var(--ink);}
-.acts{padding:14px 20px 0;}
-.act{font-size:.84rem;padding:5px 0;border-bottom:1px dashed #E5DDD0;display:flex;align-items:flex-start;gap:6px;line-height:1.5;}
-.act:last-child{border-bottom:none;}
-.bo{font-size:.63rem;font-weight:700;padding:1px 5px;border-radius:3px;white-space:nowrap;margin-top:2px;flex-shrink:0;}
-.bb{background:#E8F5E9;color:#2E7D32;border:1px solid #A5D6A7;}
-.be{background:#FFF3E0;color:#E65100;border:1px solid #FFCC80;}
-.pad{padding-bottom:20px;}
 
-/* ── 명소 카드 ── */
-.spot-cards{padding:0 20px 16px;display:flex;flex-direction:column;gap:10px;}
-.spot-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;}
-.spot-card-head{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--warm-gray);}
-.spot-card-num{font-family:'DM Mono',monospace;font-size:.68rem;font-weight:700;background:var(--red);color:#fff;padding:2px 7px;border-radius:4px;flex-shrink:0;}
-.spot-card-time{font-family:'DM Mono',monospace;font-size:.68rem;color:var(--red);font-weight:600;margin-left:auto;}
-.spot-card-body{padding:10px 14px;font-size:.82rem;line-height:1.6;color:#444;background:#fff;}
-.spot-card-body strong{color:var(--ink);}
-.spot-walk{font-size:.7rem;color:var(--green);font-weight:700;background:#E8F5E9;border:1px solid #A5D6A7;border-radius:4px;padding:1px 6px;margin-left:6px;font-family:'DM Mono',monospace;}
+.route-box { background: #f8f9fa; padding: 15px; border-radius: 10px; font-size: 0.95rem; margin-bottom: 10px; border: 1px solid #eee; transition: all 0.2s; }
+.food-box { background: #fffde7; padding: 15px; border-radius: 10px; border: 1px solid #fff9c4; margin-top: 10px; font-size: 0.9rem; transition: all 0.2s; }
+.warning-box { background: #fff5f5; border: 2px solid #feb2b2; padding: 12px; border-radius: 10px; font-size: 0.85rem; color: #c53030; margin-top: 15px; transition: all 0.2s; }
+.time-red { color: #d32f2f; font-weight: bold; }
 
-/* ── 식당/쇼핑 카드 ── */
+.spot-link { color: #1565c0; font-weight: bold; cursor: pointer; text-decoration: underline; display: inline-block; transition: color 0.2s; }
+.spot-link:hover { color: #d32f2f; }
+.change-btn { display: none; font-size: 0.75rem; color: #777; cursor: pointer; margin-left: 5px; text-decoration: underline; vertical-align: middle; }
+.change-btn:hover { color: #d32f2f; }
+input[type="file"] { display: none; }
+img.hidden-data { display: none !important; }
+
+.editing-active { border: 2px dashed #d32f2f !important; background-color: #fffde7 !important; outline: none; }
+
+/* 식당/쇼핑 카드용 */
 .rest-section{padding:0 20px 16px;}
 .rest-title{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brown);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
 .rest-title::after{content:'';flex:1;height:1px;background:var(--border);}
@@ -156,7 +96,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
 .rb-dinner{background:#FCE4EC;color:#880E4F;border:1px solid #F48FB1;}
 .rb-snack{background:#F3E5F5;color:#6A1B9A;border:1px solid #CE93D8;}
 .rb-ramen{background:#FFF3E0;color:#E65100;border:1px solid #FFCC80;}
-.rb-shop{background:#E8F5E9;color:#1B5E20;border:1px solid #81C784;} /* 쇼핑 뱃지 추가 */
+.rb-shop{background:#E8F5E9;color:#1B5E20;border:1px solid #81C784;} 
 .rest-info{flex:1;}
 .rest-name{font-size:.9rem;font-weight:700;color:var(--ink);}
 .rest-sub{font-size:.78rem;color:#666;margin-top:2px;line-height:1.5;}
@@ -165,57 +105,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
 .rest-score{font-size:.7rem;font-family:'DM Mono',monospace;color:#888;margin-top:3px;}
 .rest-star{color:#F4A201;}
 
-/* ── 쿱마트 박스 ── */
-.coop-box{background:#E8F5E9;border:2px solid #81C784;border-radius:10px;padding:10px 14px;margin:0 20px 14px;font-size:.82rem;color:#1B5E20;line-height:1.6;}
-.coop-box strong{display:block;margin-bottom:2px;font-size:.84rem;}
-
-/* ── 티켓/패스 배지 ── */
-.pass-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px;}
-.pass{display:inline-flex;align-items:center;gap:3px;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:4px;font-family:'DM Mono',monospace;white-space:nowrap;}
-.p-free{background:#E8F5E9;color:#1B5E20;border:1px solid #81C784;}
-.p-family{background:#E3F2FD;color:#0D47A1;border:1px solid #90CAF9;}
-.p-ticket{background:#EDE7F6;color:#4527A0;border:1px solid #9575CD;}
-.p-disc25{background:#FFF8E1;color:#E65100;border:1px solid #FFB74D;}
-.p-disc50{background:#FFF3E0;color:#BF360C;border:1px solid #FF8A65;}
-.p-dong{background:#FCE4EC;color:#880E4F;border:1px solid #F48FB1;}
-.p-vip{background:#F3E5F5;color:#6A1B9A;border:1px solid #BA68C8;}
-
-/* ── 패스 안내 박스 ── */
-.pass-box{background:#F3E5F5;border:1.5px solid #CE93D8;border-radius:10px;padding:10px 13px;margin:7px 0 3px;font-size:.8rem;color:#4A148C;line-height:1.6;}
-.pass-box strong{color:#880E4F;}
-.pass-box a{color:#1565C0;text-decoration:underline;cursor:pointer;}
-
-/* ── 좌석 팁 박스 ── */
-.seat-tip{background:#E8EAF6;border:1.5px solid #9FA8DA;border-radius:8px;padding:7px 12px;margin:6px 0 3px;font-size:.79rem;color:#283593;line-height:1.5;display:flex;align-items:flex-start;gap:6px;}
-.seat-tip::before{content:'💺';flex-shrink:0;font-size:.9rem;}
-
-/* ── 가격 태그 ── */
-.price-tag{display:inline-flex;align-items:center;gap:4px;background:#FFF9E6;border:1px solid #F4A201;border-radius:5px;padding:1px 7px;font-size:.72rem;font-weight:700;color:#856200;font-family:'DM Mono',monospace;margin:3px 3px 0 0;}
-.price-free{background:#E8F5E9;border-color:#66BB6A;color:#1B5E20;}
-.price-row{display:flex;flex-wrap:wrap;gap:0;margin:5px 0 3px;}
-
-/* ── Coop 정류장 박스 ── */
-.coop-stop{background:#F1F8E9;border:1.5px solid #AED581;border-radius:10px;padding:8px 13px;margin:0 20px 10px;font-size:.81rem;color:#33691E;line-height:1.6;}
-.coop-stop strong{color:#1B5E20;}
-
-/* ── 커피 카드 ── */
-.coffee-section{padding:4px 20px 14px;}
-.coffee-title{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4E342E;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
-.coffee-title::after{content:'';flex:1;height:1px;background:#D7CCC8;}
-.coffee-card{background:#FFF8F5;border:1px solid #FFCCBC;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
-.coffee-name{font-size:.88rem;font-weight:700;color:#4E342E;}
-.coffee-sub{font-size:.79rem;color:#666;margin-top:3px;line-height:1.5;}
-.coffee-addr{font-size:.71rem;color:var(--blue);margin-top:3px;font-family:'DM Mono',monospace;cursor:pointer;text-decoration:underline;}
-.coffee-addr:hover{color:var(--red);}
-.coffee-menu{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}
-.cmenu{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:12px;background:#FFF3E0;color:#E65100;border:1px solid #FFCC80;}
-.cmenu.iced{background:#E3F2FD;color:#1565C0;border-color:#90CAF9;}
-
-/* ── 예약 버튼 ── */
-.res-btn{display:inline-flex;align-items:center;gap:4px;background:var(--blue);color:#fff;padding:3px 10px;border-radius:6px;font-size:.72rem;font-weight:700;text-decoration:none;cursor:pointer;margin-top:5px;transition:opacity .15s;}
-.res-btn:hover{opacity:.85;}
-
-/* ── BUDGET ── */
+/* BUDGET PANEL */
 #budget-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:8888;align-items:flex-end;justify-content:center;}
 #budget-overlay.on{display:flex;}
 #budget-panel{background:#f0f4f8;border-radius:20px 20px 0 0;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;padding:0 0 40px;}
@@ -248,13 +138,10 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
 .bdel{background:none;border:none;color:#ccc;cursor:pointer;font-size:.88rem;padding:2px 5px;}
 .bdel:hover{color:#C0392B;}
 .bempty{text-align:center;color:#aaa;padding:24px 14px;font-size:.82rem;}
-.fab{position:fixed;bottom:24px;right:20px;z-index:8000;background:linear-gradient(135deg,#1565C0,#1976D2);color:#fff;border:none;border-radius:50px;padding:12px 22px;font-size:.88rem;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;box-shadow:0 6px 20px rgba(21,101,192,.45);display:flex;align-items:center;gap:7px;transition:transform .15s;}
-.fab:hover{transform:translateY(-2px);}
 </style>
 </head>
 <body>
 
-<!-- ── SPOT POPUP ── -->
 <div id="ov" onclick="ovc(event)">
   <div id="popup-card">
     <button id="px" onclick="cp()">✕</button>
@@ -266,17 +153,12 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
       <div class="pc-name" id="pc-name"></div>
       <div class="pc-desc" id="pc-desc"></div>
       <div class="pc-tags" id="pc-tags"></div>
-      <a id="pc-btn-img" class="pc-btn" target="_blank" rel="noopener">
-        🔍 Google에서 사진 검색
-      </a>
-      <a id="pc-btn-yt" class="pc-btn pc-btn-g" target="_blank" rel="noopener" style="margin-top:8px;">
-        ▶ YouTube 영상 보기
-      </a>
+      <a id="pc-btn-img" class="pc-btn" target="_blank" rel="noopener">🔍 Google 사진 검색</a>
+      <a id="pc-btn-yt" class="pc-btn pc-btn-g" target="_blank" rel="noopener" style="margin-top:8px;">▶ YouTube 영상</a>
     </div>
   </div>
 </div>
 
-<!-- ── BUDGET PANEL ── -->
 <div id="budget-overlay" onclick="bOvc(event)">
   <div id="budget-panel">
     <div class="bp-head">
@@ -286,8 +168,8 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
     <div class="bp-body">
       <div class="rate-row">
         <label>💱 환율</label>
-        <input type="number" id="rate" value="1550" min="100" max="3000" step="10" oninput="bRender()">
-        <span>원 / 1 CHF (수정 가능)</span>
+        <input type="number" id="rate" value="1550" step="10" oninput="bRender()">
+        <span>원 / 1 CHF</span>
       </div>
       <div class="stats">
         <div class="stat"><div class="stat-l">총 CHF</div><div class="stat-v" id="tc">CHF 0</div></div>
@@ -295,1070 +177,594 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
         <div class="stat"><div class="stat-l">건수</div><div class="stat-v" id="tn">0건</div></div>
       </div>
       <div class="form-card">
-        <h3>✏️ 지출 입력</h3>
+        <h3>✏️ 지출 추가</h3>
         <div class="frow">
-          <select id="sd">
-            <option value="1">DAY 1 · 7/14</option><option value="2">DAY 2 · 7/15</option>
-            <option value="3">DAY 3 · 7/16</option><option value="4">DAY 4 · 7/17</option>
-            <option value="5">DAY 5 · 7/18</option><option value="6">DAY 6 · 7/19</option>
-            <option value="7">DAY 7 · 7/20</option><option value="8">DAY 8 · 7/21</option>
-          </select>
-          <select id="sc">
-            <option value="🍽️">🍽️ 식비</option><option value="🚆">🚆 교통</option>
-            <option value="🎫">🎫 입장료</option><option value="🛒">🛒 쇼핑</option>
-            <option value="🏨">🏨 숙소</option><option value="☕">☕ 카페</option>
-            <option value="⚡">⚡ 액티비티</option><option value="💊">💊 기타</option>
-          </select>
+          <select id="sd"><option value="1">DAY 1</option><option value="2">DAY 2</option><option value="3">DAY 3</option><option value="4">DAY 4</option><option value="5">DAY 5</option><option value="6">DAY 6</option><option value="7">DAY 7</option><option value="8">DAY 8</option></select>
+          <select id="sc"><option value="🍽️">🍽️ 식비</option><option value="🚆">🚆 교통</option><option value="🎫">🎫 입장료</option><option value="🛒">🛒 쇼핑</option><option value="🏨">🏨 숙소</option></select>
         </div>
-        <div class="frow"><input type="text" id="idd" placeholder="내역 (예: 융프라우 왕복권)" style="flex:2"></div>
+        <div class="frow"><input type="text" id="idd" placeholder="내역 입력" style="flex:2"></div>
         <div class="frow">
           <input type="number" id="ichf" placeholder="CHF 금액" min="0" step="0.5">
           <input type="number" id="ikrw" placeholder="원화 금액" min="0" step="100">
         </div>
-        <button class="badd" onclick="bAdd()">+ 지출 추가</button>
+        <button class="badd" onclick="bAdd()">+ 추가</button>
       </div>
       <div id="blist"></div>
     </div>
   </div>
 </div>
 
-<button class="fab" onclick="openBudget()">💰 가계부</button>
-
-<!-- ── HERO ── -->
-<div class="hero">
-  <div class="badge">7박 8일 · 2025년 7월 14일 ~ 21일</div>
-  <h1>🇨🇭 스위스 이동경로 완전정복</h1>
-  <p>이 가이드 하나만 보고 따라가세요 — 모든 이동 경로를 단계별로 정리했습니다</p>
-  <div class="hint">📷 파란색 장소명을 누르면 정보 카드 + Google 사진 검색이 열립니다</div>
-</div>
-
-<div class="legend">
-  <span><span class="tr tt">🚆 열차</span></span>
-  <span><span class="tr tb">⛴ 유람선</span></span>
-  <span><span class="tr tc">🚡 케이블카</span></span>
-  <span><span class="tr tg">🚠 곤돌라</span></span>
-  <span><span class="tr ta">🚐 차량</span></span>
-  <span><span class="tr tw">🚶 도보</span></span>
-</div>
-
 <div class="wrap">
+  <textarea id="expense-data" style="display:none;">{}</textarea>
 
-<!-- ══ DAY 1 ══ -->
+  <header>
+      <button class="btn-expense" onclick="openBudget()" title="가계부 쓰기">💰 가계부</button>
+      <div class="header-right-btns">
+          <button class="header-btn btn-edit" id="edit-btn" onclick="toggleEditMode()" title="텍스트 수정">✏️</button>
+          <button class="header-btn btn-save" onclick="saveDocument()" title="현재 상태 저장">💾</button>
+      </div>
+      <h2 style="margin:0; margin-top: 35px;">🇨🇭 스위스 통합 가이드</h2>
+      <p style="margin:5px 0 0; font-size:0.85rem; opacity:0.9;">파란색 글자를 눌러 사진 등록 / ✏️를 눌러 글자 수정</p>
+  </header>
+
 <div class="day-block">
-  <div class="day-header">
+  <div class="day-header editable">
     <span class="day-num">DAY 1</span>
-    <span class="day-title-text">✈️ <span class="s" onclick="show('zurich_airport')">취리히 공항</span> → <span class="s" onclick="show('lucerne')">루체른</span> 도착</span>
-    <span class="day-date">7/14 화</span>
+    <span class="day-title-text">7/14 (화) <span class="spot-link" id="link-day1" onclick="handleSpotClick('day1')">루체른</span> 도착
+      <span id="btn-change-day1" class="change-btn" onclick="document.getElementById('f-day1').click()">[변경]</span>
+      <input type="file" id="f-day1" accept="image/*" onchange="previewImage(this, 'day1')"><img id="img-day1" class="hidden-data">
+    </span>
   </div>
-  <div class="sec"><div class="sec-title">이동 경로 상세</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="stime">17:40</div>
-        <div class="smain">✈️ <span class="s" onclick="show('zurich_airport')">취리히 공항 (ZRH)</span> 착륙</div>
-        <div class="ssub">입국 심사 · 짐 수령 후 <strong>공항 내 지하 기차역</strong>으로 이동 (도보 약 5분)</div>
-        <div class="tip">📋 <strong>꼭 확인!</strong> 도착 층 → 에스컬레이터 지하 → <em>Airport Station</em> 표지판</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚉 취리히 공항역 → <span class="s" onclick="show('zurich_hb')">취리히 중앙역 (HB)</span> → 루체른</div>
-        <div class="ssub">S16 열차 공항→HB(10분). HB 안내판에서 <strong>Luzern (IR75)</strong> 검색</div>
-        <div class="pass-row">
-          <span class="pass p-free">🎫 스위스패스 — 무료 (S16 + IR75 전구간)</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="seat-tip">취리히→루체른 구간은 평지·주거지 통과. <strong>어느 쪽 좌석이든 큰 차이 없음</strong> — 편한 자리에 앉으면 됨</div>
-        <div class="tr tt">🚆 IR75 직행</div>
-        <div class="dur"><div class="db"><div class="df" style="width:52%"></div></div> 약 52분</div>
-        <div class="tip">📋 취리히 HB 규모 큼 — <em>"Luzern"</em> 방향. 9~17번 플랫폼 근처</div>
-      </div>
-      <div class="step"><div class="dot g"></div>
-        <div class="smain">🏙 <span class="s" onclick="show('lucerne_station')">루체른역</span> 도착 → <span class="s" onclick="show('chapel_bridge')">카펠 다리</span> 방향 도보 8~10분</div>
-        <div class="tr tw">🚶 도보</div>
-      </div>
-    </div>
+  
+  <div class="editable" style="margin:20px 20px 0;">
+      <span class="spot-link" id="link-h1" onclick="handleSpotClick('h1')">🏨 Radisson Blu Hotel Lucerne</span>
+      <span id="btn-change-h1" class="change-btn" onclick="document.getElementById('f-h1').click()">[변경]</span>
+      <input type="file" id="f-h1" accept="image/*" onchange="previewImage(this, 'h1')"><img id="img-h1" class="hidden-data">
   </div>
-  <div class="hotel">🏨 <strong>오늘의 숙소</strong> Radisson Blu Hotel Lucerne</div>
 
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Confiseur Bachmann — 호수 뷰 키오스크</div>
-      <div class="coffee-sub">루체른 호수변 유리 키오스크. 호텔에서 도보 5분. 루체른 최고 인기 베이커리 체인으로 에스프레소 음료의 품질이 높음. 야외 테라스에서 카펠 다리와 호수 뷰 감상하며 커피 가능</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Confiseur+Bachmann+Luzern+Quai')">📍 Schwanenplatz 7, 6004 Luzern (호숫가) · 07:30~18:30</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 5.5~6</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 6~7</span>
-        <span class="cmenu">🥐 버터크루아상 CHF 3.5</span>
+  <div class="sec"><div class="sec-title editable">이동 경로</div>
+      <div class="route-box editable">
+          • 17:40 취리히(ZRH) 도착 → 공항역 <span class="time-red">도보 5분</span><br>
+          • <span class="spot-link" id="link-zhb" onclick="handleSpotClick('zhb')">🚉 취리히 중앙역(HB)</span>
+          <span id="btn-change-zhb" class="change-btn" onclick="document.getElementById('f-zhb').click()">[변경]</span>
+          <input type="file" id="f-zhb" accept="image/*" onchange="previewImage(this, 'zhb')"><img id="img-zhb" class="hidden-data"><br>
+          • 취리히공항역 → 취리히 HB <span class="time-red">열차 10분</span><br>
+          • 취리히 HB → 루체른역 (IR75 직행) <span class="time-red">52분</span><br>
+          • 루체른역 → 호텔 <span class="time-red">도보 8~10분</span>
       </div>
-    </div>
   </div>
+
+  <div class="rest-section">
     <div class="rest-title">식사</div>
     <div class="rest-card">
       <div class="rest-card-head">
         <span class="rest-badge rb-dinner">저녁 ✅추천</span>
         <div class="rest-info">
           <div class="rest-name">🍽 Restaurant Fritschi</div>
-          <div class="rest-sub">루체른 대표 퐁듀 맛집. 형형색색 프레스코화 건물이 인상적. 치즈 퐁듀가 덜 짜서 한국인 입맛에 잘 맞음. 늦게 도착해도 저녁 늦게까지 운영</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Restaurant+Fritschi+Sternenplatz+5+Luzern')">📍 Sternenplatz 5, 6004 Luzern · 11:30~23:00</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.3 · 퐁듀 CHF 28~32 / 인 · <a class="res-btn" href="https://www.opentable.com/r/fritschi-luzern" target="_blank">📅 예약</a></div>
+          <div class="rest-sub">루체른 대표 퐁듀 맛집. 치즈 퐁듀가 덜 짜서 한국인 입맛에 잘 맞음. 늦게 도착해도 저녁 늦게까지 운영. <b style="color:var(--dark-red);">(숙소에서 도보 약 12분)</b></div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Sternenplatz+5,+Luzern')">📍 Sternenplatz 5, 6004 Luzern</div>
         </div>
       </div>
     </div>
     <div class="rest-card">
       <div class="rest-card-head">
-        <span class="rest-badge rb-dinner">저녁 (대안 · 호텔 내)</span>
+        <span class="rest-badge rb-dinner">저녁 (대안)</span>
         <div class="rest-info">
-          <div class="rest-name">🍽 Restaurant Opus (Radisson Blu 호텔 내)</div>
-          <div class="rest-sub">늦게 도착한 날 피로하면 호텔 내 식당이 편리. 국제식 메뉴, 호텔 숙박객 할인 가능. 예약 불필요</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Radisson+Blu+Hotel+Luzern+Inseliquai+12')">📍 Inseliquai 12, 6005 Luzern (Radisson Blu 내) · 06:30~22:30</div>
+          <div class="rest-name">🍽 Old Swiss House</div>
+          <div class="rest-sub">비너 슈니첼로 유명한 클래식 레스토랑. 분위기를 내고 싶을 때 추천합니다. <b style="color:var(--dark-red);">(숙소에서 도보 약 15분)</b></div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Löwenplatz+4,+Luzern')">📍 Löwenplatz 4, 6004 Luzern</div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-<!-- ══ DAY 2 ══ -->
 <div class="day-block">
-  <div class="day-header">
+  <div class="day-header editable">
     <span class="day-num">DAY 2</span>
-    <span class="day-title-text">🏔 오전 <span class="s" onclick="show('rigi')">리기산</span> + 오후 <span class="s" onclick="show('lucerne')">루체른 시내</span> 투어</span>
-    <span class="day-date">7/15 수</span>
+    <span class="day-title-text">7/15 (수) <span class="spot-link" id="link-day2" onclick="handleSpotClick('day2')">리기산</span> 투어
+      <span id="btn-change-day2" class="change-btn" onclick="document.getElementById('f-day2').click()">[변경]</span>
+      <input type="file" id="f-day2" accept="image/*" onchange="previewImage(this, 'day2')"><img id="img-day2" class="hidden-data">
+    </span>
+  </div>
+  
+  <div class="sec"><div class="sec-title editable">이동 경로</div>
+      <div class="route-box editable">
+          • 호텔 → <span class="spot-link" id="link-pier" onclick="handleSpotClick('pier')">⚓ 루체른 선착장</span>
+          <span id="btn-change-pier" class="change-btn" onclick="document.getElementById('f-pier').click()">[변경]</span>
+          <input type="file" id="f-pier" accept="image/*" onchange="previewImage(this, 'pier')"><img id="img-pier" class="hidden-data"> <span class="time-red">도보 8~10분</span><br>
+          • 루체른 → <span class="spot-link" id="link-vitznau" onclick="handleSpotClick('vitznau')">비츠나우</span>
+          <span id="btn-change-vitznau" class="change-btn" onclick="document.getElementById('f-vitznau').click()">[변경]</span>
+          <input type="file" id="f-vitznau" accept="image/*" onchange="previewImage(this, 'vitznau')"><img id="img-vitznau" class="hidden-data"> <span class="time-red">유람선 1시간</span><br>
+          • 비츠나우 → <span class="spot-link" id="link-rigi" onclick="handleSpotClick('rigi')">🏔️ 리기 쿨름</span>
+          <span id="btn-change-rigi" class="change-btn" onclick="document.getElementById('f-rigi').click()">[변경]</span>
+          <input type="file" id="f-rigi" accept="image/*" onchange="previewImage(this, 'rigi')"><img id="img-rigi" class="hidden-data"> <span class="time-red">산악열차 30분</span>
+      </div>
+      
+      <div class="sec-title editable" style="margin-top:15px;">하이킹 일정</div>
+      <div class="route-box editable">
+          • <b>[기본]</b> 리기 쿨름 → <span class="spot-link" id="link-staffel" onclick="handleSpotClick('staffel')">리기 슈타펠</span>
+          <span id="btn-change-staffel" class="change-btn" onclick="document.getElementById('f-staffel').click()">[변경]</span>
+          <input type="file" id="f-staffel" accept="image/*" onchange="previewImage(this, 'staffel')"><img id="img-staffel" class="hidden-data"> <span class="time-red">30분</span><br>
+          • <b>[선택]</b> 리기 슈타펠 → <span class="spot-link" id="link-kaltbad" onclick="handleSpotClick('kaltbad')">리기 칼트바드</span>
+          <span id="btn-change-kaltbad" class="change-btn" onclick="document.getElementById('f-kaltbad').click()">[변경]</span>
+          <input type="file" id="f-kaltbad" accept="image/*" onchange="previewImage(this, 'kaltbad')"><img id="img-kaltbad" class="hidden-data"> <span class="time-red">40분</span>
+      </div>
   </div>
 
-  <!-- 아침 준비 -->
-  <div class="coop-box" style="margin-top:14px;">
-    🛒 <strong>출발 전 Coop 마트 추천!</strong>
-    루체른 중앙역 내 <strong>Coop (Bahnhofstrasse 4, 6003 Luzern)</strong> — 매일 07:00~21:00 영업.<br>
-    리기산 정상은 식당이 있지만 비쌈 (CHF 20~35). 샌드위치·음료·스낵을 미리 사서 정상에서 먹는 것을 추천. 7월 정상 기온 약 10~15°C이므로 따뜻한 음료도 챙기기.
-  </div>
-
-  <!-- 오전: 리기산 -->
-  <div class="sec"><div class="sec-title">🌄 오전 — 리기산 투어</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="stime">07:30 (출발 전)</div>
-        <div class="smain">🛒 <strong>Coop 마트 들르기</strong> — 루체른 중앙역 내</div>
-        <div class="ssub">호텔 → 루체른역 내 Coop 방문 (도보 8분). 샌드위치·음료·스낵·따뜻한 음료 구매 후 선착장으로 이동</div>
-        <div class="price-row">
-          <span class="price-tag">샌드위치 CHF 5~8</span>
-          <span class="price-tag">음료 CHF 2~4</span>
-          <span class="price-tag">스낵 CHF 2~5</span>
-          <span class="price-tag price-free">정상 식당보다 CHF 15~20 절약</span>
-        </div>
-      </div>
-      <div class="step"><div class="dot r"></div>
-        <div class="stime">08:00~08:30</div>
-        <div class="smain">🏨 호텔 출발 → <span class="s" onclick="show('lucerne_lake')">루체른 선착장</span></div>
-        <div class="ssub">역 방면 호숫가 따라 도보 8~10분. 선착장 도착 후 <strong>비츠나우행</strong> 유람선 탑승</div>
-        <div class="tr tw">🚶 도보</div>
-      </div>
-      <div class="step"><div class="dot t"></div>
-        <div class="smain">⛴ <span class="s" onclick="show('lucerne_lake')">루체른 호수 유람선</span> → 비츠나우 (Vitznau)</div>
-        <div class="ssub">루체른 호수(Vierwaldstättersee) 크루즈. 갑판 위쪽 좌석 추천 — 필라투스·리기 조망 가능</div>
-        <div class="pass-row">
-          <span class="pass p-free">🎫 스위스패스 — 무료</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="seat-tip">유람선 갑판 위층 권장. 루체른 출발 후 <strong>오른쪽 선체</strong> = 리기산 방향 조망</div>
-        <div class="tr tb">⛴ 유람선</div>
-        <div class="dur"><div class="db"><div class="df" style="width:60%"></div></div> 약 1시간</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚉 비츠나우 하선 → <span class="s" onclick="show('rigi_train')">리기 산악열차 (Rigibahn)</span> 탑승</div>
-        <div class="ssub">배에서 내리면 바로 앞에 <strong>Vitznau역</strong>. 빨간 톱니바퀴 열차 탑승</div>
-        <div class="pass-row">
-          <span class="pass p-free">🎫 스위스패스 — 리기산 전구간 무료</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="price-row"><span class="price-tag">스패스 없을 시 성인 왕복 CHF 68</span></div>
-        <div class="seat-tip">리기 산악열차는 산허리를 돌아가며 올라감. <strong>양쪽 모두 알프스·호수 뷰</strong> 좋으므로 어느 쪽이든 OK. 외부 전망 플랫폼 있음</div>
-        <div class="tr tt">🚆 리기 산악열차</div>
-        <div class="dur"><div class="db"><div class="df" style="width:30%"></div></div> 약 30분</div>
-      </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="stime">약 11:00</div>
-        <div class="smain">🏔 <span class="s" onclick="show('rigi')">리기 쿨름 (1,798m)</span> 정상 도착 · 자유 시간</div>
-        <div class="ssub">360도 파노라마 — 루체른 호수, 알프스, 맑은 날 독일·프랑스 국경까지 조망. Coop에서 산 도시락으로 야외 점심 추천</div>
-      </div>
-    </div>
-  </div>
-  <div class="acts"><div class="sec-title">리기산 하이킹 옵션</div>
-    <div class="act"><span class="bo bb">기본</span> 리기 쿨름 → 리기 슈타펠 (Rigi Staffel) — 약 30분, 평탄한 능선 산책</div>
-    <div class="act"><span class="bo be">선택</span> 리기 슈타펠 → 리기 칼트바드 (Rigi Kaltbad) — 추가 40분, 칼트바드역에서 열차로 하산 가능</div>
-  </div>
-  <div class="sec" style="padding-top:12px;"><div class="sec-title">리기산 복귀 경로</div>
-    <div class="steps"><div class="step"><div class="dot b"></div>
-      <div class="smain">리기 쿨름 → 비츠나우 (산악열차 30분) → 루체른 선착장 (유람선 1시간)</div>
-      <div class="ssub">오후 13:00~14:00 사이 루체른 복귀 목표. 이후 시내 투어 시작</div>
-    </div></div>
-  </div>
-
-  <!-- 오후: 루체른 시내 투어 -->
-  <div class="sec" style="padding-top:16px;"><div class="sec-title">🏙 오후 — 루체른 시내 투어 (도보 코스)</div></div>
-  <div class="spot-cards">
-
-    <div class="spot-card">
-      <div class="spot-card-head">
-        <span class="spot-card-num">① 첫 번째</span>
-        <span class="smain" style="font-size:.88rem;font-weight:700;"><span class="s" onclick="show('chapel_bridge')">카펠 다리 (Kapellbrücke)</span></span>
-        <span class="spot-card-time">14:00</span>
-      </div>
-      <div class="spot-card-body">
-        <strong>유럽에서 가장 오래된 목조 지붕 다리</strong> — 1333년 건축, 길이 204m. 루체른의 상징이자 필수 포토스팟.<br>
-        다리 내부 지붕 패널에는 17세기 화가 하인리히 베그만이 그린 <strong>루체른 역사화 62점</strong>이 걸려 있음(1993년 화재 후 복원). 다리 중간의 팔각형 <strong>급수탑(Wasserturm)</strong>은 14세기에 건축된 독립된 구조물.<br>
-        📍 Kapellgasse, 6004 Luzern<span class="spot-walk">🚶 선착장에서 도보 3분</span>
-      </div>
-    </div>
-
-    <div class="spot-card">
-      <div class="spot-card-head">
-        <span class="spot-card-num">② 두 번째</span>
-        <span class="smain" style="font-size:.88rem;font-weight:700;"><span class="s" onclick="show('spreuer_bridge')">슈프로이어교 (Spreuerbrücke)</span></span>
-        <span class="spot-card-time">14:30</span>
-      </div>
-      <div class="spot-card-body">
-        <strong>중세 로이스 강의 목조 다리</strong> — 1408년 건축, 카펠 다리보다 역사가 더 오래됨. 지그재그 형태가 특징.<br>
-        내부에 카스파르 메글링거의 <strong>죽음의 무도(Totentanzyklus)</strong> 그림 시리즈가 보존되어 있어 음산하면서도 예술적인 분위기. 다리 중간에 작은 예배당 있음. 관광객이 적어 조용히 감상 가능.<br>
-        📍 Pfistergasse, 6004 Luzern<span class="spot-walk">🚶 카펠 다리에서 도보 5분</span>
-      </div>
-    </div>
-
-    <div class="spot-card">
-      <div class="spot-card-head">
-        <span class="spot-card-num">③ 세 번째</span>
-        <span class="smain" style="font-size:.88rem;font-weight:700;"><span class="s" onclick="show('jesuit_church')">예수회 교회 (Jesuitenkirche)</span></span>
-        <span class="spot-card-time">14:50</span>
-      </div>
-      <div class="spot-card-body">
-        <strong>스위스 최초의 대형 바로크 양식 교회</strong> — 1666~1677년 건축. 양파 모양의 두 개 돔이 인상적.<br>
-        내부에 들어가면 <strong>화려한 천장 프레스코화</strong>와 금박 장식, 장엄한 오르간이 방문객을 압도함. 입장 무료. 내부 촬영 가능. 음악회도 자주 열리는 문화 공간.<br>
-        📍 Bahnhofstrasse 11a, 6004 Luzern<span class="spot-walk">🚶 슈프로이어교에서 도보 3분</span>
-      </div>
-    </div>
-
-    <div class="spot-card">
-      <div class="spot-card-head">
-        <span class="spot-card-num">④ 네 번째</span>
-        <span class="smain" style="font-size:.88rem;font-weight:700;"><span class="s" onclick="show('lion_monument')">빈사의 사자상 (Löwendenkmal)</span></span>
-        <span class="spot-card-time">15:15</span>
-      </div>
-      <div class="spot-card-body">
-        <strong>마크 트웨인이 "세상에서 가장 슬프고 감동적인 돌"이라 평한 조각상</strong> — 1821년 덴마크 조각가 베르텔 토르발센 설계, 루카스 아론 완성.<br>
-        1792년 프랑스 혁명 때 파리 튈르리 궁전을 끝까지 지키다 전사한 스위스 용병 700여 명을 기리는 위령비. 길이 9m의 거대한 사자가 창에 찔린 채 방패를 붙잡고 쓰러지는 모습. 연못 앞 작은 공원에 위치. 입장 무료.<br>
-        📍 Denkmalstrasse 4, 6006 Luzern<span class="spot-walk">🚶 예수회 교회에서 도보 10분</span>
-      </div>
-    </div>
-
-    <div class="spot-card">
-      <div class="spot-card-head">
-        <span class="spot-card-num">⑤ 다섯 번째</span>
-        <span class="smain" style="font-size:.88rem;font-weight:700;"><span class="s" onclick="show('musegg_wall')">무제크 성벽 (Museggmauer)</span></span>
-        <span class="spot-card-time">15:45</span>
-      </div>
-      <div class="spot-card-body">
-        <strong>스위스에서 가장 잘 보존된 중세 성벽</strong> — 1408년 완성, 현재 870m 구간과 9개 탑이 남아 있음.<br>
-        9개 탑 중 <strong>슈르메르탑, 지트탑(Zytturm), 맨리탑, 바흐투름</strong> 4개는 여름에 무료 개방. 특히 지트탑에는 <strong>1535년 제작된 스위스 최고(最古) 시계</strong>가 지금도 작동 중. 성벽 위에서 루체른 시내·호수·알프스 파노라마 감상.<br>
-        📍 Museggstrasse, 6004 Luzern<span class="spot-walk">🚶 빈사의 사자상에서 도보 5분</span>
-      </div>
-    </div>
-
-    <div class="spot-card">
-      <div class="spot-card-head">
-        <span class="spot-card-num">⑥ 여섯 번째</span>
-        <span class="smain" style="font-size:.88rem;font-weight:700;"><span class="s" onclick="show('lucerne')">구시가지 산책 · 쇼핑</span></span>
-        <span class="spot-card-time">17:00</span>
-      </div>
-      <div class="spot-card-body">
-        <strong>무제크 성벽에서 하산 후 구시가지 자유 산책</strong> — 콘마르크트 광장(Kornmarkt), 바인마르크트 광장(Weinmarkt) 주변의 벽화 건물·중세 골목 탐방.<br>
-        호숫가 산책로에서 저녁 전 여유 즐기기.<br>
-        📍 Kornmarkt / Weinmarkt, 6004 Luzern<span class="spot-walk">🚶 무제크 성벽에서 도보 7분</span>
-      </div>
-    </div>
-
-  </div><!-- /spot-cards -->
-
-  <!-- 식당/쇼핑 섹션 -->
   <div class="rest-section">
-    <div class="rest-title">식사 · 쇼핑 & 카페</div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-lunch">점심</span>
-        <div class="rest-info">
-          <div class="rest-name">🛒 쿱 마트 도시락 (리기 정상)</div>
-          <div class="rest-sub">출발 전 루체른 중앙역 내 Coop에서 샌드위치·음료 구매 → 리기 쿨름 정상 야외 벤치에서 알프스 파노라마를 보며 식사. 정상 레스토랑 대비 CHF 15~20 절약</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Coop+Bahnhofstrasse+4+Luzern')">📍 Bahnhofstrasse 4, 6003 Luzern (중앙역 내) · 07:00~21:00</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-snack">카페</span>
-        <div class="rest-info">
-          <div class="rest-name">☕ Café Frey <span style="font-size:.7rem;color:#888">(스위스 문화유산 베이커리)</span></div>
-          <div class="rest-sub">1906년부터 이어진 루체른 전통 베이커리. 루체르너 레브쿠헨(전통 빵), 비르넨 베겐, 파니니, 케이크. 구시가지 산책 중 간식 or 커피 타임으로 딱 좋음</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Café+Frey+Bahnhofstrasse+Luzern')">📍 Bahnhofstrasse 2, 6003 Luzern · 07:30~19:00</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.2 · 스위스 요리 문화유산 지정</div>
-        </div>
-      </div>
-    </div>
-
+    <div class="rest-title">쇼핑 & 식사</div>
     <div class="rest-card">
       <div class="rest-card-head">
         <span class="rest-badge rb-shop">쇼핑 ✅필수</span>
         <div class="rest-info">
-          <div class="rest-name">🛍 Casagrande (카사그란데)</div>
-          <div class="rest-sub">루체른에서 가장 크고 유명한 기념품샵. 저렴하고 예쁜 마그넷부터 뻐꾸기시계, 고급 오르골까지 원스톱 쇼핑이 가능한 필수 방문 코스.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Casagrande+Luzern')">📍 Grendelstrasse 6, 6004 Luzern</div>
+          <div class="rest-name">🛍 <span class="spot-link" id="link-casa" onclick="handleSpotClick('casa')">Casagrande (카사그란데)</span>
+            <span id="btn-change-casa" class="change-btn" onclick="document.getElementById('f-casa').click()">[변경]</span>
+            <input type="file" id="f-casa" accept="image/*" onchange="previewImage(this, 'casa')"><img id="img-casa" class="hidden-data">
+          </div>
+          <div class="rest-sub">루체른 최대 규모. 저렴하고 예쁜 마그넷부터 뻐꾸기시계, 고급 수공예품까지 원스톱 쇼핑 가능.</div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Grendelstrasse+6,+Luzern')">📍 Grendelstrasse 6, 6004 Luzern</div>
         </div>
       </div>
     </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-dinner">저녁 ✅추천</span>
-        <div class="rest-info">
-          <div class="rest-name">🍽 Lucide (미슐랭 1스타 ⭐)</div>
-          <div class="rest-sub">루체른 시내 KKL(문화컨벤션센터) 내 위치. 루체른 호수와 시내의 환상적인 뷰를 자랑하는 파인다이닝. 정교하고 세련된 미식 경험. (프리콘서트 또는 파인다인 디너 선택)</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Lucide+Luzern')">📍 Europaplatz 1, 6005 Luzern · 18:00~23:00</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.7 · 미슐랭 1스타 · <a class="res-btn" href="https://www.lucide-luzern.ch/en/menu/" target="_blank">📅 예약 필수</a></div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /rest-section -->
-
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">☕ Mill'Feuille — 로이스 강변 카페 (구시가지 산책 중)</div>
-      <div class="coffee-sub">슈프로이어교 바로 옆 로이스 강변 카페. 강물 소리 들으며 마시는 커피가 분위기 최고. 정통 밀푀유 케이크가 특산품. 오후 시내 투어 중간 쉬어가기 좋은 타이밍 (슈프로이어교 방문 후)</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Mill+Feuille+Mühlenplatz+6+Luzern')">📍 Mühlenplatz 6, 6004 Luzern (슈프로이어교 바로 옆) · 07:30~23:55</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 5~6</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 6~7</span>
-        <span class="cmenu">🎂 밀푀유 케이크 CHF 7~9</span>
-      </div>
-    </div>
-  </div>
-  <div class="hotel">🏨 <strong>오늘의 숙소</strong> Radisson Blu Hotel Lucerne (연박)</div>
-</div>
-
-<!-- ══ DAY 3 ══ -->
-<div class="day-block">
-  <div class="day-header">
-    <span class="day-num">DAY 3</span>
-    <span class="day-title-text">🏔 루체른 → <span class="s" onclick="show('jungfraujoch')">융프라우요흐</span> → <span class="s" onclick="show('grindelwald')">그린델발트</span></span>
-    <span class="day-date">7/16 목</span>
-  </div>
-  <div class="sec"><div class="sec-title">이동 경로 상세 (가이드 차량)</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">🏨 루체른 → <span class="s" onclick="show('grindelwald')">그린델발트 터미널</span></div>
-        <div class="tr ta">🚐 가이드 차량</div>
-        <div class="dur"><div class="db"><div class="df" style="width:45%"></div></div> 약 1시간 30분</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚠 <span class="s" onclick="show('eiger_express')">아이거 익스프레스</span> 탑승</div>
-        <div class="ssub">그린델발트 터미널 → 아이거글레처 — 3인용 곤돌라</div>
-        <div class="pass-row">
-          <span class="pass p-dong">🎫 동신항운 VIP패스 할인쿠폰 적용 시 CHF 145/인</span>
-          <span class="pass p-disc25">🎫 스위스패스만 적용 시 CHF 170/인 (25% 할인)</span>
-          <span class="pass p-family">👶 패밀리카드 + 동신항운 쿠폰 어린이 할인</span>
-        </div>
-        <div class="price-row">
-          <span class="price-tag">정가 CHF 227/인</span>
-          <span class="price-tag">동신항운 쿠폰만 CHF 160/인</span>
-          <span class="price-tag price-free">동신항운+스패스 중복 CHF 145/인 ← 최저가</span>
-          <span class="price-tag">⚠️ 좌석예약 CHF 10/인 (7월 필수!)</span>
-        </div>
-        <div class="pass-box">
-          🍜 <strong>신라면 무료 교환 방법 (정확한 정보)</strong><br>
-          ① 동신항운 홈페이지(<a href="https://www.jungfrau.co.kr" target="_blank">jungfrau.co.kr</a>)에서 VIP패스 할인쿠폰 신청 후 <strong>반드시 인쇄!</strong><br>
-          ② 바코드가 제대로 인쇄됐는지 확인 필수 (모바일 제시 불가 — 인쇄 필수)<br>
-          ③ 현지역(그린델발트 터미널/인터라켄 동역)에서 여권 + 인쇄 쿠폰 제출해 VIP패스 구매<br>
-          ④ VIP패스에 포함된 <strong>신라면 무료 교환권</strong>으로 정상 커피바(Aletsch Café)에서 <strong>신라면 무료 교환</strong>! (CHF 7.9 상당)<br>
-          ※ 인원수만큼 쿠폰 각각 인쇄 필요 (1인 1매)
-        </div>
-        <div class="tr tg">🚠 아이거 익스프레스</div>
-        <div class="dur"><div class="db"><div class="df" style="width:20%"></div></div> 약 20분</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚆 아이거글레처 → <span class="s" onclick="show('jungfraujoch')">융프라우요흐 (3,454m)</span></div>
-        <div class="seat-tip">JungfrauBahn은 대부분 터널 구간이라 창밖 뷰 없음. 아이거글레처 승강장에서 잠깐 보이는 <strong>아이거 북벽</strong>이 하이라이트 — 탑승 직후 아무 쪽이나 OK</div>
-        <div class="tr tt">🚆 JungfrauBahn (JB)</div>
-        <div class="dur"><div class="db"><div class="df" style="width:35%"></div></div> 약 35분</div>
-      </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="smain">🏔 정상 체류 — <span class="s" onclick="show('sphinx')">스핑크스 전망대</span> · <span class="s" onclick="show('aletsch')">알레취 빙하</span></div>
-        <div class="ssub">고산 반응 주의 (천천히 움직이기). 정상 기온 여름에도 0~5°C — 얇은 바람막이 필수</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">복귀: 융프라우요흐 → 아이거글레처 → 그린델발트 터미널 → 호텔 (약 55분)</div>
-      </div>
-    </div>
-  </div>
-  <div class="hotel">🏨 <strong>숙소 변경</strong> Grindelwald Belvedere</div>
-
-  <div class="rest-section">
-    <div class="rest-title">식사</div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-ramen">점심 🍜 무료!</span>
-        <div class="rest-info">
-          <div class="rest-name">🔥 신라면 — VIP패스 교환권으로 <span style="color:#1B5E20;font-weight:700">완전 무료!</span></div>
-          <div class="rest-sub">VIP패스 구매 시 <strong>신라면 무료 교환권 1매 포함</strong> → 정상 커피바(Aletsch Café)에서 제출하면 추가 비용 없이 무료! (CHF 7.9 상당). 해발 3,454m에서 먹는 신라면은 한국인 필수 코스 — 3명 모두 VIP패스 구매하면 3그릇 모두 무료</div>
-          <div class="rest-addr">📍 Top of Europe, Jungfraujoch (해발 3,454m) · Aletsch Café 내</div>
-          <div class="rest-score"><span class="price-tag price-free">✅ 신라면 무료 (VIP패스 교환권)</span> <span class="price-tag">추가 음식은 별도 CHF</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-dinner">저녁 ✅추천</span>
-        <div class="rest-info">
-          <div class="rest-name">🍽 Restaurant Glacier</div>
-          <div class="rest-sub">아이거 북벽을 정면으로 마주하는 환상적인 뷰와 세련된 다이닝. 호텔 글래시어 내 위치. </div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Restaurant+Glacier+Grindelwald')">📍 Endweg 55, 3818 Grindelwald · 18:00~21:30</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.7 · 미슐랭 1스타 · <a class="res-btn" href="https://www.hotel-glacier.ch/dining/" target="_blank">📅 예약</a></div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /rest-section -->
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Café 3692 — 그린델발트 스페셜티 커피</div>
-      <div class="coffee-sub">그린델발트 마을 내 가장 인기 있는 스페셜티 카페. 베케레이(제과점) 분위기의 아늑한 인테리어. 융프라우 다녀온 후 호텔 근처에서 마무리 커피로 딱. 저녁 식사 전 잠깐 들르기 좋음</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Café+3692+Grindelwald')">📍 Dorfstrasse, 3818 Grindelwald · 08:00~18:00</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 5.5~6.5</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 6.5~7.5</span>
-        <span class="cmenu">🥐 알프스 버터크루아상 CHF 4</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ DAY 4 ══ -->
-<div class="day-block">
-  <div class="day-header">
-    <span class="day-num">DAY 4</span>
-    <span class="day-title-text">🚠 <span class="s" onclick="show('first')">피르스트 (First)</span> 투어</span>
-    <span class="day-date">7/17 금</span>
-  </div>
-  <div class="coop-stop">
-    🛒 <strong>출발 전 Coop 들르기 — 그린델발트 마을 내</strong><br>
-    <strong>Coop (Dorfstrasse 187, 3818 Grindelwald)</strong> · 08:00~20:00 · 호텔에서 도보 5분, 곤돌라 승강장 가는 길에 위치<br>
-    정상 식당은 비쌈(CHF 25~40). 샌드위치·음료·과자 미리 구매 추천. 피르스트는 스낵바 있어 간단한 식사 가능
-  </div>
-  <div class="sec"><div class="sec-title">이동 경로 상세</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">🏨 호텔 → 피르스트 곤돌라 승강장 (도보 15분)</div>
-        <div class="tr tw">🚶 도보</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚠 <span class="s" onclick="show('first')">피르스트 곤돌라</span> 탑승</div>
-        <div class="ssub">Grindelwald → Bort → Schreckfeld → <strong>First (2,168m)</strong></div>
-        <div class="pass-row">
-          <span class="pass p-vip">🎫 융프라우 VIP패스 소지 시 — 곤돌라 무료</span>
-          <span class="pass p-disc25">🎫 VIP패스 없을 시 스위스패스 — 25% 할인</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="price-row">
-          <span class="price-tag">정가 성인 왕복 CHF 55</span>
-          <span class="price-tag">스위스패스 25% 할인 → CHF 41</span>
-          <span class="price-tag price-free">VIP패스 소지 시 무료</span>
-        </div>
-        <div class="pass-box">💡 피르스트 액티비티(플라이어·글라이더·카트) <strong>VIP패스 소지 시 각 50% 할인</strong> · 플라이어 정가 CHF 39 → CHF 20 / 카트 CHF 19 → CHF 10</div>
-        <div class="seat-tip">곤돌라는 360도 회전 가능한 8인승 캐빈. <strong>올라가는 방향 기준 오른쪽</strong> = 아이거 북벽 방향. 아무 자리에서나 잘 보임</div>
-        <div class="tr tg">🚠 First Gondola</div>
-        <div class="dur"><div class="db"><div class="df" style="width:25%"></div></div> 약 25분</div>
-      </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="smain">🏔 <span class="s" onclick="show('first')">피르스트 정상 (2,168m)</span></div>
-      </div>
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">복귀: 피르스트 → 곤돌라(25분) → 호텔(도보 15분)</div>
-      </div>
-    </div>
-  </div>
-  <div class="acts"><div class="sec-title">액티비티 & 하이킹</div>
-    <div class="act"><span class="bo bb">기본</span> <span class="s" onclick="show('bachalpsee')">바흐알프제 호수</span> 하이킹 — 왕복 약 1.5시간</div>
-    <div class="act"><span class="bo bb">기본</span> 피르스트 클리프 워크 — 절벽 유리 다리, 30분</div>
-    <div class="act"><span class="bo be">선택</span> 플라이어 · 마운틴 카트 · 글라이더 — <span style="color:#880E4F;font-weight:700">VIP패스 소지 시 50% 할인</span></div>
-  </div>
-  <div class="coop-box" style="margin-top:14px;margin-bottom:0;">
-    🛒 <strong>점심 Coop 도시락 추천!</strong> 그린델발트 마을 내 <strong>Coop (Dorfstrasse 187, 3818 Grindelwald)</strong> — 호텔에서 도보 5분. 정상 레스토랑(CHF 25~40) 대비 절약. 피르스트 정상 테라스에서 알프스 뷰 감상하며 식사
-  </div>
-  <div class="rest-section">
-    <div class="rest-title">식사 & 쇼핑</div>
     
     <div class="rest-card">
       <div class="rest-card-head">
-        <span class="rest-badge rb-shop">쇼핑</span>
-        <div class="rest-info">
-          <div class="rest-name">🛍 Grand Bazar Brunner</div>
-          <div class="rest-sub">벨베데레 숙소에서 도보 3분 거리. 산악 마을 특유의 전통적이고 클래식한 마그넷, 엽서, 예쁜 기념 소품들을 구경하기 좋은 곳.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Grand+Bazar+Brunner+Grindelwald')">📍 Dorfstrasse 115, 3818 Grindelwald</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-lunch">점심 (선택)</span>
-        <div class="rest-info">
-          <div class="rest-name">🏔 First Mountain Restaurant</div>
-          <div class="rest-sub">피르스트 정상(2,168m) 레스토랑. 알프스 뷰가 압도적. 뢰스티, 수프, 파스타류. 날씨 좋은 날 테라스 자리 추천. 성수기에는 혼잡하므로 일찍 가거나 Coop 도시락 이용 권장</div>
-          <div class="rest-addr">📍 First, 3818 Grindelwald (해발 2,168m) · 09:00~17:00</div>
-          <div class="rest-score">CHF 20~35 / 인</div>
-        </div>
-      </div>
-    </div>
-    <div class="rest-card">
-      <div class="rest-card-head">
         <span class="rest-badge rb-dinner">저녁 ✅추천</span>
         <div class="rest-info">
-          <div class="rest-name">🍽 Barry's (Belvedere Hotel 근처)</div>
-          <div class="rest-sub">몽골리안 팟으로 유명한 그린델발트 인기 식당. 직접 재료를 골라 볶음밥처럼 먹는 방식이 한국인에게 익숙해 인기. 캐주얼하고 활기찬 산장 분위기.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Barry+Grindelwald+restaurant')">📍 Dorfstrasse, 3818 Grindelwald (Belvedere 호텔 도보 5분) · 17:00~21:30</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.0 · CHF 25~35 / 인</div>
+          <div class="rest-name">🍽 <span class="spot-link" id="link-lucide" onclick="handleSpotClick('lucide')">Lucide</span> <b>(미슐랭 1스타 ⭐)</b>
+            <span id="btn-change-lucide" class="change-btn" onclick="document.getElementById('f-lucide').click()">[변경]</span>
+            <input type="file" id="f-lucide" accept="image/*" onchange="previewImage(this, 'lucide')"><img id="img-lucide" class="hidden-data">
+          </div>
+          <div class="rest-sub">KKL(문화컨벤션센터) 내 위치. 루체른 호수 뷰와 정교한 프렌치 베이스의 미식 파인다이닝을 즐기실 수 있습니다. <b style="color:var(--dark-red);">(숙소에서 도보 약 5분)</b></div>
+          <div class="rest-addr" onclick="window.open('https://www.lucide-luzern.ch/en/menu/')">📍 Europaplatz 1, 6005 Luzern</div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Bäckerei & Konditorei Chalchofä</div>
-      <div class="coffee-sub">그린델발트 현지 제과점 겸 카페. 아이거 북벽이 보이는 통유리 창가 자리가 인기. 하산 후 오후 커피 타임으로 분위기 최고. 치즈케이크, 뉘슬리(헤이즐넛 쿠키) 추천</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Bäckerei+Grindelwald')">📍 Dorfstrasse 133, 3818 Grindelwald · 07:00~18:30</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 5~6</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 6~7</span>
-        <span class="cmenu">🍰 치즈케이크 CHF 6~8</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══ DAY 5 ══ -->
 <div class="day-block">
-  <div class="day-header">
-    <span class="day-num">DAY 5</span>
-    <span class="day-title-text">🪂 패러글라이딩 & <span class="s" onclick="show('murren')">뮈렌</span> 마을</span>
-    <span class="day-date">7/18 토</span>
+  <div class="day-header editable">
+    <span class="day-num">DAY 3</span>
+    <span class="day-title-text">7/16 (목) <span class="spot-link" id="link-day3" onclick="handleSpotClick('day3')">융프라우요흐</span>
+      <span id="btn-change-day3" class="change-btn" onclick="document.getElementById('f-day3').click()">[변경]</span>
+      <input type="file" id="f-day3" accept="image/*" onchange="previewImage(this, 'day3')"><img id="img-day3" class="hidden-data">
+    </span>
   </div>
-  <div class="sec"><div class="sec-title">오전 — 인터라켄 패러글라이딩</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">🏨 호텔 → 그린델발트역 도보 5분</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚆 그린델발트역 → <span class="s" onclick="show('interlaken')">인터라켄 동역</span></div>
-        <div class="pass-row">
-          <span class="pass p-free">🎫 스위스패스 — BOB 열차 무료</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="price-row"><span class="price-tag">스패스 없을 시 편도 CHF 11.8</span></div>
-        <div class="seat-tip">그린델발트 → 인터라켄 구간. <strong>오른쪽 좌석</strong> = 아이거·묀히·융프라우 3봉과 그린델발트 계곡 뷰 (출발 초반 구간)</div>
-        <div class="tr tt">🚆 BOB 열차</div>
-        <div class="dur"><div class="db"><div class="df" style="width:35%"></div></div> 약 35분</div>
-        <div class="ssub">그린델발트 → 츠바이뤼치넨(Zweilütschinen) → 인터라켄 동역</div>
-      </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="smain">🪂 인터라켄 패러글라이딩 진행</div>
-        <div class="ssub">패러글라이딩은 스위스패스 비적용 — 별도 요금</div>
-        <div class="price-row">
-          <span class="price-tag">탠덤 패러글라이딩 CHF 130~160/인</span>
-          <span class="price-tag">영상·사진 패키지 CHF 40~60 추가</span>
-        </div>
-      </div>
-    </div>
+
+  <div class="editable" style="margin:20px 20px 0;">
+      <span class="spot-link" id="link-bel" onclick="handleSpotClick('bel')">🏨 Grindelwald Belvedere</span>
+      <span id="btn-change-bel" class="change-btn" onclick="document.getElementById('f-bel').click()">[변경]</span>
+      <input type="file" id="f-bel" accept="image/*" onchange="previewImage(this, 'bel')"><img id="img-bel" class="hidden-data">
   </div>
-  <div class="sec" style="padding-top:12px;"><div class="sec-title">오후 — 뮈렌 (환승 4번)</div>
-    <div class="steps">
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">① 인터라켄 동역 → <span class="s" onclick="show('lauterbrunnen')">라우터브루넨</span></div>
-        <div class="pass-row"><span class="pass p-free">🎫 스위스패스 — 무료</span><span class="pass p-family">👶 패밀리카드 — 무료</span></div>
-        <div class="price-row"><span class="price-tag">스패스 없을 시 편도 CHF 3.4</span></div>
-        <div class="tr tt">🚆 BOB 열차 20분</div>
+
+  <div class="sec"><div class="sec-title editable">이동 경로 (가이드 차량)</div>
+      <div class="route-box editable">
+          • 호텔 → <span class="spot-link" id="link-term" onclick="handleSpotClick('term')">그린델발트 터미널</span>
+          <span id="btn-change-term" class="change-btn" onclick="document.getElementById('f-term').click()">[변경]</span>
+          <input type="file" id="f-term" accept="image/*" onchange="previewImage(this, 'term')"><img id="img-term" class="hidden-data"> <span class="time-red">차량 1시간 30분</span><br>
+          • 터미널 → <span class="spot-link" id="link-eiger" onclick="handleSpotClick('eiger')">아이거 익스프레스</span>
+          <span id="btn-change-eiger" class="change-btn" onclick="document.getElementById('f-eiger').click()">[변경]</span>
+          <input type="file" id="f-eiger" accept="image/*" onchange="previewImage(this, 'eiger')"><img id="img-eiger" class="hidden-data"> <span class="time-red">20분</span> + 산악열차 <span class="time-red">35분</span><br>
+          • 도착: <span class="spot-link" id="link-jung" onclick="handleSpotClick('jung')">🏔️ 융프라우요흐 정상</span>
+          <span id="btn-change-jung" class="change-btn" onclick="document.getElementById('f-jung').click()">[변경]</span>
+          <input type="file" id="f-jung" accept="image/*" onchange="previewImage(this, 'jung')"><img id="img-jung" class="hidden-data">
       </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">② 라우터브루넨 → 그뤼츠알프 케이블카</div>
-        <div class="pass-row"><span class="pass p-free">🎫 스위스패스 — 무료</span><span class="pass p-family">👶 패밀리카드 — 무료</span></div>
-        <div class="price-row"><span class="price-tag">스패스 없을 시 편도 CHF 9.6</span></div>
-        <div class="tr tc">🚡 케이블카 5분</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">③ 그뤼츠알프 → <span class="s" onclick="show('murren')">뮈렌 (Mürren)</span></div>
-        <div class="pass-row"><span class="pass p-free">🎫 스위스패스 — 무료</span><span class="pass p-family">👶 패밀리카드 — 무료</span></div>
-        <div class="price-row"><span class="price-tag">스패스 없을 시 편도 CHF 5.6</span></div>
-        <div class="seat-tip">그뤼츠알프 → 뮈렌 BLM 열차. <strong>왼쪽 좌석</strong> = 라우터브루넨 계곡 아래 폭포군 조망, <strong>오른쪽</strong> = 아이거·묀히·융프라우 3봉 뷰</div>
-        <div class="tr tt">🚆 BLM 산악열차 15분</div>
-        <div class="ssub">차 없는 마을 — 아이거·묀히·융프라우 3봉 정면 조망</div>
-      </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="smain">🏘 <span class="s" onclick="show('murren')">뮈렌 마을</span> 탐방 · 에델바이스 테라스 카페</div>
-      </div>
-    </div>
   </div>
-  <div class="warn">
-    ⚠️ <strong>복귀 환승 절대 주의!</strong>
-    라우터브루넨 탑승 후 → <strong>츠바이뤼치넨역에서 반드시 하차!</strong> → 맞은편 플랫폼 <strong>그린델발트행</strong> 환승
-  </div>
-  <div class="hotel">🏨 <strong>오늘의 숙소</strong> Grindelwald Belvedere (연박)</div>
+
   <div class="rest-section">
-    <div class="rest-title">식사 & 쇼핑</div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-lunch">점심</span>
-        <div class="rest-info">
-          <div class="rest-name">🍜 인터라켄 한식당 (고려 Korean Restaurant)</div>
-          <div class="rest-sub">인터라켄에서 유명한 한식당. 비빔밥, 불고기, 순두부찌개. 종일 야외 액티비티 후 한식이 가장 든든함. 관광지 특성상 가격은 다소 높음</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Korean+Restaurant+Interlaken')">📍 Hauptstrasse 15, 3800 Interlaken 근처</div>
-          <div class="rest-score">CHF 18~30 / 인</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-shop">쇼핑 ✅필수</span>
-        <div class="rest-info">
-          <div class="rest-name">🛍 Albert Schild AG & SPLendid POP</div>
-          <div class="rest-sub">120년 전통 하이엔드 수공예품의 끝판왕(Albert Schild)과 감각적이고 트렌디한 팝아트 소품샵(SPLendid POP). 뮈렌 넘어가기 전후 인터라켄 메인 거리에서 쇼핑하기 완벽한 동선.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Albert+Schild+AG+Interlaken')">📍 Bahnhofstrasse, 3800 Interlaken</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-snack">간식 (뮈렌)</span>
-        <div class="rest-info">
-          <div class="rest-name">☕ 에델바이스 호텔 테라스 카페</div>
-          <div class="rest-sub">뮈렌 내 에델바이스 호텔 테라스. 케이크·커피·아이스크림. 아이거·묀히·융프라우를 정면으로 보며 마시는 커피는 별미. 날씨 좋은 날 노천 자리 추천</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Hotel+Edelweiss+Mürren')">📍 3825 Mürren (뮈렌 마을 내)</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-dinner">저녁 ✅추천</span>
-        <div class="rest-info">
-          <div class="rest-name">🍽 1910 Gourmet by Hausers (미슐랭 1스타 ⭐)</div>
-          <div class="rest-sub">머무시는 <strong>벨베데레 호텔 내부</strong>에 위치. 프라이빗하고 로맨틱한 파인다이닝 코스 요리. 밖으로 나갈 필요 없이 숙소 안에서 스위스 최고 수준의 완벽한 미식을 즐겨보세요.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Belvedere+Swiss+Quality+Hotel+Grindelwald')">📍 Dorfstrasse 53, 3818 Grindelwald (호텔 내)</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.8 · 미슐랭 1스타 · <a class="res-btn" href="https://www.belvedere-grindelwald.ch/en/restaurant/gourmet-1910/" target="_blank">📅 예약 필수</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Café de Paris (인터라켄) — 패러글라이딩 후 커피</div>
-      <div class="coffee-sub">인터라켄 구시가지 중심 카페. 패러글라이딩 마친 후 or 뮈렌 출발 전 인터라켄에서 마시기 좋음. 아이스아메리카노 품질 준수. 야외 테라스에서 융프라우 방면 산 조망 가능</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Café+de+Paris+Interlaken+Höheweg')">📍 Höheweg 29, 3800 Interlaken · 07:30~22:00</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 5~6</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 6~7</span>
-        <span class="cmenu">🥐 크루아상 CHF 4</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ DAY 6 ══ -->
-<div class="day-block">
-  <div class="day-header">
-    <span class="day-num">DAY 6</span>
-    <span class="day-title-text">💧 <span class="s" onclick="show('oeschinensee')">외시넨 호수</span> → <span class="s" onclick="show('zermatt')">체르마트</span></span>
-    <span class="day-date">7/19 일</span>
-  </div>
-  <div class="sec"><div class="sec-title">이동 경로 상세 (가이드 차량)</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">🏨 그린델발트 출발</div>
-        <div class="tr ta">🚐 가이드 차량</div>
-        <div class="dur"><div class="db"><div class="df" style="width:60%"></div></div> 약 2시간 10분</div>
-        <div class="ssub"><span class="s" onclick="show('oeschinensee')">외시넨 호수</span> & <span class="s" onclick="show('blausee')">블라우제</span> 투어 → <strong>테쉬 (Täsch)</strong></div>
-        <div class="tip">📋 외시넨 호수 케이블카: 칸더슈테그역에서 탑승. 스위스패스 — 50% 할인 / 패밀리카드 — 어린이 50% 할인</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚆 테쉬 → <span class="s" onclick="show('zermatt')">체르마트 (Zermatt)</span></div>
-        <div class="pass-row">
-          <span class="pass p-free">🎫 스위스패스 — 테쉬↔체르마트 셔틀 무료</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="price-row"><span class="price-tag">스패스 없을 시 편도 CHF 4.4</span></div>
-        <div class="tr tt">🚆 셔틀 열차 (MGB) 12분</div>
-        <div class="tip">📋 테쉬부터 자동차 진입 불가 — 셔틀 필수! 짐은 가지고 탑승</div>
-      </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">🚆 체르마트 → 리펠알프 (2,211m)</div>
-        <div class="pass-row">
-          <span class="pass p-ticket">🎫 제공 티켓 (성인 2인) — 사용</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="price-row"><span class="price-tag">제공 티켓 없을 시 성인 왕복 CHF 45</span></div>
-        <div class="seat-tip">체르마트 → 리펠알프 GGB 열차. <strong>오른쪽 좌석</strong> = 마터호른 정면 뷰 ⭐ (탑승 후 바로 오른쪽으로!)</div>
-        <div class="tr tt">🚆 고르너그라트 철도 (GGB) 15분</div>
-        <div class="ssub">체르마트역 바로 앞 GGB 탑승 → 리펠알프역 하차</div>
-      </div>
-    </div>
-  </div>
-  <div class="hotel">🏨 <strong>숙소 변경</strong> Riffelalp Resort 2222m ⭐</div>
-  <div class="rest-section">
-    <div class="rest-title">식사</div>
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-lunch">점심</span>
-        <div class="rest-info">
-          <div class="rest-name">🏞 외시넨 호수 산장 레스토랑 (Oeschinen See)</div>
-          <div class="rest-sub">외시넨 호수 가장자리에 위치한 산장 식당. 칸더슈테그 지역 전통 요리, 뢰스티, 치즈 수프. 호수 뷰가 식사의 일부. 투어 중 가이드 추천식당 사용 가능</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Restaurant+Oeschinensee+Kandersteg')">📍 Oeschinensee, 3718 Kandersteg · 09:00~17:30</div>
-          <div class="rest-score">CHF 20~35 / 인</div>
-        </div>
-      </div>
-    </div>
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-dinner">저녁 ✅추천</span>
-        <div class="rest-info">
-          <div class="rest-name">🍽 Restaurant Alexandre (Riffelalp Resort)</div>
-          <div class="rest-sub">리펠알프 리조트 내 파인다이닝 레스토랑. 마터호른이 보이는 테라스. 스위스 알프스 요리, 그릴 요리. 해발 2,222m에서의 저녁 식사는 특별한 경험. 호텔 체크인 후 바로 이용 가능</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Riffelalp+Resort+Zermatt')">📍 Riffelalp Resort, 3920 Zermatt (리조트 내) · 18:30~21:30</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.6 · CHF 45~80 / 인 · <a class="res-btn" href="https://www.riffelalp.com/en/dining" target="_blank">📅 예약</a></div>
-        </div>
-      </div>
-    </div>
+    <div class="rest-title">저녁 식사 (당일 기분따라 택 1)</div>
+    
     <div class="rest-card">
       <div class="rest-card-head">
         <span class="rest-badge rb-dinner">저녁 (캐주얼)</span>
         <div class="rest-info">
-          <div class="rest-name">🍽 Al Bosco (Riffelalp Resort)</div>
-          <div class="rest-sub">리조트 내 캐주얼 레스토랑. 피자, 파스타, 스위스 전통 요리. Alexandre보다 가볍고 편안한 분위기. 아이와 함께 식사하기에 적합</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Riffelalp+Resort+Zermatt')">📍 Riffelalp Resort, 3920 Zermatt (리조트 내)</div>
-          <div class="rest-score">CHF 25~45 / 인</div>
+          <div class="rest-name">🍽 <span class="spot-link" id="link-memory" onclick="handleSpotClick('memory')">Bistro Memory</span>
+            <span id="btn-change-memory" class="change-btn" onclick="document.getElementById('f-memory').click()">[변경]</span>
+            <input type="file" id="f-memory" accept="image/*" onchange="previewImage(this, 'memory')"><img id="img-memory" class="hidden-data">
+          </div>
+          <div class="rest-sub">그린델발트에서 뢰스티(감자전)와 수제 버거를 가장 맛있게 하는 집. 편안하고 활기찬 산장 분위기라 융프라우에 다녀온 뒤 지친 체력을 달래기 좋습니다. <b style="color:var(--dark-red);">(숙소에서 도보 약 10분)</b></div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Dorfstrasse+133,+Grindelwald')">📍 Dorfstrasse 133, 3818 Grindelwald</div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Bäckerei Schindler (체르마트) — 리조트 가기 전</div>
-      <div class="coffee-sub">체르마트 마을 내 현지인 제과점 카페. GGB 타기 전 체르마트역 근처에서 잠깐 들를 수 있음. 체르마트는 관광지라 커피 물가 높은 편이지만 이곳은 비교적 합리적. 마터호른 뷰 보이는 야외 테이블 있음</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Bäckerei+Zermatt')">📍 Bahnhofstrasse, 3920 Zermatt (역 근처) · 07:30~18:30</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 6~7</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 7~8</span>
-        <span class="cmenu">🥐 버터크루아상 CHF 4.5</span>
+    
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-dinner">저녁 (피자/파스타)</span>
+        <div class="rest-info">
+          <div class="rest-name">🍽 <span class="spot-link" id="link-toms" onclick="handleSpotClick('toms')">Onkel Tom's Hütte</span>
+            <span id="btn-change-toms" class="change-btn" onclick="document.getElementById('f-toms').click()">[변경]</span>
+            <input type="file" id="f-toms" accept="image/*" onchange="previewImage(this, 'toms')"><img id="img-toms" class="hidden-data">
+          </div>
+          <div class="rest-sub">작고 아늑한 통나무 오두막에서 맛있는 화덕 피자와 파스타를 제공하는 최고 평점 식당. 스위스 현지식에 살짝 질렸을 때 입가심으로 완벽합니다. <b style="color:var(--dark-red);">(숙소에서 도보 약 15분)</b></div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Kreuzweg+1,+Grindelwald')">📍 Kreuzweg 1, 3818 Grindelwald</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══ DAY 7 ══ -->
 <div class="day-block">
-  <div class="day-header">
-    <span class="day-num">DAY 7</span>
-    <span class="day-title-text">🚂 <span class="s" onclick="show('gornergrat')">고르너그라트</span> & <span class="s" onclick="show('matterhorn')">마터호른</span></span>
-    <span class="day-date">7/20 월</span>
+  <div class="day-header editable">
+    <span class="day-num">DAY 4</span>
+    <span class="day-title-text">7/17 (금) <span class="spot-link" id="link-day4" onclick="handleSpotClick('day4')">피르스트</span>(First)
+      <span id="btn-change-day4" class="change-btn" onclick="document.getElementById('f-day4').click()">[변경]</span>
+      <input type="file" id="f-day4" accept="image/*" onchange="previewImage(this, 'day4')"><img id="img-day4" class="hidden-data">
+    </span>
   </div>
-  <div class="sec"><div class="sec-title">이동 경로 상세</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">🏨 리펠알프 → <span class="s" onclick="show('gornergrat')">고르너그라트 (3,089m)</span></div>
-        <div class="pass-row">
-          <span class="pass p-ticket">🎫 제공 티켓 (성인 2인) — 사용</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
+
+  <div class="sec"><div class="sec-title editable">이동 경로</div>
+      <div class="route-box editable">
+          • 호텔 → <span class="spot-link" id="link-fbase" onclick="handleSpotClick('fbase')">🚠 피르스트 승강장</span>
+          <span id="btn-change-fbase" class="change-btn" onclick="document.getElementById('f-fbase').click()">[변경]</span>
+          <input type="file" id="f-fbase" accept="image/*" onchange="previewImage(this, 'fbase')"><img id="img-fbase" class="hidden-data"> <span class="time-red">도보 15분</span><br>
+          • 승강장 ↔ <span class="spot-link" id="link-ft" onclick="handleSpotClick('ft')">피르스트 정상</span>
+          <span id="btn-change-ft" class="change-btn" onclick="document.getElementById('f-ft').click()">[변경]</span>
+          <input type="file" id="f-ft" accept="image/*" onchange="previewImage(this, 'ft')"><img id="img-ft" class="hidden-data"> <span class="time-red">곤돌라 25분</span>
+      </div>
+      
+      <div class="sec-title editable" style="margin-top:15px;">액티비티 & 하이킹</div>
+      <div class="route-box editable">
+          • <b>[기본]</b> <span class="spot-link" id="link-bach" onclick="handleSpotClick('bach')">바흐알프제 호수</span> 하이킹 (왕복 1.5시간)
+          <span id="btn-change-bach" class="change-btn" onclick="document.getElementById('f-bach').click()">[변경]</span>
+          <input type="file" id="f-bach" accept="image/*" onchange="previewImage(this, 'bach')"><img id="img-bach" class="hidden-data"><br>
+          • <b>[기본]</b> <span class="spot-link" id="link-cliff" onclick="handleSpotClick('cliff')">피르스트 클리프 워크</span>
+          <span id="btn-change-cliff" class="change-btn" onclick="document.getElementById('f-cliff').click()">[변경]</span>
+          <input type="file" id="f-cliff" accept="image/*" onchange="previewImage(this, 'cliff')"><img id="img-cliff" class="hidden-data"><br>
+          • <b>[선택]</b> <span class="spot-link" id="link-activity" onclick="handleSpotClick('activity')">액티비티</span> (플라이어, 카트 등)
+          <span id="btn-change-activity" class="change-btn" onclick="document.getElementById('f-activity').click()">[변경]</span>
+          <input type="file" id="f-activity" accept="image/*" onchange="previewImage(this, 'activity')"><img id="img-activity" class="hidden-data">
+      </div>
+  </div>
+
+  <div class="rest-section">
+    <div class="rest-title">쇼핑 & 식사</div>
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-shop">쇼핑</span>
+        <div class="rest-info">
+          <div class="rest-name">🛍 <span class="spot-link" id="link-brunner" onclick="handleSpotClick('brunner')">Grand Bazar Brunner</span>
+            <span id="btn-change-brunner" class="change-btn" onclick="document.getElementById('f-brunner').click()">[변경]</span>
+            <input type="file" id="f-brunner" accept="image/*" onchange="previewImage(this, 'brunner')"><img id="img-brunner" class="hidden-data">
+          </div>
+          <div class="rest-sub">숙소에서 도보 3분. 산악 마을 특유의 클래식한 마그넷, 예쁜 기념 소품 구경하기 좋은 샬레 소품샵.</div>
         </div>
-        <div class="price-row"><span class="price-tag">제공 티켓 없을 시 체르마트~고르너그라트 왕복 CHF 99</span></div>
-        <div class="seat-tip">리펠알프 → 고르너그라트 GGB 열차. <strong>오른쪽 좌석</strong> = 마터호른이 바로 보임 ⭐⭐ — 꼭 오른쪽에 앉기! 이 뷰가 GGB의 하이라이트</div>
-        <div class="tr tt">🚆 GGB 열차</div>
-        <div class="dur"><div class="db"><div class="df" style="width:20%"></div></div> 약 20분</div>
-        <div class="ssub">열차 안에서 <span class="s" onclick="show('matterhorn')">마터호른</span> 조망 가능</div>
       </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="smain">🏔 <span class="s" onclick="show('gornergrat')">고르너그라트 전망대</span> 체류</div>
-        <div class="ssub">고르너 빙하 · 마터호른 최고 뷰포인트</div>
-      </div>
-      <div class="step"><div class="dot g"></div>
-        <div class="smain"><span class="s" onclick="show('riffelsee')">리펠제 (Riffelsee)</span> 하이킹</div>
-        <div class="ssub">고르너그라트에서 도보 15~20분 하강 → 마터호른 반영. 왕복 30~40분</div>
-        <div class="tr tw">🚶 하이킹</div>
+    </div>
+    
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-dinner">저녁 ✅추천</span>
+        <div class="rest-info">
+          <div class="rest-name">🍽 <span class="spot-link" id="link-schmitte" onclick="handleSpotClick('schmitte')">Restaurant Schmitte</span>
+            <span id="btn-change-schmitte" class="change-btn" onclick="document.getElementById('f-schmitte').click()">[변경]</span>
+            <input type="file" id="f-schmitte" accept="image/*" onchange="previewImage(this, 'schmitte')"><img id="img-schmitte" class="hidden-data">
+          </div>
+          <div class="rest-sub">로만틱 호텔 슈바이처호프 내부. 조용하고 우아한 분위기에서 최상급 스테이크와 맛있는 전통 요리를 즐길 수 있는 훌륭한 식당입니다. <b style="color:var(--dark-red);">(숙소에서 도보 약 5분)</b></div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Swiss+Alp+Resort+1,+Grindelwald')">📍 Swiss Alp Resort 1, 3818 Grindelwald</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="hotel">🏨 <strong>오늘의 숙소</strong> Riffelalp Resort 2222m (연박)</div>
+</div>
+
+<div class="day-block">
+  <div class="day-header editable">
+    <span class="day-num">DAY 5</span>
+    <span class="day-title-text">7/18 (토) 패러글라이딩 & <span class="spot-link" id="link-day5" onclick="handleSpotClick('day5')">뮈렌</span>
+      <span id="btn-change-day5" class="change-btn" onclick="document.getElementById('f-day5').click()">[변경]</span>
+      <input type="file" id="f-day5" accept="image/*" onchange="previewImage(this, 'day5')"><img id="img-day5" class="hidden-data">
+    </span>
+  </div>
+
+  <div class="sec"><div class="sec-title editable">오전 일정</div>
+      <div class="route-box editable">
+          • 호텔 → 그린델발트역 <span class="time-red">도보 5분</span><br>
+          • 역 → 인터라켄 동역 <span class="time-red">기차 35분</span><br>
+          • 도착 후 <span class="spot-link" id="link-para" onclick="handleSpotClick('para')">패러글라이딩</span> 진행
+          <span id="btn-change-para" class="change-btn" onclick="document.getElementById('f-para').click()">[변경]</span>
+          <input type="file" id="f-para" accept="image/*" onchange="previewImage(this, 'para')"><img id="img-para" class="hidden-data">
+      </div>
+      
+      <div class="sec-title editable" style="margin-top:15px;">오후 일정 (뮈렌 마을 - 가는 길 환승 2번)</div>
+      <div class="route-box editable">
+          • 인터라켄 동역 → <span class="spot-link" id="link-lauter" onclick="handleSpotClick('lauter')">라우터브루넨</span>
+          <span id="btn-change-lauter" class="change-btn" onclick="document.getElementById('f-lauter').click()">[변경]</span>
+          <input type="file" id="f-lauter" accept="image/*" onchange="previewImage(this, 'lauter')"><img id="img-lauter" class="hidden-data"> <span class="time-red">기차 20분</span><br>
+          
+          • 라우터브루넨 → <span class="spot-link" id="link-grutsch" onclick="handleSpotClick('grutsch')">그뤼츠알프</span>
+          <span id="btn-change-grutsch" class="change-btn" onclick="document.getElementById('f-grutsch').click()">[변경]</span>
+          <input type="file" id="f-grutsch" accept="image/*" onchange="previewImage(this, 'grutsch')"><img id="img-grutsch" class="hidden-data"> <span class="time-red">케이블카 5분</span><br>
+          
+          • 그뤼츠알프 → <span class="spot-link" id="link-murren" onclick="handleSpotClick('murren')">🏘️ 뮈렌 BLM</span>
+          <span id="btn-change-murren" class="change-btn" onclick="document.getElementById('f-murren').click()">[변경]</span>
+          <input type="file" id="f-murren" accept="image/*" onchange="previewImage(this, 'murren')"><img id="img-murren" class="hidden-data"> <span class="time-red">산악열차 15분</span><br>
+          
+          • <b>[기본]</b> <span class="spot-link" id="link-murrenwalk" onclick="handleSpotClick('murrenwalk')">뮈렌 마을 절벽 산책</span>
+          <span id="btn-change-murrenwalk" class="change-btn" onclick="document.getElementById('f-murrenwalk').click()">[변경]</span>
+          <input type="file" id="f-murrenwalk" accept="image/*" onchange="previewImage(this, 'murrenwalk')"><img id="img-murrenwalk" class="hidden-data"><br>
+          
+          • <b>[선택]</b> <span class="spot-link" id="link-flower" onclick="handleSpotClick('flower')">Flower Trail</span> 중간까지 (40~50분)
+          <span id="btn-change-flower" class="change-btn" onclick="document.getElementById('f-flower').click()">[변경]</span>
+          <input type="file" id="f-flower" accept="image/*" onchange="previewImage(this, 'flower')"><img id="img-flower" class="hidden-data">
+      </div>
+      <div class="warning-box editable">
+          <b>⚠️ 복귀 시 환승 3번! (절대 주의)</b><br>
+          뮈렌에서 케이블카를 타고 라우터브루넨으로 하산 후 기차 탑승 → <strong>츠바이뤼치넨(Zweilütschinen)역에서 반드시 하차!</strong> → 맞은편 플랫폼의 <strong>그린델발트행</strong>으로 환승!
+      </div>
+  </div>
+
   <div class="rest-section">
     <div class="rest-title">식사 & 쇼핑</div>
     
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-lunch">점심 ✅추천</span>
+        <div class="rest-info">
+          <div class="rest-name">🍜 <span class="spot-link" id="link-kangchon" onclick="handleSpotClick('kangchon')">강촌 (Restaurant Kangchon)</span>
+            <span id="btn-change-kangchon" class="change-btn" onclick="document.getElementById('f-kangchon').click()">[변경]</span>
+            <input type="file" id="f-kangchon" accept="image/*" onchange="previewImage(this, 'kangchon')"><img id="img-kangchon" class="hidden-data">
+          </div>
+          <div class="rest-sub">인터라켄 정통 한식당. 패러글라이딩 후 얼큰한 찌개와 제육볶음 등 한국에서 먹는 것과 똑같은 든든한 '진짜 한식'으로 여행의 피로를 풀 수 있는 곳입니다.</div>
+          <div class="rest-addr" onclick="window.open('https://maps.google.com/?q=Centralstrasse+13,+Interlaken')">📍 Centralstrasse 13, 3800 Interlaken</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-shop">쇼핑 ✅필수</span>
+        <div class="rest-info">
+          <div class="rest-name">🛍 <span class="spot-link" id="link-schild" onclick="handleSpotClick('schild')">Albert Schild AG</span> / <span class="spot-link" id="link-splendid" onclick="handleSpotClick('splendid')">SPLendid POP</span>
+            <span id="btn-change-schild" class="change-btn" onclick="document.getElementById('f-schild').click()">[변경]</span><input type="file" id="f-schild" accept="image/*" onchange="previewImage(this, 'schild')"><img id="img-schild" class="hidden-data">
+            <span id="btn-change-splendid" class="change-btn" onclick="document.getElementById('f-splendid').click()">[변경]</span><input type="file" id="f-splendid" accept="image/*" onchange="previewImage(this, 'splendid')"><img id="img-splendid" class="hidden-data">
+          </div>
+          <div class="rest-sub">120년 전통 수공예품의 끝판왕(Albert Schild)과 감각적이고 트렌디한 팝아트 소품샵(SPLendid POP). 뮈렌 넘어가기 전후 인터라켄 메인 거리에서 쇼핑하기 완벽한 동선.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-dinner">저녁 ✅특별 추천</span>
+        <div class="rest-info">
+          <div class="rest-name">🍽 <span class="spot-link" id="link-1910" onclick="handleSpotClick('1910')">1910 Gourmet by Hausers</span> <b>(미슐랭 1스타 ⭐)</b>
+            <span id="btn-change-1910" class="change-btn" onclick="document.getElementById('f-1910').click()">[변경]</span>
+            <input type="file" id="f-1910" accept="image/*" onchange="previewImage(this, '1910')"><img id="img-1910" class="hidden-data">
+          </div>
+          <div class="rest-sub">머무시는 <strong>벨베데레 호텔 내부</strong>에 위치. 프라이빗하고 로맨틱한 파인다이닝. 밖으로 나갈 필요 없이 숙소 안에서 스위스 최고 수준의 완벽한 미식을 즐겨보세요.</div>
+          <div class="rest-addr" onclick="window.open('https://www.belvedere-grindelwald.ch/en/restaurant/gourmet-1910/')">📍 Dorfstrasse 53, 3818 Grindelwald (호텔 내)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-header editable">
+    <span class="day-num">DAY 6</span>
+    <span class="day-title-text">7/19 (일) 호수 투어 & <span class="spot-link" id="link-day6" onclick="handleSpotClick('day6')">체르마트</span>
+      <span id="btn-change-day6" class="change-btn" onclick="document.getElementById('f-day6').click()">[변경]</span>
+      <input type="file" id="f-day6" accept="image/*" onchange="previewImage(this, 'day6')"><img id="img-day6" class="hidden-data">
+    </span>
+  </div>
+
+  <div class="editable" style="margin:20px 20px 0;">
+      <span class="spot-link" id="link-rif" onclick="handleSpotClick('rif')">🏨 Riffelalp Resort 2222m</span>
+      <span id="btn-change-rif" class="change-btn" onclick="document.getElementById('f-rif').click()">[변경]</span>
+      <input type="file" id="f-rif" accept="image/*" onchange="previewImage(this, 'rif')"><img id="img-rif" class="hidden-data">
+  </div>
+
+  <div class="sec"><div class="sec-title editable">일일 투어 (가이드 차량)</div>
+      <div class="route-box editable">
+          • 그린델발트 → <span class="spot-link" id="link-lake" onclick="handleSpotClick('lake')">💧 외시넨 & 블라우 호수</span> 투어 → 테쉬 <span class="time-red">2시간 10분</span>
+          <span id="btn-change-lake" class="change-btn" onclick="document.getElementById('f-lake').click()">[변경]</span>
+          <input type="file" id="f-lake" accept="image/*" onchange="previewImage(this, 'lake')"><img id="img-lake" class="hidden-data">
+      </div>
+      <div class="sec-title editable" style="margin-top:15px;">체르마트 입성</div>
+      <div class="route-box editable">
+          • 테쉬 → 체르마트 <span class="time-red">셔틀 12분</span><br>
+          • 체르마트 → 리펠알프 <span class="time-red">산악열차 15분</span>
+      </div>
+  </div>
+</div>
+
+<div class="day-block">
+  <div class="day-header editable">
+    <span class="day-num">DAY 7</span>
+    <span class="day-title-text">7/20 (월) <span class="spot-link" id="link-day7" onclick="handleSpotClick('day7')">고르너그라트</span>
+      <span id="btn-change-day7" class="change-btn" onclick="document.getElementById('f-day7').click()">[변경]</span>
+      <input type="file" id="f-day7" accept="image/*" onchange="previewImage(this, 'day7')"><img id="img-day7" class="hidden-data">
+    </span>
+  </div>
+
+  <div class="sec"><div class="sec-title editable">일정 및 하이킹</div>
+      <div class="route-box editable">
+          • 리펠알프 ↔ <span class="spot-link" id="link-gor" onclick="handleSpotClick('gor')">🚂 고르너그라트 전망대</span> <span class="time-red">열차 20분</span><br>
+          <span id="btn-change-gor" class="change-btn" onclick="document.getElementById('f-gor').click()">[변경]</span>
+          <input type="file" id="f-gor" accept="image/*" onchange="previewImage(this, 'gor')"><img id="img-gor" class="hidden-data">
+          • <b>[기본]</b> 전망대 체류 및 주변 조망<br>
+          • <b>[기본]</b> <span class="spot-link" id="link-riffelsee" onclick="handleSpotClick('riffelsee')">리펠제</span> 가벼운 하이킹 (왕복 30~40분)
+          <span id="btn-change-riffelsee" class="change-btn" onclick="document.getElementById('f-riffelsee').click()">[변경]</span>
+          <input type="file" id="f-riffelsee" accept="image/*" onchange="previewImage(this, 'riffelsee')"><img id="img-riffelsee" class="hidden-data">
+      </div>
+  </div>
+
+  <div class="rest-section">
+    <div class="rest-title">쇼핑 & 식사</div>
+    
+    <div class="rest-card">
+      <div class="rest-card-head">
+        <span class="rest-badge rb-shop">쇼핑 ✅추천</span>
+        <div class="rest-info">
+          <div class="rest-name">🛍 <span class="spot-link" id="link-artisans" onclick="handleSpotClick('artisans')">The Swiss Artisans</span>
+            <span id="btn-change-artisans" class="change-btn" onclick="document.getElementById('f-artisans').click()">[변경]</span>
+            <input type="file" id="f-artisans" accept="image/*" onchange="previewImage(this, 'artisans')"><img id="img-artisans" class="hidden-data">
+          </div>
+          <div class="rest-sub">체르마트 수네가 방면 길목 위치. 공장제가 아닌 현지 장인 수공예품 공방. 고급스러운 디자인 소품 추천.</div>
+        </div>
+      </div>
+    </div>
+
     <div class="rest-card">
       <div class="rest-card-head">
         <span class="rest-badge rb-lunch">점심 ✅강력 추천</span>
         <div class="rest-info">
           <div class="rest-name">🍽 Chez Vrony</div>
-          <div class="rest-sub">체르마트 최고 레스토랑 중 하나. 현지 발레 주 전통 요리, 뢰스티, 마터호른 뷰가 압도적인 테라스. 수네가역에서 도보 15분 하산 또는 고르너그라트에서 이동. 예약 필수!</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Chez+Vrony+Zermatt')">📍 Findeln, 3920 Zermatt (수네가 방면) · 11:30~16:00</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.8 · 미슐랭 가이드 · <a class="res-btn" href="https://www.chez-vrony.ch" target="_blank">📅 예약 (필수!)</a></div>
+          <div class="rest-sub">마터호른 뷰가 압도적인 테라스. 수네가역 도보 15분. 미슐랭 가이드 등재. 예약 없으면 입장 불가 수준!</div>
         </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-shop">쇼핑 ✅추천</span>
-        <div class="rest-info">
-          <div class="rest-name">🛍 The Swiss Artisans</div>
-          <div class="rest-sub">체르마트 기차역에서 수네가로 가는 길목에 위치. 공장제가 아닌 스위스 현지 장인들의 수공예품 공방. 흔하지 않고 고급스러운 디자인 소품을 사기에 최적의 장소.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=The+Swiss+Artisans+Zermatt')">📍 Bahnhofstrasse 70, 3920 Zermatt</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-dinner">저녁</span>
-        <div class="rest-info">
-          <div class="rest-name">🍽 리펠알프 리조트 내 식당</div>
-          <div class="rest-sub">리조트에서 편안하게 마터호른 야경 감상하며 저녁 식사. 마터호른에 붉게 물드는 알펜글로우(Alpenglow)는 7월 일몰 무렵 가장 아름다움</div>
-          <div class="rest-addr">📍 Riffelalp Resort, 3920 Zermatt</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Café du Pont (체르마트 마을 내)</div>
-      <div class="coffee-sub">체르마트 구시가지 중심 카페. 마터호른이 보이는 테라스 자리 인기. 고르너그라트 다녀온 후 하산해 마을에서 마시는 커피로 추천. 아이스아메리카노 물에 희석되지 않게 에스프레소 투샷 요청 가능</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Café+du+Pont+Zermatt+Bahnhofstrasse')">📍 Bahnhofstrasse 4, 3920 Zermatt · 08:00~21:00</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 6.5~7.5</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 7~8.5</span>
-        <span class="cmenu">🍰 발레 지방 애플파이 CHF 7</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══ DAY 8 ══ -->
 <div class="day-block">
-  <div class="day-header">
+  <div class="day-header editable">
     <span class="day-num">DAY 8</span>
-    <span class="day-title-text">🐻 <span class="s" onclick="show('bern')">베른</span> 관광 → 귀국</span>
-    <span class="day-date">7/21 화</span>
+    <span class="day-title-text">7/21 (화) <span class="spot-link" id="link-day8" onclick="handleSpotClick('day8')">베른</span> 관광
+      <span id="btn-change-day8" class="change-btn" onclick="document.getElementById('f-day8').click()">[변경]</span>
+      <input type="file" id="f-day8" accept="image/*" onchange="previewImage(this, 'day8')"><img id="img-day8" class="hidden-data">
+    </span>
   </div>
-  <div class="sec"><div class="sec-title">이동 경로 상세</div>
-    <div class="steps">
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">🏨 리펠알프 → 테쉬역 (GGB 15분 + 셔틀 12분)</div>
-        <div class="pass-row">
-          <span class="pass p-ticket">🎫 GGB — 제공 티켓 사용 (리펠알프→체르마트)</span>
-          <span class="pass p-free">🎫 스위스패스 — 체르마트→테쉬 셔틀 무료</span>
-          <span class="pass p-family">👶 패밀리카드 — 어린이 무료</span>
-        </div>
-        <div class="tr tt">🚆 GGB + 셔틀</div>
-        <div class="dur"><div class="db"><div class="df" style="width:25%"></div></div> 약 27분</div>
+
+  <div class="sec"><div class="sec-title editable">이동 경로 (가이드 차량)</div>
+      <div class="route-box editable">
+          • 테쉬 → 베른 시내 이동 <span class="time-red">차량 2시간 30분</span><br>
+          • <span class="spot-link" id="link-bern" onclick="handleSpotClick('bern')">🐻 베른 구시가지 및 장미정원</span><br>
+          <span id="btn-change-bern" class="change-btn" onclick="document.getElementById('f-bern').click()">[변경]</span>
+          <input type="file" id="f-bern" accept="image/*" onchange="previewImage(this, 'bern')"><img id="img-bern" class="hidden-data">
+          • 베른 시내 → 취리히 공항 <span class="time-red">차량 1시간 30분</span>
       </div>
-      <div class="step"><div class="dot b"></div>
-        <div class="smain">테쉬 → <span class="s" onclick="show('bern')">베른 시내</span></div>
-        <div class="tr ta">🚐 가이드 차량</div>
-        <div class="dur"><div class="db"><div class="df" style="width:60%"></div></div> 약 2시간 30분</div>
-      </div>
-      <div class="step"><div class="dot o"></div>
-        <div class="smain">🐻 베른 관광 — <strong>16:00 이전 출발 필수!</strong></div>
-        <div class="ssub"><span class="s" onclick="show('zytglogge')">시계탑 (Zytglogge)</span> · <span class="s" onclick="show('bundeshaus')">연방의회</span> · <span class="s" onclick="show('rosengarten')">장미정원</span></div>
-      </div>
-      <div class="step"><div class="dot r"></div>
-        <div class="smain">⚠️ 베른 → <span class="s" onclick="show('zurich_airport')">취리히 공항</span></div>
-        <div class="tr ta">🚐 차량</div>
-        <div class="dur"><div class="db"><div class="df" style="width:45%"></div></div> 약 1시간 30분</div>
-        <div class="tip">📋 <strong>시간 엄수!</strong> 17:40 공항 도착 → 19:40 탑승 → 베른 <strong>16:00 이전</strong> 출발</div>
-      </div>
-      <div class="step"><div class="dot g"></div>
-        <div class="smain">✈️ 취리히 공항 출국 — 19:40 탑승</div>
-      </div>
-    </div>
   </div>
-  <div class="warn">
-    ✈️ <strong>귀국 최종 점검</strong><br>
-    베른 16:00 이전 출발 → 공항 17:40 도착 → 보안·출국 심사 → 탑승구 이동 → 19:40 탑승
-  </div>
+
   <div class="rest-section">
     <div class="rest-title">식사</div>
     <div class="rest-card">
       <div class="rest-card-head">
         <span class="rest-badge rb-lunch">점심 ✅강력 추천</span>
         <div class="rest-info">
-          <div class="rest-name">🍽 Kornhauskeller (콘하우스켈러)</div>
-          <div class="rest-sub">베른의 웅장한 지하 곡물창고를 개조한 압도적인 분위기의 레스토랑. 화려한 바로크 양식의 천장 벽화 아래에서 즐기는 훌륭한 다이닝. 귀국 전 최고의 만찬 장소.</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Kornhauskeller+Bern')">📍 Kornhausplatz 18, 3011 Bern · 11:30~23:30</div>
-          <div class="rest-score"><span class="rest-star">★</span> 4.4 · 분위기 최고 · <a class="res-btn" href="https://bindella.ch/gastronomie/kornhauskeller" target="_blank">📅 예약 권장</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="rest-card">
-      <div class="rest-card-head">
-        <span class="rest-badge rb-lunch">점심 (대안)</span>
-        <div class="rest-info">
-          <div class="rest-name">🛒 Coop / Migros 도시락 (베른 구시가지)</div>
-          <div class="rest-sub">시간이 촉박한 귀국 날은 슈퍼마켓 도시락으로 가볍게. 베른 구시가지 Migros (Marktgasse 46) 또는 Coop City (Neuengasse 17)에서 간편하게 해결하고 관광 시간 확보</div>
-          <div class="rest-addr" onclick="window.open('https://maps.google.com?q=Migros+Marktgasse+Bern')">📍 Marktgasse 46, 3011 Bern · 08:00~20:00</div>
-          <div class="rest-score">CHF 8~15 / 인 · 시간 절약 최고</div>
+          <div class="rest-name">🍽 <span class="spot-link" id="link-kornhaus" onclick="handleSpotClick('kornhaus')">Kornhauskeller (콘하우스켈러)</span>
+            <span id="btn-change-kornhaus" class="change-btn" onclick="document.getElementById('f-kornhaus').click()">[변경]</span>
+            <input type="file" id="f-kornhaus" accept="image/*" onchange="previewImage(this, 'kornhaus')"><img id="img-kornhaus" class="hidden-data">
+          </div>
+          <div class="rest-sub">베른의 웅장한 지하 곡물창고를 개조한 압도적인 분위기의 레스토랑. 화려한 바로크 양식 천장 아래에서의 귀국 전 최고 만찬 장소.</div>
+          <div class="rest-addr" onclick="window.open('https://bindella.ch/gastronomie/kornhauskeller')">📍 Kornhausplatz 18, 3011 Bern</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="coffee-section">
-    <div class="coffee-title">☕ 오늘의 커피 (마지막 날 베른에서)</div>
-    <div class="coffee-card">
-      <div class="coffee-name">Café Littéraire (베른 구시가지)</div>
-      <div class="coffee-sub">베른 구시가지 아케이드 골목 안 아늑한 카페. 시계탑 관람 후 or 장미정원 가는 길 중간에 위치. 책이 가득한 인테리어로 분위기 특별. 스위스 마지막 커피를 여유롭게 즐기기 좋음. 단 16:00 전 출발해야 하므로 시간 조절 필수</div>
-      <div class="coffee-addr" onclick="window.open('https://maps.google.com?q=Café+Bern+Kramgasse+Altstadt')">📍 Kramgasse 6, 3011 Bern (구시가지 아케이드 내) · 08:00~19:00</div>
-      <div class="coffee-menu">
-        <span class="cmenu iced">🧊 아이스아메리카노 CHF 5.5~6.5</span>
-        <span class="cmenu">🍦 바닐라라떼 CHF 6~7</span>
-        <span class="cmenu">🥐 버터크루아상 CHF 3.8</span>
-      </div>
-    </div>
-  </div>
-  <div class="pad"></div>
 </div>
 
 </div>
 
 <script>
-// ── 장소 데이터 (그라디언트 색상 + 구글 검색어) ──
+// SPOT POPUP
 const SPOTS = {
-  zurich_airport:  { e:'✈️', n:'취리히 공항 (ZRH)', d:'스위스 최대 국제공항 — 터미널 지하에 기차역 직결', tags:['해발 432m','국제선'],   grad:'linear-gradient(135deg,#1a237e,#283593)', q:'Zurich Airport ZRH Switzerland', yt:'Zurich Airport ZRH Switzerland' },
-  lucerne:         { e:'🏰', n:'루체른 (Luzern)',    d:'알프스와 호수가 만나는 스위스 중부의 보석 도시', tags:['중세 도시','호수'],          grad:'linear-gradient(135deg,#1b5e20,#2e7d32)', q:'Lucerne Switzerland Kapellbrücke', yt:'Lucerne Switzerland travel' },
-  lucerne_station: { e:'🚉', n:'루체른역 (Luzern Bahnhof)', d:'루체른 시내 중심부 기차역 — 역 앞으로 카펠 다리와 호수', tags:['IR75','S16'], grad:'linear-gradient(135deg,#880e4f,#c2185b)', q:'Luzern Bahnhof railway station', yt:'Lucerne train station Switzerland' },
-  chapel_bridge:   { e:'🌉', n:'카펠 다리 (Kapellbrücke)', d:'1333년 건축 — 유럽에서 가장 오래된 목조 지붕 다리', tags:['1333년 건축','UNESCO'],  grad:'linear-gradient(135deg,#b71c1c,#c0392b)', q:'Kapellbrücke Lucerne Switzerland', yt:'Kapellbrücke Lucerne bridge' },
-  zurich_hb:       { e:'🚄', n:'취리히 중앙역 (Zürich HB)', d:'유럽 최대급 기차역 — 하루 약 45만 명 이용', tags:['환승허브','지하쇼핑몰'],     grad:'linear-gradient(135deg,#4a148c,#7b1fa2)', q:'Zürich Hauptbahnhof main station', yt:'Zurich Hauptbahnhof Switzerland' },
-  lucerne_lake:    { e:'⛴', n:'루체른 호수 (Vierwaldstättersee)', d:'빙하가 녹아 만들어진 루체른 호수 유람선 크루즈', tags:['유람선','빙하호수'],  grad:'linear-gradient(135deg,#006064,#00838f)', q:'Lake Lucerne Switzerland boat cruise', yt:'Lake Lucerne Switzerland cruise' },
-  rigi:            { e:'🏔', n:'리기 쿨름 (Rigi Kulm, 1,798m)', d:'알프스의 여왕 — 루체른 호수와 알프스 360도 파노라마', tags:['1,798m','알프스의 여왕'], grad:'linear-gradient(135deg,#1a237e,#1565c0)', q:'Rigi Kulm summit Switzerland panorama', yt:'Rigi Kulm Switzerland mountain' },
-  rigi_train:      { e:'🚂', n:'리기 산악열차 (Rigibahn)', d:'1871년 개통 — 유럽 최초의 산악 톱니바퀴 철도', tags:['1871년 개통','유럽 최초'],   grad:'linear-gradient(135deg,#b71c1c,#e53935)', q:'Vitznau Rigi railway mountain train Switzerland', yt:'Rigi mountain railway Switzerland' },
-  jungfraujoch:    { e:'🏔', n:'융프라우요흐 (3,454m)', d:'유럽의 지붕 — 알프스 최고 기차역, 연중 눈과 빙하', tags:['3,454m','유럽의 지붕'],      grad:'linear-gradient(135deg,#37474f,#546e7a)', q:'Jungfraujoch top of Europe Switzerland', yt:'Jungfraujoch Top of Europe Switzerland' },
-  sphinx:          { e:'🔭', n:'스핑크스 전망대', d:'해발 3,571m 유리 전망대 — 알레취 빙하와 알프스 3봉', tags:['3,571m','유리전망대'],            grad:'linear-gradient(135deg,#1a237e,#283593)', q:'Sphinx Observatory Jungfraujoch Switzerland', yt:'Sphinx Observatory Jungfraujoch' },
-  aletsch:         { e:'🧊', n:'알레취 빙하 (Aletsch Glacier)', d:'알프스 최대 빙하 길이 23km — UNESCO 세계자연유산', tags:['23km','UNESCO 자연유산'], grad:'linear-gradient(135deg,#006064,#00897b)', q:'Aletsch Glacier Switzerland UNESCO', yt:'Aletsch Glacier Switzerland' },
-  grindelwald:     { e:'🏡', n:'그린델발트 (Grindelwald)', d:'아이거 북벽 아래 산악 마을 — 베르너 오버란트의 베이스캠프', tags:['아이거 북벽','산악마을'], grad:'linear-gradient(135deg,#1b5e20,#388e3c)', q:'Grindelwald Switzerland village Alps', yt:'Grindelwald Switzerland travel guide' },
-  eiger_express:   { e:'🚠', n:'아이거 익스프레스', d:'2020년 개통 — 세계 최대급 3인용 곤돌라, 아이거 북벽 통과 20분', tags:['2020년 개통','세계 최대급 곤돌라'], grad:'linear-gradient(135deg,#e65100,#f4511e)', q:'Eiger Express gondola Grindelwald Switzerland', yt:'Eiger Express cable car Switzerland' },
-  first:           { e:'🚠', n:'피르스트 정상 (First, 2,168m)', d:'그린델발트 위 액티비티 천국 — 클리프 워크, 플라이어, 하이킹', tags:['2,168m','클리프 워크'], grad:'linear-gradient(135deg,#1565c0,#1976d2)', q:'First Grindelwald Switzerland cliff walk', yt:'First Grindelwald Switzerland activities' },
-  bachalpsee:      { e:'🏞', n:'바흐알프제 (Bachalpsee)', d:'피르스트 인근 고산 호수 — 베터호른이 수면에 반영되는 포토스팟', tags:['고산 호수','반영 포토스팟'], grad:'linear-gradient(135deg,#006064,#00838f)', q:'Bachalpsee lake Grindelwald Switzerland reflection', yt:'Bachalpsee lake Switzerland hiking' },
-  interlaken:      { e:'🏙', n:'인터라켄 (Interlaken)', d:'툰 호수와 브리엔츠 호수 사이 — 알프스 관광의 관문 도시', tags:['관광 허브','패러글라이딩'], grad:'linear-gradient(135deg,#1b5e20,#2e7d32)', q:'Interlaken Switzerland tourism', yt:'Interlaken Switzerland travel guide' },
-  lauterbrunnen:   { e:'💦', n:'라우터브루넨 (Lauterbrunnen)', d:'72개의 폭포가 흘러내리는 절벽 계곡 마을', tags:['72개 폭포','절벽 계곡'],        grad:'linear-gradient(135deg,#004d40,#00695c)', q:'Lauterbrunnen waterfalls Switzerland valley', yt:'Lauterbrunnen Switzerland valley waterfalls' },
-  murren:          { e:'🏘', n:'뮈렌 (Mürren, 1,650m)', d:'자동차 없는 절벽 마을 — 아이거·묀히·융프라우 3봉 정면 조망', tags:['1,650m','차 없는 마을'], grad:'linear-gradient(135deg,#37474f,#455a64)', q:'Mürren Switzerland car free village Alps', yt:'Mürren Switzerland village Jungfrau view' },
-  oeschinensee:    { e:'💎', n:'외시넨 호수 (Oeschinensee)', d:'칸더슈테그 해발 1,578m 에메랄드빛 빙하 호수', tags:['1,578m','UNESCO 자연유산'],    grad:'linear-gradient(135deg,#006064,#00838f)', q:'Oeschinensee lake Kandersteg Switzerland turquoise', yt:'Oeschinensee lake Switzerland' },
-  blausee:         { e:'🔵', n:'블라우제 (Blausee)', d:'신비로운 파란빛 투명 호수 — 바닥이 훤히 보이는 맑은 물', tags:['투명 호수','파란빛'],       grad:'linear-gradient(135deg,#0d47a1,#1565c0)', q:'Blausee blue lake Switzerland Kandersteg', yt:'Blausee Switzerland blue lake' },
-  zermatt:         { e:'🏔', n:'체르마트 (Zermatt)', d:'마터호른 아래 자동차 없는 산악 마을 — 스위스 최고의 스키 리조트', tags:['차 없는 마을','스키 리조트'], grad:'linear-gradient(135deg,#b71c1c,#c0392b)', q:'Zermatt Switzerland Matterhorn village', yt:'Zermatt Switzerland travel guide' },
-  matterhorn:      { e:'🗻', n:'마터호른 (Matterhorn, 4,478m)', d:'스위스의 상징 — 완벽한 피라미드형 알프스 명봉', tags:['4,478m','세계에서 가장 많이 촬영된 산'], grad:'linear-gradient(135deg,#37474f,#263238)', q:'Matterhorn Zermatt Switzerland mountain', yt:'Matterhorn Switzerland aerial view' },
-  gornergrat:      { e:'🔭', n:'고르너그라트 전망대 (3,089m)', d:'마터호른 정면 전망대 — 세계에서 가장 아름다운 열차 노선', tags:['3,089m','마터호른 정면'], grad:'linear-gradient(135deg,#4a148c,#6a1b9a)', q:'Gornergrat observatory Zermatt Switzerland Matterhorn', yt:'Gornergrat railway Zermatt Switzerland' },
-  riffelsee:       { e:'🏞', n:'리펠제 호수 (Riffelsee)', d:'고르너그라트 아래 고산 호수 — 마터호른이 수면에 반영되는 절경', tags:['마터호른 반영','포토스팟'], grad:'linear-gradient(135deg,#006064,#00838f)', q:'Riffelsee lake Matterhorn reflection Switzerland', yt:'Riffelsee Matterhorn reflection Switzerland' },
-  bern:            { e:'🐻', n:'베른 구시가지 (Bern Altstadt)', d:'스위스 연방 수도 — 6km 중세 아케이드 거리, UNESCO 세계문화유산', tags:['수도','UNESCO 문화유산'], grad:'linear-gradient(135deg,#e65100,#bf360c)', q:'Bern old town Switzerland Altstadt UNESCO', yt:'Bern Switzerland old town travel guide' },
-  zytglogge:       { e:'🕰', n:'시계탑 (Zytglogge)', d:'13세기 건축 베른의 랜드마크 — 매시 정각 인형 퍼레이드', tags:['13세기 건축','인형 퍼레이드'],  grad:'linear-gradient(135deg,#bf360c,#d84315)', q:'Zytglogge clock tower Bern Switzerland', yt:'Zytglogge Bern clock tower animation' },
-  bundeshaus:      { e:'🏛', n:'연방의회 (Bundeshaus)', d:'스위스 민주주의의 심장 — 네오 바로크 양식의 웅장한 돔형 의사당', tags:['연방 의사당','네오 바로크'], grad:'linear-gradient(135deg,#1a237e,#283593)', q:'Bundeshaus Federal Palace Bern Switzerland', yt:'Bundeshaus Bern Switzerland Federal Palace' },
-  rosengarten:     { e:'🌹', n:'장미정원 (Rosengarten)', d:'베른 구시가지를 한눈에 내려다보는 언덕 위 정원', tags:['200종 장미','전망 포인트'],   grad:'linear-gradient(135deg,#880e4f,#ad1457)', q:'Rosengarten Bern Switzerland rose garden view', yt:'Rosengarten Bern Switzerland panorama' },
-
-  // 루체른 시내 명소
-  spreuer_bridge:  { e:'🌉', n:'슈프로이어교 (Spreuerbrücke)', d:'1408년 건축, 로이스 강의 지그재그 목조 다리 — 죽음의 무도 17세기 그림 시리즈 보존', tags:['1408년 건축','죽음의 무도 그림'], grad:'linear-gradient(135deg,#4e342e,#6d4c41)', q:'Spreuerbrücke Lucerne Switzerland medieval bridge', yt:'Spreuerbrücke Lucerne Switzerland' },
-  jesuit_church:   { e:'⛪', n:'예수회 교회 (Jesuitenkirche)', d:'1677년 완공, 스위스 최초 대형 바로크 교회 — 화려한 천장 프레스코화와 금박 장식', tags:['바로크 양식','1677년 완공'], grad:'linear-gradient(135deg,#1a237e,#283593)', q:'Jesuitenkirche Lucerne Switzerland baroque church', yt:'Jesuitenkirche Lucerne Switzerland interior' },
-  lion_monument:   { e:'🦁', n:'빈사의 사자상 (Löwendenkmal)', d:'1821년 조성 — 프랑스 혁명 전사 스위스 용병 기리는 위령비. 마크 트웨인이 세상에서 가장 슬프고 감동적인 돌이라 평함', tags:['1821년 조성','마크 트웨인 극찬'], grad:'linear-gradient(135deg,#37474f,#455a64)', q:'Löwendenkmal Lion Monument Lucerne Switzerland', yt:'Lion Monument Lucerne Löwendenkmal Switzerland' },
-  musegg_wall:     { e:'🏰', n:'무제크 성벽 (Museggmauer)', d:'1408년 완성, 스위스 최고(最古) 보존 중세 성벽 — 9개 탑, 지트탑에 1535년 제작 스위스 최고(最古) 시계', tags:['870m 성벽','1535년 시계'], grad:'linear-gradient(135deg,#3e2723,#4e342e)', q:'Museggmauer Musegg Wall Lucerne Switzerland medieval', yt:'Museggmauer Lucerne Switzerland city wall' },
+  // 기존 장소 
+  zurich_airport: { e:'✈️', n:'취리히 공항', d:'스위스 최대 공항', tags:[], grad:'linear-gradient(135deg,#1a237e,#283593)', q:'Zurich Airport', yt:'Zurich Airport' },
+  lucerne: { e:'🏰', n:'루체른', d:'알프스와 호수의 만남', tags:[], grad:'linear-gradient(135deg,#1b5e20,#2e7d32)', q:'Lucerne', yt:'Lucerne' },
+  chapel_bridge: { e:'🌉', n:'카펠 다리', d:'유럽에서 가장 오래된 목조 다리', tags:[], grad:'linear-gradient(135deg,#b71c1c,#c0392b)', q:'Kapellbrucke', yt:'Kapellbrucke' },
+  rigi: { e:'🏔', n:'리기 쿨름', d:'알프스의 여왕', tags:[], grad:'linear-gradient(135deg,#1a237e,#1565c0)', q:'Rigi Kulm', yt:'Rigi Kulm' },
+  jungfraujoch: { e:'🏔', n:'융프라우요흐', d:'유럽의 지붕', tags:[], grad:'linear-gradient(135deg,#37474f,#546e7a)', q:'Jungfraujoch', yt:'Jungfraujoch' },
+  first: { e:'🚠', n:'피르스트', d:'액티비티 천국', tags:[], grad:'linear-gradient(135deg,#1565c0,#1976d2)', q:'Grindelwald First', yt:'Grindelwald First' },
+  murren: { e:'🏘', n:'뮈렌', d:'차 없는 절벽 마을', tags:[], grad:'linear-gradient(135deg,#37474f,#455a64)', q:'Murren Switzerland', yt:'Murren Switzerland' },
+  oeschinensee: { e:'💎', n:'외시넨 호수', d:'에메랄드 빙하 호수', tags:[], grad:'linear-gradient(135deg,#006064,#00838f)', q:'Oeschinensee', yt:'Oeschinensee' },
+  zermatt: { e:'🏔', n:'체르마트', d:'마터호른 아래 마을', tags:[], grad:'linear-gradient(135deg,#b71c1c,#c0392b)', q:'Zermatt', yt:'Zermatt' },
+  gornergrat: { e:'🔭', n:'고르너그라트', d:'마터호른 정면 전망대', tags:[], grad:'linear-gradient(135deg,#4a148c,#6a1b9a)', q:'Gornergrat', yt:'Gornergrat' },
+  bern: { e:'🐻', n:'베른 구시가지', d:'스위스 수도, 곰 공원', tags:[], grad:'linear-gradient(135deg,#e65100,#bf360c)', q:'Bern Switzerland', yt:'Bern Switzerland' }
 };
 
 function show(k) {
-  const s = SPOTS[k]; if (!s) return;
-
-  // 비주얼 영역
+  const s = SPOTS[k] || {e:'✨',n:k,d:'검색을 눌러 확인하세요',tags:[],grad:'linear-gradient(135deg,#555,#333)',q:k,yt:k};
   document.getElementById('pc-visual').style.background = s.grad;
   document.getElementById('pc-emoji').textContent = s.e;
-  document.getElementById('pc-tagline').textContent = s.tags.join(' · ');
-
-  // 정보
   document.getElementById('pc-name').textContent = s.n;
   document.getElementById('pc-desc').textContent = s.d;
-
-  // 태그
-  const tagColors = ['#E3F2FD:#1565C0','#E8F5E9:#2E7D32','#FFF3E0:#E65100','#F3E5F5:#6A1B9A','#E0F7FA:#00695C'];
-  document.getElementById('pc-tags').innerHTML = s.tags.map((t,i) => {
-    const [bg,col] = tagColors[i % tagColors.length].split(':');
-    return `<span class="pc-tag" style="background:${bg};color:${col}">${t}</span>`;
-  }).join('');
-
-  // Google 이미지 검색 URL
   document.getElementById('pc-btn-img').href = `https://www.google.com/search?q=${encodeURIComponent(s.q)}&tbm=isch`;
   document.getElementById('pc-btn-yt').href = `https://www.youtube.com/results?search_query=${encodeURIComponent(s.yt)}`;
-
   document.getElementById('ov').classList.add('on');
 }
-
 function cp() { document.getElementById('ov').classList.remove('on'); }
 function ovc(e) { if (e.target === document.getElementById('ov')) cp(); }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { cp(); closeBudget(); } });
 
-// ── 가계부 ──
+// 텍스트 수정 및 이미지
+let isEditMode = false;
+function toggleEditMode() {
+    isEditMode = !isEditMode;
+    document.querySelectorAll('.editable').forEach(el => {
+        el.setAttribute('contenteditable', isEditMode);
+        isEditMode ? el.classList.add('editing-active') : el.classList.remove('editing-active');
+    });
+    const btn = document.getElementById('edit-btn');
+    if (isEditMode) { btn.innerHTML = '✅'; btn.style.backgroundColor = '#fffde7'; btn.style.color = '#d32f2f'; } 
+    else { btn.innerHTML = '✏️'; btn.style.backgroundColor = '#fff'; btn.style.color = '#333'; }
+}
+
+function handleSpotClick(spotId) {
+    if(isEditMode) return; 
+    const img = document.getElementById('img-' + spotId);
+    if (img && img.hasAttribute('src') && img.getAttribute('src') !== "") {
+        const w = window.open("", "_blank");
+        w.document.write(`<body style="margin:0;background:#000;display:flex;justify-content:center;align-items:center;height:100vh;"><img src="${img.getAttribute('src')}" style="max-width:100%;max-height:100%;cursor:pointer" onclick="window.close()"></body>`);
+    } else {
+        document.getElementById('f-' + spotId).click();
+    }
+}
+
+function previewImage(inputElement, spotId) {
+    if (inputElement.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('img-' + spotId).setAttribute('src', e.target.result); 
+            const link = document.getElementById('link-' + spotId);
+            if(link && !link.innerHTML.includes('📷')) link.innerHTML += ' 📷';
+            const btn = document.getElementById('btn-change-' + spotId);
+            if(btn) btn.style.display = 'inline-block';
+            handleSpotClick(spotId); // 팝업 띄우기
+        }
+        reader.readAsDataURL(inputElement.files[0]);
+    }
+}
+
+function saveDocument() {
+    if(isEditMode) toggleEditMode(); 
+    document.querySelectorAll('input[type="file"]').forEach(i => i.value = "");
+    const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '스위스_일정표_수정본.html'; a.click();
+    alert("저장되었습니다!");
+}
+
+// BUDGET
 let bd = {};
 try { const s = localStorage.getItem('jw_b'); if (s) bd = JSON.parse(s); } catch(e) {}
-const DL = {1:'DAY 1 · 7/14',2:'DAY 2 · 7/15',3:'DAY 3 · 7/16',4:'DAY 4 · 7/17',5:'DAY 5 · 7/18',6:'DAY 6 · 7/19',7:'DAY 7 · 7/20',8:'DAY 8 · 7/21'};
-
 function openBudget()  { document.getElementById('budget-overlay').classList.add('on'); bRender(); }
 function closeBudget() { document.getElementById('budget-overlay').classList.remove('on'); }
 function bOvc(e) { if (e.target === document.getElementById('budget-overlay')) closeBudget(); }
-function bSave() { try { localStorage.setItem('jw_b', JSON.stringify(bd)); } catch(e) {} }
-
+function bSave() { try { localStorage.setItem('jw_b', JSON.stringify(bd)); document.getElementById('expense-data').value=JSON.stringify(bd); } catch(e) {} }
 function bAdd() {
-  const day = document.getElementById('sd').value;
-  const cat = document.getElementById('sc').value;
-  const desc = document.getElementById('idd').value.trim();
-  const chf = parseFloat(document.getElementById('ichf').value) || 0;
-  const krw = parseInt(document.getElementById('ikrw').value) || 0;
-  if (!desc) { alert('내역을 입력해주세요.'); return; }
-  if (!bd[day]) bd[day] = [];
-  bd[day].push({ id: Date.now(), cat, desc, chf, krw });
-  document.getElementById('idd').value = '';
-  document.getElementById('ichf').value = '';
-  document.getElementById('ikrw').value = '';
+  const d = document.getElementById('sd').value, c = document.getElementById('sc').value, t = document.getElementById('idd').value;
+  const cf = parseFloat(document.getElementById('ichf').value)||0, kr = parseInt(document.getElementById('ikrw').value)||0;
+  if(!t)return alert('내역 입력 요망');
+  if(!bd[d]) bd[d]=[]; bd[d].push({id:Date.now(),cat:c,desc:t,chf:cf,krw:kr});
+  document.getElementById('idd').value='';document.getElementById('ichf').value='';document.getElementById('ikrw').value='';
   bSave(); bRender();
 }
-function bDel(day, id) {
-  if (!confirm('삭제할까요?')) return;
-  bd[day] = bd[day].filter(e => e.id !== id);
-  bSave(); bRender();
-}
+function bDel(d,i) { if(confirm('삭제?')){bd[d]=bd[d].filter(e=>e.id!==i); bSave(); bRender();} }
 function bRender() {
-  const rate = parseFloat(document.getElementById('rate').value) || 1550;
-  let tc = 0, tk = 0, tn = 0;
-  const list = document.getElementById('blist');
-  list.innerHTML = '';
-  const empty = Object.keys(bd).every(k => !bd[k] || !bd[k].length);
-  if (empty) {
-    list.innerHTML = '<div class="bempty">아직 지출 내역이 없습니다<br><small>위 양식에서 지출을 추가하세요</small></div>';
-  } else {
-    for (let i = 1; i <= 8; i++) {
-      const items = (bd[i] || []); if (!items.length) continue;
-      let dc = 0, dk = 0, html = '';
-      items.forEach(e => {
-        const kc = e.krw || Math.round(e.chf * rate);
-        dc += e.chf; dk += kc; tc += e.chf; tk += kc; tn++;
-        html += `<div class="ei"><span style="font-size:.9rem">${e.cat}</span><span class="ed">${e.desc}</span><div class="ea">${e.chf > 0 ? `<span class="ec">CHF ${e.chf.toFixed(2)}</span><br>` : ''}<span class="ek">${kc.toLocaleString()}원</span></div><button class="bdel" onclick="bDel(${i},${e.id})">✕</button></div>`;
-      });
-      list.innerHTML += `<div class="dg"><div class="dgh"><span>${DL[i]}</span><span>CHF ${dc.toFixed(2)} · ${dk.toLocaleString()}원</span></div>${html}</div>`;
-    }
+  const rate = parseFloat(document.getElementById('rate').value)||1550;
+  let tc=0, tk=0, html='';
+  for(let i=1;i<=8;i++){
+    if(!bd[i]||!bd[i].length) continue;
+    let dc=0, dk=0, m='';
+    bd[i].forEach(e=>{ const k=e.krw||Math.round(e.chf*rate); dc+=e.chf; dk+=k; tc+=e.chf; tk+=k;
+      m+=`<div class="ei"><span>${e.cat}</span><span class="ed">${e.desc}</span><div class="ea">${e.chf>0?`CHF ${e.chf}<br>`:''}<span>${k.toLocaleString()}원</span></div><button class="bdel" onclick="bDel(${i},${e.id})">✕</button></div>`;
+    });
+    html+=`<div class="dg"><div class="dgh"><span>DAY ${i}</span><span>CHF ${dc} · ${dk.toLocaleString()}원</span></div>${m}</div>`;
   }
-  document.getElementById('tc').textContent = 'CHF ' + tc.toFixed(2);
-  document.getElementById('tk').textContent = tk.toLocaleString() + ' 원';
-  document.getElementById('tn').textContent = tn + '건';
+  document.getElementById('blist').innerHTML = html||'<div class="bempty">지출 내역 없음</div>';
+  document.getElementById('tc').textContent = 'CHF '+tc.toFixed(2); document.getElementById('tk').textContent = tk.toLocaleString()+' 원';
 }
 </script>
 </body>
