@@ -110,7 +110,7 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
           <button class="header-btn btn-save" onclick="saveDocument()">💾</button>
       </div>
       <h2 style="margin-top: 35px;">🇨🇭 스위스 7박 9일 완벽 가이드</h2>
-      <p style="margin:5px 0 0; font-size:0.85rem; opacity:0.9;">피르스트 투트랙 액티비티 동선 최종 반영</p>
+      <p style="margin:5px 0 0; font-size:0.85rem; opacity:0.9;">소요시간, 관광지 설명, 동선 최종 최적화</p>
   </header>
 
 <div class="day-block">
@@ -122,13 +122,13 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
       <div class="sec-title">숙소 정보</div>
       <div class="route-box">
           🏨 <b>Radisson Blu Hotel Lucerne</b><br>
-          • 루체른역에서 <span class="time-red">도보 8분</span> 거리. 호수와 기차역 접근성이 최상인 4성급 호텔.
+          • 루체른역에서 <span class="time-red">도보 8분</span>. 호수 및 기차역 접근성이 최상인 4성급 호텔.
       </div>
       <div class="sec-title">이동 경로</div>
       <div class="route-box">
           • 17:40 취리히 공항(ZRH) 도착 ➔ 취리히 중앙역(HB) 이동<br>
           • 취리히 HB ➔ 루체른역 (기차: <span class="time-red">약 1시간 10분</span>)<br>
-          • 19:30 호텔 체크인 및 주변 산책<br>
+          • 루체른역 ➔ 호텔 이동 및 체크인 (<span class="time-red">도보 8분</span>)<br>
           <span class="price-tag price-free">교통비: CHF 0 (스패스 1등석 무료)</span>
       </div>
   </div>
@@ -136,7 +136,7 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
     <div class="rest-title">식사</div>
     <div class="rest-card">
       <div class="rest-card-head"><span class="rest-badge rb-dinner">저녁</span>
-        <div class="rest-info"><div class="rest-name">🍽 Restaurant Fritschi</div><div class="rest-sub">루체른 대표 퐁듀 맛집. 꽃무늬 외벽이 특징. <b style="color:var(--dark-red);">(숙소 도보 12분)</b></div></div>
+        <div class="rest-info"><div class="rest-name">🍽 Restaurant Fritschi</div><div class="rest-sub">한국인 입맛에 잘 맞는 덜 짠 루체른 대표 치즈 퐁듀. <b style="color:var(--dark-red);">(숙소 도보 12분)</b></div></div>
       </div>
     </div>
   </div>
@@ -150,23 +150,30 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
   <div class="sec">
       <div class="sec-title">숙소 정보</div>
       <div class="route-box">🏨 <b>Radisson Blu Hotel Lucerne</b> (연박)</div>
+      
       <div class="sec-title">오전: 리기산 (알프스의 여왕)</div>
       <div class="route-box">
-          • <b>동선:</b> 호텔 ➔ 선착장(<span class="time-red">도보 8분</span>) ➔ 비츠나우(유람선 1시간) ➔ 리기 쿨름(산악열차 30분)<br>
+          • <b>동선:</b> 호텔 ➔ 루체른 선착장(<span class="time-red">도보 8분</span>) ➔ 비츠나우(유람선 <span class="time-red">1시간</span>) ➔ 리기 쿨름(산악열차 <span class="time-red">30분</span>)<br>
           • <b>하이킹:</b> 쿨름 ➔ 슈타펠 <span class="hike-badge hb-easy">난이도: 하 (30분)</span> 내리막 코스.<br>
-          • <b>복귀:</b> 슈타펠역 ➔ 산악열차 ➔ 비츠나우 ➔ 유람선 ➔ 루체른 복귀 (<span class="time-red">약 1시간 40분</span>)
+          • <b>복귀:</b> 슈타펠역 ➔ 산악열차 ➔ 비츠나우 ➔ 유람선 ➔ 루체른 복귀 (<span class="time-red">총 소요 약 1시간 40분</span>)
       </div>
-      <div class="sec-title">오후: 루체른 시내 명소</div>
+      
+      <div class="sec-title">오후: 루체른 시내 명소 (효율적 도보 동선)</div>
       <div class="route-box">
-          • <span class="s" onclick="show('Bridge')">카펠교(Kapellbrücke)</span>: 1333년에 지어진 유럽에서 가장 오래된 목조 다리. 내부 삼각형 판화가 핵심. (선착장 <span class="time-red">도보 3분</span>)<br>
-          • <span class="s" onclick="show('Church')">예수회 교회</span>: 스위스 최초의 대형 바로크 양식 성당. 내부가 매우 화려함. (카펠교 <span class="time-red">도보 5분</span>)<br>
-          • <span class="s" onclick="show('Wall')">무제크 성벽</span>: 9개의 탑 중 일부는 내부 관람 가능하며 시내 전경 조망. (교회에서 <span class="time-red">도보 12분</span>)<br>
-          • <span class="s" onclick="show('Lion')">사자 기념비</span>: 전사한 스위스 용병들을 기리는 조각. 세계에서 가장 슬픈 조각상. (성벽에서 <span class="time-red">도보 15분</span>)<br>
-          • <b>추천 소품샵:</b> 🛍️ Casagrande (📍 Grendelstrasse 6): 정교한 오르골, 빅토리녹스 칼, 마그넷 전문. (기념비에서 <span class="time-red">도보 8분</span>)
+          ① <span class="s" onclick="show('Bridge')">카펠교(Kapellbrücke)</span>: 루체른 선착장에서 <span class="time-red">도보 3분</span>. 1333년 지어진 유럽에서 가장 오래된 목조 다리. 다리 지붕 안쪽의 삼각형 판화가 핵심.<br>
+          ② <span class="s" onclick="show('Church')">예수회 교회(Jesuitenkirche)</span>: 카펠교에서 <span class="time-red">도보 5분</span>. 스위스 최초의 대형 바로크 양식 성당으로 내부가 매우 화려함.<br>
+          ③ <span class="s" onclick="show('Wall')">무제크 성벽(Museggmauer)</span>: 교회에서 <span class="time-red">도보 12분</span>. 9개의 탑 중 일부 내부 관람 가능하며 시내 전경 조망 가능.<br>
+          ④ <span class="s" onclick="show('Lion')">사자 기념비(Löwendenkmal)</span>: 성벽에서 <span class="time-red">도보 15분</span>. 전사한 스위스 용병들을 기리는 위령비. 세계에서 가장 슬픈 조각상.<br>
+          ⑤ <b>소품샵 쇼핑:</b> 기념비에서 <span class="time-red">도보 8분</span> 거리 카사그란데 이동.
       </div>
   </div>
   <div class="rest-section">
-    <div class="rest-title">식사</div>
+    <div class="rest-title">쇼핑 & 식사</div>
+    <div class="rest-card">
+      <div class="rest-card-head"><span class="rest-badge rb-shop">소품</span>
+        <div class="rest-info"><div class="rest-name">🛍️ Casagrande (카사그란데)</div><div class="rest-sub">📍 Grendelstrasse 6. 루체른 최대 기념품샵. 정교한 오르골, 마그넷 전문.</div></div>
+      </div>
+    </div>
     <div class="rest-card"><div class="rest-card-head"><span class="rest-badge rb-lunch">점심</span><div class="rest-name">🛒 쿱(Coop) 피크닉</div><div class="rest-sub">유람선 또는 리기산 벤치에서 식사</div></div></div>
     <div class="rest-card"><div class="rest-card-head"><span class="rest-badge rb-dinner">저녁</span><div class="rest-name">🍽 Korea Town (한식 대안)</div><div class="rest-sub">현지식에 물렸을 때 추천 <b style="color:var(--dark-red);">(숙소 도보 5분)</b></div></div></div>
   </div>
@@ -183,16 +190,25 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
           🏨 <b>Grindelwald Belvedere</b><br>
           • 그린델발트역에서 <span class="time-red">도보 5분</span>. 아이거 북벽 뷰가 환상적인 정통 스위스 샬레 호텔.
       </div>
-      <div class="sec-title">등정 경로 & 팁</div>
+      <div class="sec-title">이동 및 발권 (가이드 차량)</div>
       <div class="route-box">
-          • 오전 이동: 루체른 ➔ 그린델발트 (가이드 차량 <span class="time-red">1시간 30분</span>) ➔ 체크인 ➔ 터미널 이동 (<span class="time-red">차량 5분</span>)<br>
-          • <b>동신항운 쿠폰:</b> 터미널 매표소에서 <b>스패스+쿠폰</b>을 제시하고 티켓 구매.<br>
+          • 오전: 루체른 ➔ 그린델발트 (가이드 차량 <span class="time-red">1시간 30분</span>) ➔ 호텔 체크인<br>
+          • 호텔 ➔ 그린델발트 터미널 (가이드 차량 <span class="time-red">5분</span>)<br>
+          • <b>발권 팁:</b> 터미널 매표소에서 <b>'동신항운 할인쿠폰 + 스위스 트래블 패스'</b>를 함께 제시하여 가장 저렴하게 티켓 구매.
+      </div>
+      <div class="sec-title">등정 경로 & 즐길 거리</div>
+      <div class="route-box">
           • <b>등정:</b> 아이거 익스프레스 곤돌라(<span class="time-red">20분</span>) ➔ 아이거글렛처 ➔ 산악열차(<span class="time-red">35분</span>) ➔ 정상<br>
-          • <b>정상 즐길 거리:</b> 스핑크스 전망대(조망), 얼음궁전(빙하 조각), 고원지대(스위스 깃발 포토존), 무료 신라면
+          • <b>정상 관광:</b> <br>
+          &nbsp;&nbsp;1) 스핑크스 전망대(유럽에서 가장 높은 야외 천문대 조망)<br>
+          &nbsp;&nbsp;2) 얼음궁전(거대한 빙하 내부 조각상 관람)<br>
+          &nbsp;&nbsp;3) 고원지대(스위스 국기가 꽂힌 야외 만년설 포토존)<br>
+          &nbsp;&nbsp;4) 카페테리아 무료 신라면 시식
       </div>
       <div class="sec-title">복귀 경로</div>
       <div class="route-box">
-          • 정상 ➔ 산악열차 ➔ 아이거글렛처 ➔ 아이거 익스프레스 하산 ➔ 터미널 ➔ 로컬 버스(121번 등) ➔ 호텔 정문 하차
+          • 융프라우요흐 ➔ 산악열차(<span class="time-red">35분</span>) ➔ 아이거글렛처 ➔ 아이거 익스프레스 하산(<span class="time-red">20분</span>) ➔ 그린델발트 터미널<br>
+          • 터미널 ➔ 로컬 버스 121번/122번 탑승 (<span class="time-red">약 8분</span>) ➔ 호텔 정문 바로 앞 하차
       </div>
   </div>
   <div class="rest-section">
@@ -214,38 +230,39 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
       <div class="sec-title">숙소 정보</div>
       <div class="route-box">🏨 <b>Grindelwald Belvedere</b> (연박)</div>
       
-      <div class="sec-title">🎫 액티비티 발권 팁 (매우 중요)</div>
+      <div class="sec-title">🎫 액티비티 발권 및 탑승 팁 (중요)</div>
       <div class="route-box">
-          • 하단 피르스트 곤돌라 매표소(숙소 <span class="time-red">도보 15분</span>)에서 <b>부모님은 곤돌라+액티비티 2종 패키지 일괄 구매</b> (스패스 50% 할인).<br>
-          • <b>딸은 패밀리카드로 곤돌라 100% 무료!</b> 딸의 몫으로는 액티비티 단품 2종만 결제.
+          • 호텔에서 피르스트 하단 곤돌라 승강장(Firstbahn) 매표소로 이동 (<span class="time-red">도보 15분</span>)<br>
+          • <b>발권:</b> 현장 매표소에서 <b>'어드벤처 패키지(곤돌라+액티비티 2종)'</b> 일괄 구매.<br>
+          • <b>할인:</b> 부모님은 스위스 패스로 곤돌라 50% 할인. 딸(15세)은 <b>패밀리 카드로 곤돌라 100% 무료!</b> (딸은 액티비티 2종 단품 가격만 별도 지불)
       </div>
 
-      <div class="sec-title">플라이어 대기줄 대비 2가지 동선 전략</div>
-      <div class="route-box" style="background:#fff; border:2px solid var(--blue);">
-          <b>[전략 1] 얼리버드 정석 (동선 낭비 제로)</b><br>
-          ① 첫 곤돌라로 피르스트 정상 직행<br>
-          ② 🏔️ <span class="s" onclick="show('Bachalp')">바흐알프제</span> 하이킹 (바람 적은 오전에 반영이 예쁨, <span class="time-red">왕복 1.5~2시간</span>, <span class="hike-badge hb-easy">난이도: 하</span>)<br>
-          ③ 피르스트 <span class="s" onclick="show('Cliff')">클리프워크</span> 구경<br>
-          ④ 정상에서 <b>플라이어</b> 탑승 ➔ 슈렉펠트 하차<br>
-          ⑤ 슈렉펠트에서 <b>마운틴 카트</b> 탑승 ➔ 보르트(Bort) 하차<br>
+      <div class="sec-title">등정 및 2가지 선택 동선 전략</div>
+      <div class="route-box">
+          • 하단 승강장 ➔ 피르스트 정상 곤돌라 등정 (<span class="time-red">25분</span>)<br><br>
+          <b>[전략 1] 얼리버드 정석 (추천: 동선 낭비 제로)</b><br>
+          ① 아침 일찍 도착 후 🏔️ <span class="s" onclick="show('Bachalp')">바흐알프제 호수</span> 하이킹 (바람 적은 오전에 수면 반영이 선명함, <span class="time-red">왕복 1.5~2시간</span>, <span class="hike-badge hb-easy">난이도: 하</span>)<br>
+          ② 복귀 후 피르스트 <span class="s" onclick="show('Cliff')">클리프워크</span>(절벽 구름다리) 구경<br>
+          ③ 피르스트 정상에서 <b>플라이어(짚라인)</b> 탑승 (<span class="time-red">약 2분 소요</span>) ➔ 슈렉펠트 하차<br>
+          ④ 슈렉펠트에서 <b>마운틴 카트</b> 탑승 (<span class="time-red">약 15~20분 소요</span>) ➔ 보르트(Bort) 하차<br>
           <hr style="margin:10px 0; border:0; border-top:1px dashed #ccc;">
-          <b>[전략 2] 곤돌라 역주행 (액티비티 대기줄 완벽 차단)</b><br>
-          ① 정상 도착 ➔ <span class="s" onclick="show('Cliff')">클리프워크</span> 구경<br>
-          ② 대기줄이 생기기 전 <b>플라이어</b> 1등으로 탑승 ➔ 슈렉펠트 하차<br>
-          ③ 슈렉펠트에서 <b>곤돌라를 타고 다시 정상으로 복귀</b><br>
-          ④ 정상에서 여유롭게 🏔️ <span class="s" onclick="show('Bachalp')">바흐알프제</span> 하이킹<br>
+          <b>[전략 2] 곤돌라 역주행 (목적: 성수기 액티비티 대기줄 차단)</b><br>
+          ① 정상 도착 직후 <span class="s" onclick="show('Cliff')">클리프워크</span> 구경<br>
+          ② 대기줄 생기기 전 <b>플라이어</b> 1등으로 탑승 ➔ 슈렉펠트 하산<br>
+          ③ 슈렉펠트에서 <b>곤돌라 타고 피르스트 정상으로 다시 복귀</b> (<span class="time-red">약 10분</span>)<br>
+          ④ 정상에서 여유롭게 🏔️ <span class="s" onclick="show('Bachalp')">바흐알프제</span> 하이킹 진행<br>
           ⑤ 하이킹 후 곤돌라 타고 슈렉펠트 하산 ➔ <b>마운틴 카트</b> 탑승 ➔ 보르트 하차
       </div>
       <div class="sec-title">복귀 경로</div>
       <div class="route-box">
-          • 보르트(Bort)역 ➔ 곤돌라 탑승 ➔ 마을 역 하차 ➔ 호텔 복귀
+          • 보르트(Bort)역 ➔ 곤돌라 탑승 (<span class="time-red">10~15분</span>) ➔ 마을 하단 역 하차 ➔ 호텔 복귀 (<span class="time-red">도보 15분</span>)
       </div>
   </div>
   <div class="rest-section">
     <div class="rest-title">쇼핑 & 식사</div>
     <div class="rest-card">
       <div class="rest-card-head"><span class="rest-badge rb-shop">소품</span>
-        <div class="rest-info"><div class="rest-name">🛍️ Grand Bazar Brunner</div><div class="rest-sub">📍 Dorfstrasse 133. 샬레 모양 오르골과 예쁜 나무 인형 전문점. <b style="color:var(--dark-red);">(숙소 도보 10분)</b></div></div>
+        <div class="rest-info"><div class="rest-name">🛍️ Grand Bazar Brunner</div><div class="rest-sub">📍 Dorfstrasse 133. 샬레 모양 오르골 등 산악 마을 소품 전문점. <b style="color:var(--dark-red);">(숙소 도보 10분)</b></div></div>
       </div>
     </div>
     <div class="rest-card"><div class="rest-card-head"><span class="rest-badge rb-lunch">점심</span><div class="rest-name">🛒 쿱(Coop) 피크닉</div><div class="rest-sub">정상 야외 테라스석 추천</div></div></div>
@@ -261,15 +278,26 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
   <div class="sec">
       <div class="sec-title">숙소 정보</div>
       <div class="route-box">🏨 <b>Grindelwald Belvedere</b> (연박)</div>
-      <div class="sec-title">이동 경로 및 하이킹</div>
+      
+      <div class="sec-title">오전: 인터라켄 이동 및 액티비티</div>
       <div class="route-box">
-          • <b>오전 (인터라켄):</b> 호텔 ➔ 그린델발트역 ➔ 인터라켄 동역 (기차 <span class="time-red">35분</span>). 도착 후 🪂 패러글라이딩 진행.<br>
-          • <b>오후 (뮈렌 진입):</b> 인터라켄 동역 ➔ 라우터브루넨(기차 <span class="time-red">20분</span>) ➔ 그뤼츠알프(케이블카 <span class="time-red">5분</span>) ➔ 뮈렌(산악열차 <span class="time-red">15분</span>).<br>
-          • <b>하이킹:</b> <span class="s" onclick="show('Flower')">알멘트후벨 플라워 트레일</span> (뮈렌역에서 푸니쿨라로 이동. 수많은 야생화 사이를 걷는 코스. <span class="hike-badge hb-easy">난이도: 하, 약 1시간</span>)
+          • 호텔 ➔ 그린델발트역 (<span class="time-red">도보 5분</span> 또는 호텔 무료 셔틀밴 <span class="time-red">1~2분</span>)<br>
+          • 그린델발트역 ➔ 인터라켄 동역 (기차: <span class="time-red">35분</span>)<br>
+          • 도착 후 🪂 패러글라이딩 진행.
       </div>
-      <div class="sec-title">복귀 경로 (환승 주의)</div>
+      
+      <div class="sec-title">오후: 뮈렌 마을 진입 및 하이킹</div>
       <div class="route-box">
-          • 뮈렌 ➔ 그뤼츠알프 ➔ 라우터브루넨 ➔ <b>츠바이뤼치넨(반드시 하차 후 환승!)</b> ➔ 그린델발트 ➔ 호텔
+          • 인터라켄 동역 ➔ 라우터브루넨 (기차: <span class="time-red">20분</span>)<br>
+          • 라우터브루넨 ➔ 그뤼츠알프 (케이블카: <span class="time-red">5분</span>)<br>
+          • 그뤼츠알프 ➔ 뮈렌 (산악열차: <span class="time-red">15분</span>)<br>
+          • <b>하이킹:</b> <span class="s" onclick="show('Flower')">알멘트후벨 플라워 트레일</span> (뮈렌역에서 푸니쿨라로 이동. 수많은 야생화 사이를 걷는 코스. <span class="time-red">약 1시간</span>, <span class="hike-badge hb-easy">난이도: 하</span>)
+      </div>
+      
+      <div class="sec-title">복귀 경로 (환승 극히 주의!)</div>
+      <div class="route-box">
+          • 뮈렌 ➔ 그뤼츠알프 ➔ 라우터브루넨 기차 탑승<br>
+          • <b>[주의] 츠바이뤼치넨(Zweilütschinen)역에서 반드시 하차 후 반대편 그린델발트행 환승!</b> (<span class="time-red">복귀 총 1시간 소요</span>)
       </div>
   </div>
   <div class="rest-section">
@@ -282,7 +310,7 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
     <div class="rest-card"><div class="rest-card-head"><span class="rest-badge rb-lunch">점심</span><div class="rest-name">🍜 강촌 (한식당)</div></div></div>
     <div class="rest-card" style="border: 2.5px solid var(--gold);">
       <div class="rest-card-head"><span class="rest-badge rb-dinner" style="background:var(--gold); color:#fff;">저녁 ✅예약확정</span>
-        <div class="rest-info"><div class="rest-name">🍽 1910 Gourmet by Hausers</div><div class="rest-sub"><b>예약 시간: 18:30</b> (호텔 내부). 미슐랭 1스타 디너 코스.</div></div>
+        <div class="rest-info"><div class="rest-name">🍽 1910 Gourmet by Hausers</div><div class="rest-sub"><b>예약 시간: 18:30</b> (호텔 내부). 미슐랭 1스타 파인다이닝 코스.</div></div>
       </div>
     </div>
   </div>
@@ -297,14 +325,15 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
       <div class="sec-title">숙소 정보</div>
       <div class="route-box">
           🏨 <b>Riffelalp Resort 2222m</b><br>
-          • 해발 2222m에 위치. 마터호른이 정면으로 보이는 5성급 럭셔리 리조트. 체르마트에서 산악열차로 <span class="time-red">15분</span> 소요.
+          • 해발 2222m. 마터호른이 정면으로 보이는 5성급 럭셔리 휴양 리조트. 체르마트에서 산악열차로 <span class="time-red">15분</span> 소요.
       </div>
       <div class="sec-title">이동 경로 및 수하물 서비스</div>
       <div class="route-box">
-          • 그린델발트 ➔ 가이드 차량 탑승 ➔ 외시넨 & 블라우 호수 투어 ➔ 테쉬역 하차 (차량 <span class="time-red">약 2시간</span>)<br>
+          • 오전: 그린델발트 ➔ 외시넨 & 블라우 호수 투어 ➔ 테쉬(Täsch)역 (가이드 차량 순수 이동 <span class="time-red">약 2시간~2시간 30분</span>)<br>
+          • <b>[짐 서비스]</b> 체르마트역 도착 시간을 리조트에 미리 알리면, 전담 포터가 기차역으로 마중 나와 짐을 픽업해 갑니다.<br>
           • 테쉬역 ➔ 셔틀 기차 ➔ 체르마트역 하차 (<span class="time-red">12분</span>)<br>
-          • <b>[짐 서비스]</b> 체르마트역 도착 시간을 호텔에 미리 알리면 직원이 역에서 짐을 수거해 감.<br>
-          • 체르마트역 맞은편 GGB 매표소 ➔ 산악열차 ➔ 리펠알프역 하차 (<span class="time-red">15분</span>) ➔ 호텔 전용 트램 ➔ 체크인
+          • 체르마트역 맞은편 도보 1분 거리의 GGB 매표소 이동<br>
+          • 고르너그라트 산악열차 탑승 ➔ 리펠알프역 하차 (<span class="time-red">15분</span>) ➔ 호텔 전용 트램 탑승 ➔ 리조트 로비 (<span class="time-red">5분</span>)
       </div>
   </div>
   <div class="rest-section">
@@ -324,8 +353,9 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
       <div class="sec-title">이동 및 복귀 경로</div>
       <div class="route-box">
           • <b>등정:</b> 리펠알프역 ➔ 산악열차 ➔ 고르너그라트 전망대 (<span class="time-red">약 20분</span>)<br>
-          • <b>하이킹:</b> 전망대 ➔ 로텐보덴(Rotenboden)역 ➔ 🏔️ <span class="s" onclick="show('Riffelsee')">리펠제(Riffelsee)</span> 호수 반영 감상 (<span class="time-red">왕복 40분</span>, <span class="hike-badge hb-norm">난이도: 중하</span>)<br>
-          • <b>복귀:</b> 로텐보덴역 ➔ 산악열차 하산 ➔ 리펠알프역 하차 ➔ <span class="time-red">도보 5분</span> ➔ 호텔 복귀
+          • 고르너그라트 정상 관광 후 ➔ 로텐보덴(Rotenboden)역 이동 (산악열차 <span class="time-red">5분</span>)<br>
+          • <b>하이킹:</b> 로텐보덴역 출발 ➔ 🏔️ <span class="s" onclick="show('Riffelsee')">리펠제(Riffelsee)</span> 호수 반영 감상 ➔ 로텐보덴역 복귀 (순수 도보 <span class="time-red">왕복 40~50분</span>, <span class="hike-badge hb-norm">난이도: 중하</span>)<br>
+          • <b>복귀:</b> 로텐보덴역 ➔ 산악열차 하산 ➔ 리펠알프역 하차 (<span class="time-red">15분</span>) ➔ <span class="time-red">도보 5분</span> ➔ 호텔 복귀
       </div>
   </div>
   <div class="rest-section">
@@ -341,17 +371,18 @@ header { background: #d32f2f; color: white; padding: 20px; text-align: center; b
     <span class="day-title-text">7/21 (화) 베른 관광 및 귀국 출발</span>
   </div>
   <div class="sec">
-      <div class="sec-title">이동 경로</div>
+      <div class="sec-title">오전 이동 경로</div>
       <div class="route-box">
           • 리조트 체크아웃 (짐은 포터가 체르마트 역으로 내려줌)<br>
-          • 체르마트 ➔ 테쉬 (셔틀 기차 <span class="time-red">12분</span>)<br>
-          • 테쉬 가이드 차량 미팅 ➔ 베른 이동 (<span class="time-red">2시간 30분</span>)
+          • 체르마트역 ➔ 셔틀 기차 ➔ 테쉬역 하차 (<span class="time-red">12분</span>)<br>
+          • 테쉬역 가이드 차량 미팅 ➔ 베른 이동 (가이드 차량 <span class="time-red">2시간 30분</span>)
       </div>
-      <div class="sec-title">베른 핵심 관광 (수도)</div>
+      <div class="sec-title">베른 도보 관광 (수도, 약 1.5~2시간 코스)</div>
       <div class="route-box">
-          • <span class="s" onclick="show('Zyt')">시계탑(Zytglogge)</span>: 800년 된 천문 시계. 정각 4분 전부터 인형들이 나와 춤추는 쇼 진행.<br>
+          • <span class="s" onclick="show('Rose')">장미 정원(Rosengarten)</span>: 언덕 위에 위치하여 구시가지 전체의 붉은 지붕을 가장 예쁘게 조망할 수 있는 뷰 포인트.<br>
           • <span class="s" onclick="show('Bear')">곰 공원(BärenPark)</span>: 베른 도시 이름의 유래가 된 곰을 실제로 볼 수 있는 강변 공원.<br>
-          • <span class="s" onclick="show('Rose')">장미 정원(Rosengarten)</span>: 언덕 위에 위치하여 베른 구시가지 전체의 붉은 지붕을 가장 예쁘게 조망할 수 있는 뷰 포인트.
+          • <span class="s" onclick="show('Zyt')">시계탑(Zytglogge)</span>: 800년 된 천문 시계. 매시 정각 4분 전부터 인형들이 나와 춤추는 쇼 진행.<br>
+          • **연방 의사당 및 대성당:** 웅장한 고딕 건축물과 광장 산책.
       </div>
       <div class="sec-title">공항 이동</div>
       <div class="route-box">
