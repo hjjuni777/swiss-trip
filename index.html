@@ -3,148 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🇨🇭 스위스 7박 8일 완벽 가이드 & 가계부</title>
+<title>🇨🇭 스위스 7박 9일 완벽 가이드 & 가계부</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#C0392B;--dark-red:#96281B;--cream:#FDF6E3;
-  --warm-gray:#F5F0E8;--ink:#1A1208;--brown:#5D4037;
-  --gold:#D4A017;--light-gold:#F9E4A0;--green:#2E7D32;
-  --blue:#1565C0;--teal:#00695C;--border:#D4C5A9;
+  /* 모던하고 고급스러운 컬러 팔레트로 변경 */
+  --red: #E53935; --dark-red: #C62828; 
+  --cream: #F4F6F9; --ink: #2C3E50; 
+  --brown: #455A64; --blue: #1E88E5; 
+  --border: #E0E6ED; --gold: #F5A623;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--ink);}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;letter-spacing:-0.3px;}
 
 /* ── SPOT POPUP ── */
 #ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:9999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
 #ov.on{display:flex;animation:fi .2s ease;}
 @keyframes fi{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
-#popup-card{border-radius:20px;overflow:hidden;max-width:460px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.6);position:relative;}
+#popup-card{border-radius:24px;overflow:hidden;max-width:460px;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.6);position:relative;}
 .pc-visual{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;}
 .pc-visual::before{content:'';position:absolute;inset:0;background:inherit;filter:blur(0px);}
-.pc-emoji{font-size:4rem;position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));}
-.pc-tagline{font-size:.78rem;color:rgba(255,255,255,.85);margin-top:10px;position:relative;z-index:1;font-weight:500;letter-spacing:.5px;}
-.pc-info{background:#fff;padding:20px 22px 18px;}
-.pc-name{font-size:1.1rem;font-weight:900;color:var(--ink);line-height:1.3;}
-.pc-desc{font-size:.84rem;color:#555;margin-top:6px;line-height:1.6;}
+.pc-emoji{font-size:4.5rem;position:relative;z-index:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.3));}
+.pc-tagline{font-size:.8rem;color:rgba(255,255,255,.9);margin-top:10px;position:relative;z-index:1;font-weight:500;}
+.pc-info{background:#fff;padding:24px;}
+.pc-name{font-size:1.2rem;font-weight:900;color:var(--ink);line-height:1.3;}
+.pc-desc{font-size:.88rem;color:#555;margin-top:8px;}
 .pc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
-.pc-tag{font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:12px;font-family:'DM Mono',monospace;}
-.pc-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:14px;padding:12px;background:linear-gradient(135deg,#1a73e8,#1557b0);color:#fff;border:none;border-radius:10px;font-size:.88rem;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:opacity .15s;text-decoration:none;}
-.pc-btn:hover{opacity:.9;}
-.pc-btn-g{background:linear-gradient(135deg,#ea4335,#c5221f);}
-#px{position:absolute;top:10px;right:12px;background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:50%;width:30px;height:30px;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;}
+.pc-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:16px;padding:14px;background:linear-gradient(135deg,#1E88E5,#1565C0);color:#fff;border:none;border-radius:12px;font-size:.9rem;font-weight:700;cursor:pointer;transition:transform 0.2s, box-shadow 0.2s;text-decoration:none;}
+.pc-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(30,136,229,0.3);}
+.pc-btn-g{background:linear-gradient(135deg,#E53935,#C62828);}
+.pc-btn-g:hover{box-shadow:0 6px 20px rgba(229,57,53,0.3);}
+#px{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);color:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background 0.2s;}
 #px:hover{background:var(--red);}
 
 /* ── SPOT LINK ── */
-.s{color:var(--blue);font-weight:700;cursor:pointer;border-bottom:1.5px dashed var(--blue);transition:color .15s,border-color .15s;}
+.s{color:var(--blue);font-weight:700;cursor:pointer;border-bottom:1.5px dashed var(--blue);transition:all 0.2s;}
 .s:hover{color:var(--red);border-color:var(--red);}
-.s::after{content:' 📷';font-size:.75em;opacity:.6;}
-.day-header .s{color:#ffe;border-bottom-color:rgba(255,240,160,.45);}
+.s::after{content:' 📷';font-size:.75em;opacity:.5;}
+.day-header .s{color:#ffe;border-bottom-color:rgba(255,255,255,.5);}
 .day-header .s:hover{color:#fff;border-bottom-color:#fff;}
 
 /* ── HEADER & LAYOUT ── */
-header { background: #d32f2f; color: white; padding: 20px; text-align: center; border-radius: 15px 15px 0 0; position: relative; margin-bottom: 20px; }
-.btn-expense { position: absolute; top: 15px; left: 15px; background: #fff; font-size: 0.9rem; font-weight: bold; color: #1565c0; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-.header-right-btns { position: absolute; top: 15px; right: 15px; display: flex; gap: 8px; }
-.header-btn { background: #fff; font-size: 1.1rem; font-weight: bold; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: 0.2s; display: flex; align-items: center; justify-content: center; }
-.btn-edit { color: #333; }
-.btn-save { color: #d32f2f; }
-.header-btn:hover, .btn-expense:hover { background: #f8f9fa; transform: scale(1.05); }
+header { background: linear-gradient(135deg, var(--red), var(--dark-red)); color: white; padding: 25px 20px; text-align: center; border-radius: 0 0 24px 24px; position: relative; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(198,40,40,0.2); }
+.btn-expense { position: absolute; top: 20px; left: 20px; background: #fff; font-size: 0.85rem; font-weight: 900; color: var(--dark-red); border: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.2s; }
+.header-right-btns { position: absolute; top: 20px; right: 20px; display: flex; gap: 8px; }
+.header-btn { background: #fff; font-size: 1rem; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.2s; display: flex; align-items: center; justify-content: center; }
+.btn-expense:hover, .header-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
 
-.wrap{max-width:680px;margin:0 auto;padding:18px 13px 100px;}
-.day-block{background:#fff;border-radius:16px;margin-bottom:22px;box-shadow:0 3px 16px rgba(0,0,0,.08);overflow:hidden;border:1px solid var(--border);}
-.day-header{background:var(--red);color:#fff;padding:13px 20px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
-.day-num{font-family:'DM Mono',monospace;font-size:.73rem;background:rgba(255,255,255,.2);padding:2px 8px;border-radius:4px;flex-shrink:0;}
-.day-title-text{font-size:.97rem;font-weight:700;flex:1;}
-.day-date{font-size:.78rem;opacity:.78;font-family:'DM Mono',monospace;}
-.sec{padding:18px 20px 0;}
-.sec-title{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brown);margin-bottom:13px;display:flex;align-items:center;gap:6px;}
-.sec-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.wrap{max-width:720px;margin:0 auto;padding:0 15px 100px;}
+.day-block{background:#fff;border-radius:20px;margin-bottom:28px;box-shadow:0 8px 25px rgba(0,0,0,.04);overflow:hidden;border:1px solid #fff;}
+.day-header{background:linear-gradient(135deg, #E53935, #C62828);color:#fff;padding:16px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.day-num{font-family:'DM Mono',monospace;font-size:.75rem;background:rgba(255,255,255,.2);padding:4px 10px;border-radius:6px;flex-shrink:0;font-weight:700;}
+.day-title-text{font-size:1.05rem;font-weight:700;flex:1;}
 
-.route-box { background: #f8f9fa; padding: 15px; border-radius: 10px; font-size: 0.95rem; margin-bottom: 10px; border: 1px solid #eee; transition: all 0.2s; }
-.warning-box { background: #fff5f5; border: 2px solid #feb2b2; padding: 12px; border-radius: 10px; font-size: 0.85rem; color: #c53030; margin-top: 15px; transition: all 0.2s; }
-.time-red { color: #d32f2f; font-weight: bold; }
+.sec{padding:24px 24px 0;}
+.sec-title{font-size:.72rem;font-weight:900;letter-spacing:1px;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.sec-title::before{content:'';width:4px;height:12px;background:var(--blue);border-radius:2px;}
 
-.spot-link { color: #1565c0; font-weight: bold; cursor: pointer; text-decoration: underline; display: inline-block; transition: color 0.2s; }
-.spot-link:hover { color: #d32f2f; }
-.change-btn { display: none; font-size: 0.75rem; color: #777; cursor: pointer; margin-left: 5px; text-decoration: underline; vertical-align: middle; }
-.change-btn:hover { color: #d32f2f; }
+.route-box { background: #fff; padding: 18px 20px; border-radius: 12px; font-size: 0.92rem; margin-bottom: 16px; border: 1px solid var(--border); border-left: 4px solid var(--blue); box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: 0.2s; }
+.route-box:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
+.warning-box { background: #FFF5F5; border: 1px solid #FEB2B2; border-left: 4px solid #E53935; padding: 15px 20px; border-radius: 12px; font-size: 0.88rem; color: #C62828; margin-bottom: 16px; }
+.time-red { color: var(--red); font-weight: 700; background: #FFEBEE; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; }
+
+.change-btn { display: none; font-size: 0.75rem; color: #999; cursor: pointer; margin-left: 5px; text-decoration: underline; vertical-align: middle; }
+.change-btn:hover { color: var(--red); }
 input[type="file"] { display: none; }
 img.hidden-data { display: none !important; }
 
-.editing-active { border: 2px dashed #d32f2f !important; background-color: #fffde7 !important; outline: none; }
+.editing-active { border: 2px dashed #E53935 !important; background-color: #FFFDE7 !important; outline: none; border-radius: 8px; padding: 4px; }
 
 /* 식당/쇼핑 카드용 */
-.rest-section{padding:0 20px 16px;}
-.rest-title{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brown);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
-.rest-title::after{content:'';flex:1;height:1px;background:var(--border);}
-.rest-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:10px;}
-.rest-card-head{padding:10px 14px 8px;background:#fff;display:flex;align-items:flex-start;gap:8px;}
-.rest-badge{font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:2px;}
-.rb-lunch{background:#E3F2FD;color:#1565C0;border:1px solid #90CAF9;}
-.rb-dinner{background:#FCE4EC;color:#880E4F;border:1px solid #F48FB1;}
-.rb-snack{background:#F3E5F5;color:#6A1B9A;border:1px solid #CE93D8;}
-.rb-shop{background:#E8F5E9;color:#1B5E20;border:1px solid #81C784;} 
+.rest-section{padding:10px 24px 20px;}
+.rest-title{font-size:.72rem;font-weight:900;letter-spacing:1px;color:var(--brown);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.rest-title::before{content:'';width:4px;height:12px;background:var(--brown);border-radius:2px;}
+
+.rest-card{border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:12px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.02);transition:all 0.2s;}
+.rest-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.06);border-color:#d0d7de;}
+.rest-card-head{padding:14px 18px;display:flex;align-items:flex-start;gap:12px;}
+.rest-badge{font-size:.65rem;font-weight:900;padding:4px 8px;border-radius:6px;white-space:nowrap;flex-shrink:0;margin-top:2px;letter-spacing:0.5px;}
+.rb-lunch{background:#E3F2FD;color:#1565C0;}
+.rb-dinner{background:#FCE4EC;color:#C2185B;}
+.rb-shop{background:#E8F5E9;color:#2E7D32;} 
 .rest-info{flex:1;}
-.rest-name{font-size:.9rem;font-weight:700;color:var(--ink);}
-.rest-sub{font-size:.78rem;color:#666;margin-top:2px;line-height:1.5;}
-.rest-addr{font-size:.72rem;color:var(--blue);margin-top:4px;font-family:'DM Mono',monospace;cursor:pointer;text-decoration:underline;}
-.rest-addr:hover{color:var(--red);}
-.rest-score{font-size:.7rem;font-family:'DM Mono',monospace;color:#888;margin-top:4px;}
-.rest-star{color:#F4A201;}
+.rest-name{font-size:.95rem;font-weight:700;color:var(--ink);}
+.rest-sub{font-size:.82rem;color:#666;margin-top:4px;line-height:1.5;}
+.rest-score{font-size:.75rem;font-family:'DM Mono',monospace;color:#888;margin-top:6px;display:flex;align-items:center;gap:6px;}
+.rest-star{color:var(--gold);font-size:0.9rem;}
 
 /* 추가 요금 표시용 태그 */
-.price-tag{display:inline-flex;align-items:center;gap:4px;background:#FFF9E6;border:1px solid #F4A201;border-radius:5px;padding:2px 7px;font-size:.75rem;font-weight:700;color:#856200;font-family:'DM Mono',monospace;margin:3px 3px 0 0;}
-.price-free{background:#E8F5E9;border-color:#66BB6A;color:#1B5E20;}
+.price-tag{display:inline-flex;align-items:center;gap:6px;background:#FFF8E1;border:1px solid #FFE082;border-radius:6px;padding:4px 10px;font-size:.78rem;font-weight:700;color:#F57F17;margin-top:8px;}
+.price-free{background:#E8F5E9;border-color:#A5D6A7;color:#2E7D32;}
+
+/* 하이킹 배지 */
+.hike-badge{font-size:.7rem;padding:3px 8px;border-radius:6px;font-weight:700;margin-left:6px;vertical-align:middle;}
+.hb-easy{background:#E8F5E9;color:#2E7D32;border:1px solid #C8E6C9;}
+.hb-norm{background:#FFF3E0;color:#E65100;border:1px solid #FFE0B2;}
 
 /* 커피 카드용 */
-.coffee-section{padding:4px 20px 14px;}
-.coffee-title{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4E342E;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
-.coffee-title::after{content:'';flex:1;height:1px;background:#D7CCC8;}
-.coffee-card{background:#FFF8F5;border:1px solid #FFCCBC;border-radius:10px;padding:10px 14px;margin-bottom:8px;}
-.coffee-name{font-size:.88rem;font-weight:700;color:#4E342E;}
-.coffee-sub{font-size:.79rem;color:#666;margin-top:3px;line-height:1.5;}
-.coffee-menu{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}
-.cmenu{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:12px;background:#FFF3E0;color:#E65100;border:1px solid #FFCC80;}
-.cmenu.iced{background:#E3F2FD;color:#1565C0;border-color:#90CAF9;}
+.coffee-section{padding:10px 24px 10px;}
+.coffee-card{background:#FAFAFA;border:1px solid var(--border);border-left:4px solid #8D6E63;border-radius:12px;padding:16px 20px;margin-bottom:12px;box-shadow:0 4px 12px rgba(0,0,0,0.02);transition:all 0.2s;}
+.coffee-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.05);}
+.coffee-name{font-size:.9rem;font-weight:900;color:#4E342E;}
+.coffee-sub{font-size:.82rem;color:#666;margin-top:4px;line-height:1.5;}
+.coffee-menu{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.cmenu{font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:8px;background:#EFEBE9;color:#5D4037;}
+.cmenu.iced{background:#E3F2FD;color:#1565C0;}
 
 /* 예약 버튼 */
-.res-btn{display:inline-flex;align-items:center;gap:4px;background:var(--blue);color:#fff;padding:3px 10px;border-radius:6px;font-size:.72rem;font-weight:700;text-decoration:none;cursor:pointer;transition:opacity .15s;}
-.res-btn:hover{opacity:.85;}
+.res-btn{display:inline-flex;align-items:center;gap:4px;background:var(--blue);color:#fff;padding:4px 12px;border-radius:8px;font-size:.75rem;font-weight:700;text-decoration:none;cursor:pointer;transition:background 0.2s;}
+.res-btn:hover{background:#1565C0;}
 
 /* BUDGET PANEL */
-#budget-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:8888;align-items:flex-end;justify-content:center;}
+#budget-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:8888;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px);}
 #budget-overlay.on{display:flex;}
-#budget-panel{background:#f0f4f8;border-radius:20px 20px 0 0;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;padding:0 0 40px;}
-.bp-head{background:linear-gradient(135deg,#1565C0,#1976D2);color:#fff;padding:18px 20px 14px;display:flex;align-items:center;justify-content:space-between;}
-.bp-head h2{font-size:1.1rem;font-weight:900;}
-.bp-close{background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:50%;width:30px;height:30px;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.bp-body{padding:14px 14px 0;}
-.rate-row{background:#E3F2FD;border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px;font-size:.8rem;flex-wrap:wrap;}
-.rate-row label{color:#1565C0;font-weight:700;}
-.rate-row input{width:90px;padding:4px 8px;border:1.5px solid #90CAF9;border-radius:6px;font-family:'DM Mono',monospace;font-size:.8rem;outline:none;}
-.stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
-.stat{flex:1;min-width:110px;background:#fff;border-radius:10px;padding:11px 13px;box-shadow:0 2px 8px rgba(0,0,0,.07);}
-.stat-l{font-size:.65rem;color:#888;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;}
-.stat-v{font-size:1.05rem;font-weight:900;color:#1565C0;}
-.stat-v.red{color:#C0392B;}
-.form-card{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);}
-.form-card h3{font-size:.8rem;font-weight:700;color:#1565C0;margin-bottom:9px;}
-.frow{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:7px;}
-.frow input,.frow select{flex:1;min-width:90px;padding:8px 10px;border:1.5px solid #ddd;border-radius:8px;font-size:.81rem;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s;}
-.frow input:focus,.frow select:focus{border-color:#1565C0;}
-.badd{width:100%;padding:10px;background:linear-gradient(135deg,#1565C0,#1976D2);color:#fff;border:none;border-radius:8px;font-size:.84rem;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;}
-.dg{background:#fff;border-radius:11px;margin-bottom:10px;overflow:hidden;box-shadow:0 2px 7px rgba(0,0,0,.07);}
-.dgh{background:#1565C0;color:#fff;padding:9px 14px;font-size:.79rem;font-weight:700;display:flex;justify-content:space-between;}
-.ei{display:flex;align-items:center;gap:9px;padding:9px 14px;border-bottom:1px solid #f0f0f0;font-size:.8rem;}
+#budget-panel{background:#F4F6F9;border-radius:24px 24px 0 0;width:100%;max-width:720px;max-height:90vh;overflow-y:auto;padding:0 0 40px;box-shadow:0 -10px 40px rgba(0,0,0,0.2);}
+.bp-head{background:linear-gradient(135deg,#1E88E5,#1565C0);color:#fff;padding:24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+.bp-head h2{font-size:1.2rem;font-weight:900;}
+.bp-close{background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:0.2s;}
+.bp-close:hover{background:var(--red);}
+.bp-body{padding:20px;}
+.rate-row{background:#fff;border-radius:16px;padding:16px;margin-bottom:16px;display:flex;align-items:center;gap:12px;font-size:.9rem;box-shadow:0 4px 15px rgba(0,0,0,0.03);}
+.rate-row label{color:var(--blue);font-weight:900;}
+.rate-row input{width:100px;padding:8px 12px;border:1px solid #ddd;border-radius:8px;font-family:'DM Mono',monospace;font-size:.9rem;outline:none;}
+.rate-row input:focus{border-color:var(--blue);}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
+.stat{flex:1;min-width:120px;background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 15px rgba(0,0,0,0.03);}
+.stat-l{font-size:.7rem;color:#888;font-weight:900;letter-spacing:1px;margin-bottom:4px;}
+.stat-v{font-size:1.2rem;font-weight:900;color:var(--blue);}
+.stat-v.red{color:var(--red);}
+.form-card{background:#fff;border-radius:16px;padding:20px;margin-bottom:20px;box-shadow:0 4px 15px rgba(0,0,0,0.03);}
+.form-card h3{font-size:.9rem;font-weight:900;color:var(--ink);margin-bottom:12px;}
+.frow{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+.frow input,.frow select{flex:1;min-width:100px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:.85rem;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s;background:#FAFAFA;}
+.frow input:focus,.frow select:focus{border-color:var(--blue);background:#fff;}
+.badd{width:100%;padding:14px;background:linear-gradient(135deg,#1E88E5,#1565C0);color:#fff;border:none;border-radius:10px;font-size:.95rem;font-weight:900;cursor:pointer;margin-top:10px;transition:0.2s;}
+.badd:hover{box-shadow:0 6px 15px rgba(30,136,229,0.3);}
+.dg{background:#fff;border-radius:16px;margin-bottom:16px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.03);}
+.dgh{background:var(--blue);color:#fff;padding:12px 18px;font-size:.85rem;font-weight:900;display:flex;justify-content:space-between;}
+.ei{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--border);font-size:.85rem;}
 .ei:last-child{border-bottom:none;}
-.ed{flex:1;font-weight:500;}
-.ea{font-family:'DM Mono',monospace;font-size:.77rem;text-align:right;line-height:1.4;}
-.ec{color:#1565C0;font-weight:700;}
-.ek{color:#888;}
-.bdel{background:none;border:none;color:#ccc;cursor:pointer;font-size:.88rem;padding:2px 5px;}
-.bdel:hover{color:#C0392B;}
-.bempty{text-align:center;color:#aaa;padding:24px 14px;font-size:.82rem;}
+.ed{flex:1;font-weight:500;color:var(--ink);}
+.ea{font-family:'DM Mono',monospace;font-size:.8rem;text-align:right;line-height:1.5;}
+.ec{color:var(--blue);font-weight:900;}
+.bdel{background:#FFF5F5;border:none;color:var(--red);cursor:pointer;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:0.2s;}
+.bdel:hover{background:var(--red);color:#fff;}
+.bempty{text-align:center;color:#999;padding:40px 20px;font-size:.9rem;font-weight:500;background:#fff;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,0.03);}
 </style>
 </head>
 <body>
@@ -161,7 +164,7 @@ img.hidden-data { display: none !important; }
       <div class="pc-desc" id="pc-desc"></div>
       <div class="pc-tags" id="pc-tags"></div>
       <a id="pc-btn-img" class="pc-btn" target="_blank" rel="noopener">🔍 Google 사진 검색</a>
-      <a id="pc-btn-yt" class="pc-btn pc-btn-g" target="_blank" rel="noopener" style="margin-top:8px;">▶ YouTube 영상</a>
+      <a id="pc-btn-yt" class="pc-btn pc-btn-g" target="_blank" rel="noopener">▶ YouTube 영상 검색</a>
     </div>
   </div>
 </div>
@@ -169,22 +172,22 @@ img.hidden-data { display: none !important; }
 <div id="budget-overlay" onclick="bOvc(event)">
   <div id="budget-panel">
     <div class="bp-head">
-      <h2>💰 여행 가계부</h2>
+      <h2>💰 스위스 여행 가계부</h2>
       <button class="bp-close" onclick="closeBudget()">✕</button>
     </div>
     <div class="bp-body">
       <div class="rate-row">
-        <label>💱 환율</label>
+        <label>💱 적용 환율</label>
         <input type="number" id="rate" value="1550" step="10" oninput="bRender()">
         <span>원 / 1 CHF</span>
       </div>
       <div class="stats">
-        <div class="stat"><div class="stat-l">총 CHF</div><div class="stat-v" id="tc">CHF 0</div></div>
-        <div class="stat"><div class="stat-l">총 원화</div><div class="stat-v red" id="tk">0 원</div></div>
-        <div class="stat"><div class="stat-l">건수</div><div class="stat-v" id="tn">0건</div></div>
+        <div class="stat"><div class="stat-l">총 지출 (프랑)</div><div class="stat-v" id="tc">CHF 0</div></div>
+        <div class="stat"><div class="stat-l">총 지출 (원화)</div><div class="stat-v red" id="tk">0 원</div></div>
+        <div class="stat"><div class="stat-l">기록 건수</div><div class="stat-v" style="color:var(--ink);" id="tn">0건</div></div>
       </div>
       <div class="form-card">
-        <h3>✏️ 지출 추가</h3>
+        <h3>✏️ 새로운 지출 추가</h3>
         <div class="frow">
           <select id="sd">
             <option value="1">DAY 1</option><option value="2">DAY 2</option><option value="3">DAY 3</option>
@@ -193,12 +196,12 @@ img.hidden-data { display: none !important; }
           </select>
           <select id="sc"><option value="🍽️">🍽️ 식비</option><option value="🚆">🚆 교통</option><option value="🎫">🎫 입장료</option><option value="🛒">🛒 쇼핑</option><option value="🏨">🏨 숙소</option></select>
         </div>
-        <div class="frow"><input type="text" id="idd" placeholder="내역 입력" style="flex:2"></div>
+        <div class="frow"><input type="text" id="idd" placeholder="어디서 무엇을 결제하셨나요?" style="flex:2"></div>
         <div class="frow">
           <input type="number" id="ichf" placeholder="CHF 금액" min="0" step="0.5">
-          <input type="number" id="ikrw" placeholder="원화 금액" min="0" step="100">
+          <input type="number" id="ikrw" placeholder="원화 직접 입력(선택)" min="0" step="100">
         </div>
-        <button class="badd" onclick="bAdd()">+ 추가</button>
+        <button class="badd" onclick="bAdd()">+ 내역 추가하기</button>
       </div>
       <div id="blist"></div>
     </div>
@@ -214,8 +217,8 @@ img.hidden-data { display: none !important; }
           <button class="header-btn btn-edit" id="edit-btn" onclick="toggleEditMode()" title="텍스트 수정">✏️</button>
           <button class="header-btn btn-save" onclick="saveDocument()" title="현재 상태 저장">💾</button>
       </div>
-      <h2 style="margin:0; margin-top: 35px;">🇨🇭 스위스 통합 가이드</h2>
-      <p style="margin:5px 0 0; font-size:0.85rem; opacity:0.9;">파란색 글자를 눌러 사진 등록 / ✏️를 눌러 글자 수정</p>
+      <h2 style="margin:0; font-weight:900; font-size:1.4rem;">🇨🇭 프리미엄 스위스 가이드</h2>
+      <p style="margin:8px 0 0; font-size:0.85rem; opacity:0.9; font-weight:500;">파란색 글자를 눌러 사진 등록 / ✏️를 눌러 텍스트 수정</p>
   </header>
 
 <div class="day-block">
@@ -227,8 +230,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
   
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link" id="link-h1" onclick="handleSpotClick('h1')">🏨 Radisson Blu Hotel Lucerne</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" id="link-h1" onclick="handleSpotClick('h1')" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Radisson Blu Hotel Lucerne</span>
       <span id="btn-change-h1" class="change-btn" onclick="document.getElementById('f-h1').click()">[변경]</span>
       <input type="file" id="f-h1" accept="image/*" onchange="previewImage(this, 'h1')"><img id="img-h1" class="hidden-data">
   </div>
@@ -296,8 +299,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
   
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link">🏨 Radisson Blu Hotel Lucerne (연박)</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Radisson Blu Hotel Lucerne (연박)</span>
   </div>
 
   <div class="sec"><div class="sec-title editable">오전: 리기산 등정 및 하이킹</div>
@@ -311,13 +314,13 @@ img.hidden-data { display: none !important; }
           <span class="price-tag price-free">가족 총 추가비용: CHF 0 (스위스패스 전면 무료)</span>
       </div>
       
-      <div class="sec-title editable" style="margin-top:15px;">리기산 복귀 구간 (선택한 하이킹에 따라)</div>
+      <div class="sec-title editable">리기산 복귀 구간 (선택한 하이킹에 따라)</div>
       <div class="route-box editable">
           • <b>칼트바드 하이킹 시 (가장 추천):</b> 칼트바드 → 베기스(Weggis) <span class="time-red">케이블카 10분 (뷰가 예술입니다!)</span> → 베기스 선착장 도보 이동 → 루체른 복귀 <span class="time-red">유람선 40분</span><br>
           • <b>슈타펠 하이킹 시:</b> 슈타펠역 → 비츠나우 <span class="time-red">산악열차 15분 (내려갈 땐 오른쪽 좌석 추천)</span> → 루체른 선착장 복귀 <span class="time-red">유람선 1시간</span>
       </div>
 
-      <div class="sec-title editable" style="margin-top:15px;">오후: 루체른 시내 관광 명소</div>
+      <div class="sec-title editable">오후: 루체른 시내 관광 명소</div>
       <div class="route-box editable">
           • <span class="spot-link">카펠교</span>: 가장 오래된 목조 다리. 내부 판화 감상. (선착장에서 <span class="time-red">도보 3분</span>)<br>
           • <span class="spot-link">예수회 교회</span>: 스위스 최초의 대형 바로크 양식 성당. (카펠교에서 <span class="time-red">도보 5분</span>)<br>
@@ -396,8 +399,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
 
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link" id="link-bel" onclick="handleSpotClick('bel')">🏨 Grindelwald Belvedere</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" id="link-bel" onclick="handleSpotClick('bel')" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Grindelwald Belvedere</span>
       <span id="btn-change-bel" class="change-btn" onclick="document.getElementById('f-bel').click()">[변경]</span>
       <input type="file" id="f-bel" accept="image/*" onchange="previewImage(this, 'bel')"><img id="img-bel" class="hidden-data">
   </div>
@@ -410,10 +413,10 @@ img.hidden-data { display: none !important; }
           • <b>[티켓 구매]</b> 터미널 매표소에서 <b>'동신항운 쿠폰 + 스패스'</b> 제시하여 융프라우 발권<br>
           • 터미널 → 아이거글렛처 <span class="time-red">아이거 익스프레스 곤돌라 20분</span> (진행 방향을 등지고 타거나 오른쪽이 뷰가 좋습니다.)<br>
           • 아이거글렛처 → 🏔️ 융프라우요흐 정상 <span class="time-red">산악열차 35분</span> (올라갈 때 <b>오른쪽 좌석 추천</b>)<br>
-          <span class="price-tag">가족 총 추가비용: CHF 310 (동신항운+스패스 할인, 신라면 포함)</span>
+          <span class="price-tag price-free">가족 총 추가비용: CHF 310 (동신항운+스패스 할인, 신라면 포함)</span>
       </div>
 
-      <div class="sec-title editable" style="margin-top:15px;">정상 관광 및 복귀 경로</div>
+      <div class="sec-title editable">정상 관광 및 복귀 경로</div>
       <div class="route-box editable">
           • <b>[정상 활동]</b> 스핑크스 전망대(조망) / 얼음궁전(빙하 조각상) / 고원지대(야외 만년설 스위스 깃발 포토존) / 무료 신라면 즐기기<br>
           • <b>[복귀 하산]</b> 융프라우요흐 → 아이거글렛처 <span class="time-red">산악열차 35분</span><br>
@@ -466,8 +469,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
 
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link">🏨 Grindelwald Belvedere (연박)</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Grindelwald Belvedere (연박)</span>
   </div>
 
   <div class="sec"><div class="sec-title editable">등정 경로 및 티켓 발권</div>
@@ -478,14 +481,14 @@ img.hidden-data { display: none !important; }
           <span class="price-tag">가족 총 추가비용: 약 CHF 72 (액티비티 비용 제외)</span>
       </div>
       
-      <div class="sec-title editable" style="margin-top:15px;">액티비티 & 하이킹 (동선 2가지 중 택 1)</div>
+      <div class="sec-title editable">액티비티 & 하이킹 (동선 2가지 중 택 1)</div>
       <div class="route-box editable">
           <b>[선택 1] 얼리버드 정석 (추천: 동선 낭비 없음)</b><br>
           ① 피르스트 정상 도착 직후 🏔️ 바흐알프제 하이킹 <span class="time-red">왕복 1.5~2시간 소요</span><br>
           ② 복귀 후 피르스트 클리프워크 절벽 구름다리 구경<br>
           ③ <b>플라이어(짚라인)</b> 탑승 <span class="time-red">약 2분 비행</span> ➔ 슈렉펠트 하차<br>
           ④ 슈렉펠트에서 <b>마운틴 카트</b> 탑승 <span class="time-red">약 15~20분 주행</span> ➔ 보르트(Bort) 하차<br>
-          <hr style="margin:10px 0; border:0; border-top:1px dashed #ccc;">
+          <hr style="margin:12px 0; border:0; border-top:1px dashed #E0E6ED;">
           <b>[선택 2] 곤돌라 역주행 (목적: 성수기 대기줄 완전 차단)</b><br>
           ① 피르스트 정상 도착 직후 클리프워크 구경<br>
           ② 대기줄이 생기기 전 1등으로 <b>플라이어</b> 탑승 ➔ 슈렉펠트 하차<br>
@@ -494,7 +497,7 @@ img.hidden-data { display: none !important; }
           ⑤ 하이킹 후 곤돌라 타고 슈렉펠트로 하산 후 <b>마운틴 카트</b> 탑승 ➔ 보르트 하차
       </div>
 
-      <div class="sec-title editable" style="margin-top:15px;">최종 복귀 경로</div>
+      <div class="sec-title editable">최종 복귀 경로</div>
       <div class="route-box editable">
           • 보르트(Bort)역 → 하단 승강장 <span class="time-red">곤돌라 10~15분</span><br>
           • 하단 승강장 → 호텔 복귀 <span class="time-red">도보 15분</span>
@@ -560,8 +563,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
 
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link">🏨 Grindelwald Belvedere (연박)</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Grindelwald Belvedere (연박)</span>
   </div>
 
   <div class="sec"><div class="sec-title editable">오전 일정 및 이동</div>
@@ -571,12 +574,12 @@ img.hidden-data { display: none !important; }
           • 도착 후 🪂 <b>패러글라이딩</b> 진행
       </div>
       
-      <div class="sec-title editable" style="margin-top:15px;">오후 뮈렌 진입 및 2가지 하이킹/산책 코스</div>
+      <div class="sec-title editable">오후 뮈렌 진입 및 2가지 하이킹/산책 코스</div>
       <div class="route-box editable">
           • 인터라켄 동역 → 라우터브루넨 <span class="time-red">기차 20분</span> (진행 방향 오른쪽 창가가 계곡 뷰 맛집입니다)<br>
           • 라우터브루넨 → 그뤼츠알프 <span class="time-red">케이블카 5분</span><br>
           • 그뤼츠알프 → 🏘️ 뮈렌BLM역 <span class="time-red">산악열차 15분</span> <b>(이때 무조건 '왼쪽' 좌석에 앉아야 융프라우 3산 절경이 완벽하게 보입니다!)</b><br><br>
-          • <b>[하이킹 1] 알멘트후벨 플라워 트레일 (7월 추천):</b> 뮈렌BLM역 도착 후 근처 푸니쿨라 승강장 이동 → 알멘트후벨 등정 → 아름다운 야생화 군락지 산책로를 따라 뮈렌 마을 방향으로 완만하게 걸어 내려오는 코스 <span class="time-red">약 1시간 소요</span><br>
+          • <b>[하이킹 1] 알멘트후벨 플라워 트레일 (7월 추천):</b> 뮈렌BLM역 도착 후 근처 푸니쿨라 승강장 이동 → 알멘트후벨 등정 → 아름다운 야생화 군락지 산책로를 따라 뮈렌 마을 방향으로 완만하게 걸어 내려오는 코스 <span class="time-red">약 1시간 소요</span> <span class="hike-badge hb-easy">난이도 하</span><br>
           • <b>[산책 2] 뮈렌 절벽 마을 산책:</b> 하이킹을 마치고 내려와서, 뮈렌의 명물인 '통나무 포토존'에서 사진을 찍고 아기자기한 샬레 건물과 깎아지른 절벽 뷰를 구경하며 마을 산책을 즐깁니다. 이후 뮈렌BLM역으로 복귀.<br>
           <span class="price-tag">가족 총 추가비용: 푸니쿨라 편도 약 CHF 7.2 (성인 50% 할인, 자녀 무료)</span>
       </div>
@@ -617,7 +620,7 @@ img.hidden-data { display: none !important; }
       </div>
     </div>
 
-    <div class="rest-card" style="border: 2.5px solid var(--gold);">
+    <div class="rest-card" style="border: 2px solid var(--gold); background: #FFFAEC;">
       <div class="rest-card-head">
         <span class="rest-badge rb-dinner" style="background:var(--gold); color:#fff;">저녁 ✅예약확정</span>
         <div class="rest-info">
@@ -638,8 +641,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
 
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link" id="link-rif" onclick="handleSpotClick('rif')">🏨 Riffelalp Resort 2222m (마터호른 주니어 스위트)</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" id="link-rif" onclick="handleSpotClick('rif')" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Riffelalp Resort 2222m (마터호른 주니어 스위트)</span>
       <span id="btn-change-rif" class="change-btn" onclick="document.getElementById('f-rif').click()">[변경]</span>
       <input type="file" id="f-rif" accept="image/*" onchange="previewImage(this, 'rif')"><img id="img-rif" class="hidden-data">
   </div>
@@ -686,8 +689,8 @@ img.hidden-data { display: none !important; }
     </span>
   </div>
 
-  <div class="editable" style="margin:20px 20px 0;">
-      <span class="spot-link">🏨 Riffelalp Resort 2222m (연박)</span>
+  <div class="editable" style="margin:24px 24px 0;">
+      <span class="spot-link" style="font-size:1.1rem; font-weight:900; color:var(--ink);">🏨 Riffelalp Resort 2222m (연박)</span>
   </div>
 
   <div class="sec"><div class="sec-title editable">등정 및 호수 하이킹</div>
@@ -698,7 +701,7 @@ img.hidden-data { display: none !important; }
           <span class="price-tag price-free">가족 총 추가비용: CHF 0 (제공 티켓 사용 시)</span>
       </div>
 
-      <div class="sec-title editable" style="margin-top:15px;">복귀 경로</div>
+      <div class="sec-title editable">복귀 경로</div>
       <div class="route-box editable">
           • 로텐보덴역 → 리펠알프역 하차 <span class="time-red">산악열차 15분</span> → 호텔 복귀 <span class="time-red">도보 5분</span>
       </div>
@@ -763,7 +766,7 @@ img.hidden-data { display: none !important; }
           • 테쉬역 가이드 차량 미팅 → 베른 시내 이동 <span class="time-red">차량 2시간 30분</span>
       </div>
 
-      <div class="sec-title editable" style="margin-top:15px;">베른 구시가지 및 공항 이동</div>
+      <div class="sec-title editable">베른 구시가지 및 공항 이동</div>
       <div class="route-box editable">
           • 🐻 <b>베른 도보 관광:</b> 장미정원, 곰 공원, 시계탑 등<br>
           • 베른 시내 → 취리히 공항 <span class="time-red">차량 1시간 30분</span><br>
@@ -854,7 +857,7 @@ function toggleEditMode() {
         isEditMode ? el.classList.add('editing-active') : el.classList.remove('editing-active');
     });
     const btn = document.getElementById('edit-btn');
-    if (isEditMode) { btn.innerHTML = '✅'; btn.style.backgroundColor = '#fffde7'; btn.style.color = '#d32f2f'; } 
+    if (isEditMode) { btn.innerHTML = '✅'; btn.style.backgroundColor = '#FFFDE7'; btn.style.color = '#E53935'; } 
     else { btn.innerHTML = '✏️'; btn.style.backgroundColor = '#fff'; btn.style.color = '#333'; }
 }
 
@@ -902,12 +905,12 @@ function bSave() { try { localStorage.setItem('jw_b', JSON.stringify(bd)); docum
 function bAdd() {
   const d = document.getElementById('sd').value, c = document.getElementById('sc').value, t = document.getElementById('idd').value;
   const cf = parseFloat(document.getElementById('ichf').value)||0, kr = parseInt(document.getElementById('ikrw').value)||0;
-  if(!t)return alert('내역 입력 요망');
+  if(!t)return alert('결제 내역을 입력해주세요.');
   if(!bd[d]) bd[d]=[]; bd[d].push({id:Date.now(),cat:c,desc:t,chf:cf,krw:kr});
   document.getElementById('idd').value='';document.getElementById('ichf').value='';document.getElementById('ikrw').value='';
   bSave(); bRender();
 }
-function bDel(d,i) { if(confirm('삭제?')){bd[d]=bd[d].filter(e=>e.id!==i); bSave(); bRender();} }
+function bDel(d,i) { if(confirm('이 내역을 삭제하시겠습니까?')){bd[d]=bd[d].filter(e=>e.id!==i); bSave(); bRender();} }
 function bRender() {
   const rate = parseFloat(document.getElementById('rate').value)||1550;
   let tc=0, tk=0, html='';
@@ -919,8 +922,9 @@ function bRender() {
     });
     html+=`<div class="dg"><div class="dgh"><span>DAY ${i}</span><span>CHF ${dc} · ${dk.toLocaleString()}원</span></div>${m}</div>`;
   }
-  document.getElementById('blist').innerHTML = html||'<div class="bempty">지출 내역 없음</div>';
+  document.getElementById('blist').innerHTML = html||'<div class="bempty">아직 기록된 지출이 없습니다.</div>';
   document.getElementById('tc').textContent = 'CHF '+tc.toFixed(2); document.getElementById('tk').textContent = tk.toLocaleString()+' 원';
+  document.getElementById('tn').textContent = (Object.values(bd).flat().length) + '건';
 }
 </script>
 </body>
