@@ -84,10 +84,6 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
 .cmenu{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:12px;background:#FFF3E0;color:#E65100;border:1px solid #FFCC80;}
 .cmenu.iced{background:#E3F2FD;color:#1565C0;border-color:#90CAF9;}
 
-/* 예약 버튼 */
-.res-btn{display:inline-flex;align-items:center;gap:4px;background:var(--blue);color:#fff;padding:3px 10px;border-radius:6px;font-size:.72rem;font-weight:700;text-decoration:none;cursor:pointer;transition:opacity .15s;}
-.res-btn:hover{opacity:.85;}
-
 /* BUDGET PANEL */
 #budget-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:8888;align-items:flex-end;justify-content:center;}
 #budget-overlay.on{display:flex;}
@@ -191,8 +187,8 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
       <div class="route-box editable">
           • <b>17:40</b> 취리히 공항(ZRH) 도착 및 입국 심사, 수하물 수령 (약 1시간 소요 예상)<br>
           • <b>18:40</b> 공항 지하 기차역(Zürich Flughafen)으로 이동 <span class="time-red">도보 5분</span><br>
-          • <b>18:39 또는 19:15</b> 루체른행 직행 기차 탑승 (IR 13 또는 IR 75)<br>
-          • <b>[꿀팁] 환승 금지!</b> 첫날 무거운 캐리어가 있으므로 취리히 중앙역(HB)에서 환승하는 표(매시 49분)는 피하고 <b>반드시 직행</b>을 타세요.<br>
+          • <b>[티켓 구매]</b> SBB 앱 결제: <b>18:39 또는 19:15</b> 루체른행 직행 기차 탑승 (IR 13 / IR 75)<br>
+          • <b>[꿀팁] 환승 금지!</b> 첫날 무거운 캐리어가 있으므로 취리히 중앙역(HB) 환승 표는 피하고 반드시 직행을 타세요.<br>
           • <b>19:51 또는 20:25</b> 루체른역 도착 ➔ 호텔 체크인 <span class="time-red">도보 8분</span><br>
           <span class="price-tag">가족 대중교통: 어른 2명 CHF 53.00 (하프 페어 카드 50% 할인, 자녀 패밀리 카드 무료)</span>
       </div>
@@ -217,33 +213,24 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
       <span class="hotel-name">🏨 Radisson Blu Hotel Lucerne (연박)</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전: 리기산 등정 및 하이킹</div>
+  <div class="sec"><div class="sec-title editable">오전: 리기산 등정 및 하이킹 (타임라인)</div>
       <div class="weather-tag editable">🌡️ 산 정상: 10~15°C | 👕 옷차림: 얇은 긴팔 + 바람막이 필수</div>
       <div class="route-box editable">
-          • <b>07:00 ~ 08:00 호텔 조식</b><br>
-          • 08:30경 호텔 출발 ➔ 루체른 선착장 <span class="time-red">도보 8분</span><br>
-          • 루체른 ➔ 비츠나우 <span class="time-red">유람선 1시간</span><br>
-          • 비츠나우 ➔ 🏔️ 리기 쿨름 <span class="time-red">산악열차 30분</span><br>
-          • <b>[이동 꿀팁]</b> 비츠나우에서 리기 쿨름으로 올라가는 산악열차 탑승 시 <b>진행 방향 '왼쪽' 좌석</b>에 앉아야 호수 뷰가 환상적입니다!<br><br>
-          • <b>[기본 하이킹 추천]</b> 리기 쿨름 ➔ 리기 칼트바드(Kaltbad) <span class="time-red">도보 약 1시간 (완만한 내리막)</span><br>
-          • <b>[선택 하이킹]</b> 걷기 힘들다면? 리기 쿨름 ➔ 리기 슈타펠(Staffel)까지만 <span class="time-red">도보 30분</span><br>
-          <span class="price-tag">가족 대중교통: 당일 아침 날씨 확인 후 루체른 ↔ 리기산 구간 SBB 결제 (어른 하프 페어 50% 적용, 자녀 패밀리 카드 무료)</span>
+          • <b>07:00 ~ 08:00</b> 호텔 조식<br>
+          • <b>08:30</b> 호텔 출발 ➔ 루체른 선착장 이동 <span class="time-red">도보 8분</span><br>
+          • <b>[티켓 구매 꿀팁]</b> 수단별로 살 필요 없이, 루체른 선착장 매표소 창구에서 <b>'리기산 순환 왕복권(Round trip)'</b>을 한 번에 결제하세요. (유람선+산악열차+케이블카 모두 포함. 하프 페어 50% 할인, 자녀 무료)<br>
+          • <b>09:12</b> 루체른 ➔ <b>10:09</b> 비츠나우 <span class="time-red">유람선 약 1시간</span><br>
+          • <b>10:15</b> 비츠나우 ➔ 🏔️ 리기 쿨름 <span class="time-red">산악열차 30분</span> (진행 방향 <b>'왼쪽'</b> 탑승!)<br>
+          • <b>10:50 ~ 12:00</b> 리기 쿨름 ➔ 리기 칼트바드(Kaltbad) <span class="time-red">도보 1시간 완만한 하이킹</span><br>
+          <span class="price-tag">가족 대중교통: 어른 2명 약 160 CHF (선착장에서 일괄 결제)</span>
       </div>
       
-      <div class="sec-title editable" style="margin-top:15px;">리기산 복귀 구간 (선택한 하이킹에 따라)</div>
+      <div class="sec-title editable" style="margin-top:15px;">오후: 하산 구간 (숨겨진 이동 주의) 및 시내 관광</div>
       <div class="route-box editable">
-          • <b>칼트바드 하이킹 시 (가장 추천):</b> 칼트바드 ➔ 베기스(Weggis) <span class="time-red">케이블카 10분 (뷰가 예술입니다!)</span> ➔ 베기스 선착장 도보 이동 ➔ 루체른 복귀 <span class="time-red">유람선 40분</span><br>
-          • <b>슈타펠 하이킹 시:</b> 슈타펠역 ➔ 비츠나우 <span class="time-red">산악열차 15분 (내려갈 땐 오른쪽 좌석 추천)</span> ➔ 루체른 선착장 복귀 <span class="time-red">유람선 1시간</span>
-      </div>
-
-      <div class="sec-title editable" style="margin-top:15px;">오후: 루체른 시내 관광 명소</div>
-      <div class="weather-tag editable">🌡️ 루체른 시내: 24~28°C | 👕 옷차림: 가벼운 여름 옷차림</div>
-      <div class="route-box editable">
-          • <b>카펠교</b>: 가장 오래된 목조 다리. 내부 판화 감상. (선착장에서 <span class="time-red">도보 3분</span>)<br>
-          • <b>예수회 교회</b>: 스위스 최초의 대형 바로크 양식 성당. (카펠교에서 <span class="time-red">도보 5분</span>)<br>
-          • <b>무제크 성벽</b>: 9개의 탑 중 일부 개방, 시내 전경 조망. (교회에서 <span class="time-red">도보 12분</span>)<br>
-          • <b>빈사의 사자상</b>: 전사한 스위스 용병들을 기리는 슬픈 조각상. (성벽에서 <span class="time-red">도보 15분</span>)<br>
-          • 소품샵 쇼핑: (기념비에서 카사그란데까지 <span class="time-red">도보 8분</span>)
+          • <b>12:10</b> 칼트바드 ➔ 베기스(Weggis) <span class="time-red">케이블카 10분</span> (뷰가 예술입니다!)<br>
+          • <b>🚨 [주의/누락 동선] 베기스 케이블카 하차 후 ➔ 베기스 선착장까지 <span class="time-red">도보 15분 (경사 있는 내리막길)</span></b><br>
+          • <b>13:05</b> 베기스 선착장 ➔ <b>13:47</b> 루체른 복귀 <span class="time-red">유람선 40분</span><br>
+          • <b>14:00 ~ 17:00</b> 루체른 시내 명소 여유롭게 도보 관광 (카펠교 ➔ 예수회 교회 ➔ 무제크 성벽 ➔ 빈사의 사자상 ➔ 카사그란데 쇼핑)
       </div>
   </div>
 
@@ -291,10 +278,6 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
         <div class="rest-info">
           <div class="rest-name">🍽 Lucide <b>(미슐랭 1스타 ⭐)</b></div>
           <div class="rest-sub">KKL 내 위치. 루체른 호수 뷰와 정교한 프렌치 베이스 다이닝. <b style="color:var(--dark-red);">(숙소에서 도보 5분)</b></div>
-          <div class="rest-score">
-            <span class="rest-star">★</span> 4.7 
-            <a class="res-btn" href="https://www.lucide-luzern.ch/en/menu/" target="_blank">📅 예약 링크</a>
-          </div>
         </div>
       </div>
     </div>
@@ -407,23 +390,24 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
           • <b>[점심 식사]</b> 융프라우 정상 카페테리아에서 VIP 패스로 제공받은 <b>신라면</b>으로 몸을 녹인 후, 하산하는 산악열차에 탑승해 <b>준비해온 샌드위치</b>를 곁들여 피크닉처럼 즐깁니다.
       </div>
       
-      <div class="sec-title editable" style="margin-top:15px;">상세 하산 경로 및 뮈렌 이동</div>
+      <div class="sec-title editable" style="margin-top:15px;">상세 하산 경로 및 호텔 짐 보관(환복)</div>
       <div class="route-box editable">
           • 11:10 ~ 11:45 융프라우요흐 ➔ 아이거글렛처 <span class="time-red">산악열차 35분</span><br>
           • 11:50 ~ 12:10 아이거글렛처 ➔ 그린델발트 터미널 <span class="time-red">아이거 익스프레스 20분</span><br>
-          • 12:15 ~ 12:20 그린델발트 터미널 ➔ 그린델발트역 <span class="time-red">기차 5분 소요</span>
+          • 12:15 ~ 12:20 그린델발트 터미널 ➔ 그린델발트역 <span class="time-red">기차 5분 소요</span><br>
+          • <b>12:25 ~ 13:00 🏨 호텔 들러 짐 보관 (도보 5분):</b> 무거운 패딩과 겨울 옷은 객실에 던져두고, 뮈렌 하이킹을 위해 얇고 가벼운 옷차림과 작은 가방만 챙겨서 다시 나옵니다!
       </div>
 
       <div class="sec-title editable" style="margin-top:15px;">오후: 절벽 마을 뮈렌 & 하이킹</div>
       <div class="weather-tag editable">🌡️ 뮈렌 마을: 15~20°C | 👕 옷차림: 가벼운 긴팔 + 얇은 겉옷</div>
       <div class="route-box editable">
-          • 13:18 그린델발트역 출발 ➔ 츠바이뤼치넨(환승) ➔ 14:10 뮈렌(Mürren)역 도착 <span class="time-red">기차 약 50분 소요</span><br>
+          • 13:18 그린델발트역 출발 ➔ 츠바이뤼치넨(기차 환승) ➔ 라우터브루넨역 하차 ➔ 케이블카로 그뤼취알프(Grütschalp) 이동 ➔ 산악열차로 환승하여 <b>14:41 뮈렌(Mürren BLM) 도착</b> <span style="color:#C0392B; font-weight:bold;">(총 약 1시간 25분 소요)</span><br>
           • <b>[티켓 구매]</b> 알멘트후벨 푸니쿨라 승강장 매표소에서 왕복권 현장 구매 (어른 <b>하프 페어 카드 50% 할인</b>, 자녀 패밀리카드 무료).<br>
-          • 14:15 ~ 16:15 🏘️ <b>뮈렌 마을 & 알멘트후벨</b><br>
+          • 14:45 ~ 16:40 🏘️ <b>뮈렌 마을 & 알멘트후벨</b><br>
           &nbsp;&nbsp;- 뮈렌 통나무 포토존 사진 촬영 후 푸니쿨라로 알멘트후벨 등정 <span class="time-red">산악열차 5분</span><br>
           &nbsp;&nbsp;- 플라워 트레일을 따라 뮈렌 마을로 완만하게 하이킹 <span class="time-red">도보 약 1시간</span><br>
-          • 16:40 뮈렌 출발 ➔ 17:38 그린델발트역 복귀 <span class="time-red">기차 약 1시간 소요</span> ➔ 호텔 정비<br>
-          • 19:15 ~ 🍽️ <b>Restaurant Schmitte</b> (최상급 스테이크 석식)
+          • 17:06 뮈렌 출발 ➔ 18:08 그린델발트역 복귀 <span class="time-red">기차 약 1시간 소요</span> ➔ 호텔 복귀 및 휴식<br>
+          • 19:15 ~ 🍽️ <b>저녁 식사 (선택)</b>: 식당(Restaurant Schmitte 등)에 가시거나, 하이킹 후 피곤하시다면 <b>쿱(Coop) 마트에서 사 온 음식이나 한국에서 가져온 햇반, 컵밥 등으로 객실에서 간단하고 편하게</b> 드시는 것을 강력 추천합니다.
       </div>
   </div>
 
@@ -441,27 +425,27 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
     <span class="day-title-text">7/18 (토) <b>피르스트</b>(오픈런) & 패러글라이딩 & 미슐랭</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전: 피르스트 오픈런 전략 (액티비티 대기 0분)</div>
+  <div class="sec"><div class="sec-title editable">오전: 피르스트 100점 오픈런 전략</div>
       <div class="weather-tag editable">🌡️ 피르스트: 10~15°C | 👕 옷차림: 활동하기 편한 긴팔 + 겉옷</div>
       <div class="route-box editable">
           • <b>07:30</b> 기상 및 프론트에서 <b>조식 도시락 수령</b><br>
-          • <b>08:00</b> 피르스트 하단 승강장으로 이동 <span class="time-red">도보 15분</span><br>
-          • <b>08:30</b> 🚠 <b>피르스트 곤돌라 첫차 탑승</b> (대기 중 또는 곤돌라 안에서 조식 해결)<br>
-          • <b>09:00</b> 🚀 <b>액티비티 선점 (관광객이 몰리기 전 1등으로 탑승!)</b><br>
-          &nbsp;&nbsp; - 피르스트 정상 도착 즉시 <b>플라이어(짚라인)</b> 탑승 ➔ 슈렉펠트 하차<br>
-          &nbsp;&nbsp; - 슈렉펠트에서 <b>마운틴 카트</b> 바로 탑승 ➔ 보르트(Bort) 하차<br>
-          • <b>09:40</b> 🥾 <b>역주행 하이킹 (보르트 ➔ 정상 ➔ 바흐알프제)</b><br>
-          &nbsp;&nbsp; - 보르트 승강장에서 곤돌라를 타고 다시 <b>피르스트 정상</b>으로 역주행 복귀<br>
-          &nbsp;&nbsp; - 클리프워크 절벽 다리 감상 후 🏔️ <b>바흐알프제 호수 하이킹</b><br>
-          • <b>11:50</b> 피르스트 정상에서 곤돌라 최종 하산 ➔ 피르스트 하단 승강장 도착
+          • <b>08:00 ~ 08:30</b> 하단 승강장 도착 및 줄 서기 (대기하며 조식 해결)<br>
+          • <b>[티켓 확인]</b> 어제 미리 산 액티비티 티켓 준비! (곤돌라는 VIP 패스로 무료 탑승)<br>
+          • <b>08:30</b> 🚠 <b>곤돌라 첫차 탑승</b> ➔ 08:55 정상 도착<br>
+          • <b>09:00 ~ 09:40</b> 🚀 <b>액티비티 1: 플라이어 (정상 ➔ 슈렉펠트)</b> (오픈 즉시 1등 탑승!)<br>
+          • <b>09:40 ~ 10:20</b> 🏎️ <b>액티비티 2: 마운틴 카트 (슈렉펠트 ➔ 보르트)</b><br>
+          • <b>10:20 ~ 10:40</b> 🚠 보르트 승강장에서 <b>정상으로 역주행 복귀</b><br>
+          • <b>10:40 ~ 11:10</b> 🌁 클리프워크 절벽 다리 걷기 및 사진 촬영<br>
+          • <b>11:10 ~ 13:40</b> 🥾 <b>바흐알프제 호수 하이킹 (왕복 2.5시간 여유)</b><br>
+          • <b>13:40 ~ 14:10</b> 🚠 최종 하산 (정상 ➔ 그린델발트 마을)
       </div>
       
-      <div class="sec-title editable" style="margin-top:15px;">오후: 그린델발트 패러글라이딩 및 휴식</div>
+      <div class="sec-title editable" style="margin-top:15px;">오후: 패러글라이딩 및 미슐랭 만찬</div>
       <div class="route-box editable">
-          • <b>12:20</b> 🍔 <b>점심 식사</b> (그린델발트 시내 수제버거 등 식당 이용)<br>
-          • <b>13:30</b> 🪂 <b>그린델발트 패러글라이딩 비행</b> (사전 예약 픽업 장소 미팅 / 아이거 북벽 뷰)<br>
-          • <b>16:00</b> 호텔 복귀 후 수영장 및 사우나 휴식으로 체력 보충<br>
-          • <b>18:30</b> 호텔 내 <b>미슐랭 1910 식당</b>으로 이동
+          • <b>14:10 ~ 14:20</b> 픽업 장소로 이동 및 대기 (점심은 하이킹 중 샌드위치 피크닉으로 해결 추천)<br>
+          • <b>14:30 ~ 16:00</b> 🪂 <b>그린델발트 패러글라이딩 비행 (14:30 타임 예약 필수)</b><br>
+          • <b>16:00 ~ 18:30</b> 🏨 마을 착륙 후 <b>호텔 복귀 및 2시간 30분 자유 휴식!</b> (샤워 및 정장 환복)<br>
+          • <b>18:30</b> 호텔 내 <b>미슐랭 1910 식당</b> 이동 및 우아한 만찬
       </div>
 
       <div class="rest-section">
@@ -493,11 +477,12 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
       <div class="route-box editable">
           • <b>07:00 ~ 08:00 호텔 조식 및 체크아웃</b><br>
           • 그린델발트 ➔ 외시넨 & 블라우 호수 투어 ➔ 테쉬 <span class="time-red">가이드 차량 2시간 30분</span><br>
-          • <b>[외시넨 케이블카 필수]</b> 가이드 차량이 진입할 수 없어 케이블카를 이용해 호수로 올라갑니다. <b>(비용: 1인 왕복 약 CHF 32, 하프 페어 카드 소지 시 50% 할인으로 CHF 16, 패밀리 카드 자녀 무료)</b><br><br>
-          • 테쉬역 ➔ 체르마트역 <span class="time-red">셔틀 기차 12분</span><br>
+          • <b>[티켓 구매]</b> 외시넨 케이블카 매표소 결제 <b>(하프 페어 카드 50% 할인, 자녀 무료)</b><br>
+          • <b>🚨 [주의/누락 동선] 케이블카 정상 하차 후 ➔ 실제 호수 앞까지 숲길 <span class="time-red">도보 25~30분</span> 소요 (또는 유료 전기 셔틀 탑승)</b><br><br>
+          • <b>[티켓 구매]</b> 테쉬역 ➔ 체르마트역 <span class="time-red">셔틀 기차 12분</span> (매표소/앱: 하프페어 50% 할인, 자녀 무료)<br>
           • <b>[수하물]</b> 체르마트역 도착 시간을 리조트에 미리 알리면, 전담 포터가 기차역으로 마중 나와 짐을 무료로 픽업해 갑니다.<br>
           • 체르마트역 맞은편 <b>도보 1분</b> 거리의 GGB(고르너그라트 산악열차) 매표소로 이동<br>
-          • 체르마트 GGB ➔ 리펠알프역 <span class="time-red">산악열차 15분</span> <b>(올라갈 때 무조건 '오른쪽' 좌석에 앉아야 마터호른이 보입니다!)</b> ➔ 호텔 전용 트램 탑승 <span class="time-red">5분</span>
+          • 체르마트 GGB ➔ 리펠알프역 <span class="time-red">산악열차 15분</span> <b>(올라갈 때 무조건 '오른쪽' 좌석에 앉아야 마터호른이 보입니다!)</b> ➔ <b>호텔 전용 빨간색 트램 탑승</b> <span class="time-red">트램 5분</span>
       </div>
   </div>
 
@@ -540,12 +525,12 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
           • <b>[등정]</b> 리펠알프역 ➔ 고르너그라트 전망대 <span class="time-red">산악열차 20분</span> (올라갈 때 오른쪽 창가 유지)<br>
           • 고르너그라트 정상 관광(고르너 빙하) 후 ➔ 로텐보덴(Rotenboden)역 이동 <span class="time-red">산악열차 5분</span><br>
           • <b>[하이킹]</b> 로텐보덴역에서 하차하여 마터호른이 거울처럼 완벽하게 비치는 <b>리펠제 호수</b> 감상 후 다시 로텐보덴역으로 복귀 <span class="time-red">왕복 도보 40분 소요</span><br>
-          <span class="price-tag price-free">가족 산악열차 추가비용: 기 결제 (하프 페어 카드 50% 할인가 유지)</span>
+          <span class="price-tag price-free">가족 산악열차 추가비용: 기 결제 (여행사 하프 페어 50% 할인가 유지)</span>
       </div>
 
       <div class="sec-title editable" style="margin-top:15px;">복귀 경로</div>
       <div class="route-box editable">
-          • 로텐보덴역 ➔ 리펠알프역 하차 <span class="time-red">산악열차 15분</span> ➔ 호텔 복귀 <span class="time-red">도보 5분</span>
+          • 로텐보덴역 ➔ 리펠알프역 하차 <span class="time-red">산악열차 15분</span> ➔ <b>호텔 전용 트램 탑승</b> <span class="time-red">트램 5분</span> ➔ 호텔 복귀
       </div>
   </div>
 
@@ -602,7 +587,9 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
       <div class="route-box editable">
           • <b>07:00 ~ 08:00 리조트 조식</b><br>
           • <b>[수하물]</b> 리조트 체크아웃 시, 호텔 직원이 무거운 캐리어를 체르마트 역까지 대신 옮겨주는 딜리버리 서비스를 이용합니다.<br>
-          • 체르마트역 ➔ 테쉬역 <span class="time-red">셔틀 기차 12분</span><br>
+          • <b>🚨 [주의/누락 동선]</b> 가족들은 트램(5분) ➔ 리펠알프역 ➔ 체르마트 GGB 역으로 <b>산악열차를 타고 직접 하산</b>해야 합니다.<br>
+          • <b>[티켓 구매]</b> 리펠알프 ➔ 체르마트 하산 산악열차 표 현장 발권 (하프페어 50% 할인, 자녀 무료)<br>
+          • <b>[티켓 구매]</b> 체르마트역 ➔ 테쉬역 <span class="time-red">셔틀 기차 12분</span> (하프페어 50% 할인, 자녀 무료)<br>
           • 테쉬역 가이드 차량 미팅 ➔ 베른 시내 이동 <span class="time-red">차량 2시간 30분</span>
       </div>
 
@@ -631,10 +618,6 @@ header { background: #d32f2f; color: white; padding: 20px 15px; text-align: cent
         <div class="rest-info">
           <div class="rest-name">🍽 <b>Kornhauskeller (콘하우스켈러)</b></div>
           <div class="rest-sub">베른의 웅장한 지하 곡물창고를 개조한 레스토랑. 화려한 바로크 양식 천장 아래에서의 귀국 전 최고 만찬 장소.</div>
-          <div class="rest-score">
-            <span class="rest-star">★</span> 4.4 
-            <a class="res-btn" href="https://bindella.ch/gastronomie/kornhauskeller" target="_blank">📅 예약 링크</a>
-          </div>
         </div>
       </div>
     </div>
