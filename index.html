@@ -259,6 +259,14 @@ header {
 .bdel{background:#FFF1F0;border:none;color:#E53935;border-radius:6px;cursor:pointer;font-size:0.8rem;padding:6px 10px; font-weight:700; transition: 0.2s;}
 .bdel:hover{background:#FFE3E3;}
 .bempty{text-align:center;color:#95A5A6;padding:30px 20px;font-size:0.9rem; font-weight: 500;}
+
+/* ── RESTAURANT CARD ALIGNMENT FIX ── */
+.rest-card-head { display: block !important; }
+.rest-badge { display: inline-flex !important; align-items: center; margin-bottom: 10px; }
+.rest-info { width: 100% !important; }
+.rest-name, .rest-sub { display: block; width: 100%; word-break: keep-all; }
+@media (min-width: 700px) { .rest-card-head { display: block !important; } }
+
 </style>
 </head>
 <body>
@@ -321,6 +329,23 @@ header {
       • DAY3 Brienz Rothorn Bahn(브리엔츠 로트호른 증기기관차) 티켓/좌석 보장권 구매 완료<br>
       • DAY7 Gornergrat(고르너그라트) 왕복 티켓 구매 완료<br>
       • DAY5 First Glider(피르스트 글라이더) 첫 운행 09:00 / 액티비티 티켓은 각 출발 지점 현장 구매 기준
+  </div>
+
+  <div class="route-box editable" style="background:#FFF8E1;border-left-color:#F59F00;margin-bottom:18px;">
+      <b>🌦️ 매일 아침 체크리스트</b><br>
+      □ MeteoSwiss 날씨 / 강풍 / 비 확인<br>
+      □ Jungfrau·First·Gornergrat 라이브캠 확인<br>
+      □ 산악열차·곤돌라·액티비티 운행 상태 확인<br>
+      □ 패러글라이딩 업체 안내 메시지 확인<br>
+      □ 티켓 QR / 하프페어카드 / 패밀리카드 / 여권 또는 신분증 / 물 / 선글라스 / 바람막이 준비
+  </div>
+
+  <div class="route-box editable" style="background:#E3F2FD;border-left-color:#1976D2;margin-bottom:18px;">
+      <b>☔ 우천/강풍 대안</b><br>
+      • DAY4: 비가 오면 37번 하이킹 생략 ➔ 라우터브루넨 마을 산책만 진행<br>
+      • DAY5: 강풍/비로 글라이더·카트·패러글라이딩 취소 가능 ➔ First 곤돌라+클리프워크만 또는 호텔 휴식<br>
+      • DAY6: 비가 오면 외쉬넨호수 체류를 짧게 하고 블라우호수·체르마트 마을 중심으로 조정<br>
+      • DAY7: 흐리거나 비가 오면 리펠제/리펠베르크 하이킹 생략 ➔ 고르너그라트 전망대만 짧게 관람
   </div>
 
 <div class="day-block">
@@ -549,7 +574,9 @@ header {
       <div class="sec-title editable" style="margin-top:20px;">2순위: 체력 좋을 때 Mürren(뮈렌) + Allmendhubel(알멘트후벨)</div>
       <div class="route-box editable">
           • <b>선택 기준:</b> 37번 하이킹 대신 뮈렌을 가고 싶거나, 하이킹보다 절벽 마을 풍경을 보고 싶을 때 선택<br>
-          • <b>이동:</b> Grindelwald(그린델발트) ➔ Zweilütschinen(츠바이뤼치넨) <span class="time-red">기차 약 15~20분</span> ➔ Lauterbrunnen(라우터브루넨) <span class="time-red">기차 약 10~12분</span><br>
+          • <b>중요:</b> 이 선택지도 융프라우 정상 활동 후 바로 이어지는 동선입니다. 호텔에 들렀다가 다시 출발하는 일정이 아닙니다.<br>
+          • <b>하산 연결:</b> Jungfraujoch(융프라우요흐) ➔ Eigergletscher(아이거글렛처) <span class="time-red">산악열차 약 26~30분</span> ➔ Grindelwald Terminal(그린델발트 터미널) <span class="time-red">아이거 익스프레스 약 15분</span><br>
+          • <b>뮈렌 이동:</b> Grindelwald Terminal(그린델발트 터미널) ➔ Grindelwald(그린델발트)역 <span class="time-red">기차 약 5분</span> ➔ Zweilütschinen(츠바이뤼치넨) <span class="time-red">기차 약 15~20분</span> ➔ Lauterbrunnen(라우터브루넨) <span class="time-red">기차 약 10~12분</span><br>
           • Lauterbrunnen(라우터브루넨)역 ➔ 케이블카 승강장 이동/대기 <span class="time-red">약 5~10분</span><br>
           • Lauterbrunnen(라우터브루넨) ➔ Grütschalp(그뤼취알프) <span class="time-red">케이블카 약 4~5분</span><br>
           • Grütschalp(그뤼취알프) ➔ Mürren BLM(뮈렌 BLM역) <span class="time-red">산악열차 약 14~15분</span><br>
@@ -560,7 +587,7 @@ header {
       </div>
   </div>
 
-<div class="rest-section">  <div class="rest-section">
+<div class="rest-section">
     <div class="rest-title">식사 추천</div>
     <div class="rest-card">
       <div class="rest-card-head">
@@ -629,7 +656,7 @@ header {
 
       <div class="sec-title editable" style="margin-top:20px;">오후: 패러글라이딩 및 상세 복귀 동선</div>
       <div class="route-box editable">
-          • <b>14:30 ~ 14:40</b> Grindelwald Firstbahn(그린델발트 피르스트반) 하단역 또는 업체 지정 픽업 장소로 이동/대기 <span class="time-red">도보 약 5~10분</span> (점심은 하이킹 중 샌드위치 피크닉 추천)<br>
+          • <b>13:55 ~ 14:20</b> Grindelwald Firstbahn(그린델발트 피르스트반) 하단역 또는 업체 지정 픽업 장소로 이동/대기 <span class="time-red">도보 약 5~10분</span> (점심은 하이킹 중 샌드위치 피크닉 추천)<br>
           • <b>14:30 ~ 16:00</b> 🪂 <b>그린델발트 패러글라이딩 비행</b> (14:30 전후 예약 권장)<br>
           • <b>[상세 착륙 및 호텔 복귀 동선 — 업체별 착륙지 확인 필요]</b><br>
           &nbsp;&nbsp; - <b>경우 1: Bodmi(보드미) 착륙장 착륙</b> ➔ Firstbahn 하단역 방향 도보 5~10분 ➔ Hotel Belvedere까지 추가 도보 약 15~20분<br>
@@ -682,26 +709,29 @@ header {
           • <b>09:45 ~ 10:30 전후</b> Blausee(블라우호수) 산책 및 사진 <span class="time-red">약 30~45분</span><br>
           • <b>10:30 ~ 11:00</b> Blausee(블라우호수) ➔ Kandersteg(칸더슈테그) / Oeschinensee(외쉬넨호수) 케이블카 하부역 이동 <span class="time-red">차량 약 15~25분</span><br>
           • <b>[티켓 구매]</b> 외쉬넨 케이블카 매표소 현장 결제 <b>(어른 하프페어카드 구매 완료 기준 50% 할인, 자녀 패밀리카드 구매 완료 기준 무료 여부 확인)</b><br>
-          • <b>11:00 ~ 13:15</b> Oeschinensee(외쉬넨호수) 관람<br>
+          • <b>11:00 ~ 13:45</b> Oeschinensee(외쉬넨호수) 관람<br>
           &nbsp;&nbsp; - 케이블카 상부역 하차 후 실제 호수 앞까지 <span class="time-red">숲길/흙길 도보 약 25~30분</span><br>
           &nbsp;&nbsp; - <b>[선택 옵션]</b> 케이블카 상부역↔Oeschinensee(외쉬넨호수) 구간은 현장 상황에 따라 <b>유료 전기 셔틀/전기차</b> 이용 가능. 운영 여부·대기시간·요금은 당일 현장 확인<br>
           &nbsp;&nbsp; - 호수 관람 후 같은 길로 복귀 <span class="time-red">왕복 도보 약 1시간</span> 또는 전기 셔틀/전기차 이용<br>
-          • <b>13:15 ~ 14:00</b> 간단 점심 또는 이동 중 식사<br>
-          • <b>14:00 ~ 16:00/16:30</b> Kandersteg(칸더슈테그) ➔ Täsch(태쉬) 이동 <span class="time-red">차량 약 2시간~2시간 30분</span> (도로/카트레인 대기 상황에 따라 변동)<br>
+          • <b>13:45 ~ 14:15</b> 간단 점심 또는 이동 중 식사<br>
+          • <b>14:15 ~ 16:15/16:45</b> Kandersteg(칸더슈테그) ➔ Täsch(태쉬) 이동 <span class="time-red">차량 약 2시간~2시간 30분</span> (도로/카트레인 대기 상황에 따라 변동)<br>
           • <b>[티켓 구매]</b> Täsch역 ➔ Zermatt(체르마트)역 <span class="time-red">셔틀 기차 약 12분</span> (하프페어카드 구매 완료 기준 50% 할인, 자녀 패밀리카드 구매 완료 기준 무료)<br><br>
 
           • <b>[체르마트 도착 후 마을 산책/쇼핑/저녁]</b><br>
-          &nbsp;&nbsp; - Zermatt역 도착 후 리펠알프 리조트에 도착 시간을 알리고 포터 수하물 픽업 요청<br>
+          &nbsp;&nbsp; - Zermatt역 도착 후 리펠알프 리조트에 도착 시간을 알리고 포터 수하물 픽업 요청<br>          &nbsp;&nbsp; - 포터에게 역 도착 예정 시간과 가족 대표 이름을 미리 알려두면 짐 전달이 훨씬 편함<br>
           &nbsp;&nbsp; - 캐리어는 포터에게 맡기고 가족은 Bahnhofstrasse(반호프슈트라세) 산책 및 쇼핑<br>
           • <b>18:00 ~ 19:30 전후</b> Zermatt 마을에서 저녁 식사<br><br>
 
           • <b>[저녁 후 리펠알프 이동]</b><br>
-          &nbsp;&nbsp; - Zermatt GGB 매표소/앱에서 Riffelalp행 티켓 구매<br>
-          &nbsp;&nbsp; - Zermatt GGB ➔ Riffelalp역 <span class="time-red">산악열차 약 15~20분</span><br>
+          &nbsp;&nbsp; - Zermatt GGB(체르마트 GGB역) ➔ Riffelalp(리펠알프) 구간은 <b>구매 완료한 리펠알프 열차 티켓 사용</b><br>
+          &nbsp;&nbsp; - <b>[막차 확인]</b> SBB 앱 기준 2026년 7월 19일 일요일 Zermatt GGB ➔ Riffelalp 열차는 17:30, 18:30, 19:30, <b>21:50</b> 출발이 확인됨. 마지막 21:50 탑승 시 22:05 Riffelalp 도착<br>
+          &nbsp;&nbsp; - 저녁 식사는 여유 있게 하되, 구매 완료한 리펠알프행 티켓을 사용해 늦어도 <b>21:50 막차 전</b>에는 Zermatt GGB역에 도착하도록 계획<br>
+          &nbsp;&nbsp; - Zermatt GGB ➔ Riffelalp역 <span class="time-red">산악열차 약 15분</span><br>
           &nbsp;&nbsp; - Riffelalp역 ➔ Riffelalp Resort <span class="time-red">호텔 전용 빨간 트램 약 5분</span><br>
           &nbsp;&nbsp; - 리조트 도착 후 체크인 및 휴식<br>
           <span class="price-tag">구매 필요: 외쉬넨 케이블카 왕복 — 하프페어카드 구매 완료 기준 50% 할인, 자녀 패밀리카드 구매 완료 기준 무료 확인</span>
-          <span class="price-tag">구매 필요: Täsch → Zermatt 셔틀 + Zermatt → Riffelalp 산악열차</span>
+          <span class="price-tag">구매 필요: Täsch(태쉬) → Zermatt(체르마트) 셔틀 기차</span>
+          <span class="price-tag price-free">구매 완료: Zermatt GGB(체르마트 GGB역) → Riffelalp(리펠알프) 산악열차</span>
       </div>
   </div>
 
@@ -803,11 +833,11 @@ header {
           &nbsp;&nbsp; - Riffelalp(리펠알프)역 ➔ Zermatt GGB(체르마트 GGB역) 하산 <span class="time-red">산악열차 약 15~20분</span><br>
           &nbsp;&nbsp; - Bahnhofstrasse(반호프슈트라세) 산책, 카페, 기념품샵, 저녁 식사 가능<br>
           &nbsp;&nbsp; - 저녁 후 Zermatt GGB(체르마트 GGB역) ➔ Riffelalp(리펠알프)역 <span class="time-red">산악열차 약 15~20분</span> ➔ 호텔 전용 트램 <span class="time-red">약 5분</span><br>
-          &nbsp;&nbsp; - <b>[추가 티켓]</b> 이 경우에는 Zermatt(체르마트) ➔ Riffelalp(리펠알프) <b>복귀 구간권만 구매</b>하면 됩니다. 어른은 하프페어카드 50% 할인, 자녀는 패밀리카드 무료 적용 여부 확인<br>
+          &nbsp;&nbsp; - <b>[추가 티켓]</b> 이 경우에는 Zermatt(체르마트) ➔ Riffelalp(리펠알프) <b>복귀 구간권만 구매</b>하면 됩니다. 7/20 월요일 당일 막차 시간은 SBB 앱에서 확인하세요.<br>
       </div>
   </div>
 
-<div class="coffee-section editable">  <div class="coffee-section editable">
+<div class="coffee-section editable">
     <div class="coffee-title">☕ 오후의 휴식</div>
     <div class="coffee-card">
       <div class="coffee-name">Riffelalp Resort (리펠알프 리조트) 라운지 / 객실 발코니</div>
@@ -842,7 +872,7 @@ header {
         <span class="rest-badge rb-dinner">저녁 선택</span>
         <div class="rest-info">
           <div class="rest-name">🍽 체르마트 시내 저녁 선택</div>
-          <div class="rest-sub">7일차 오후에 체르마트 시내까지 내려가면 Schäferstube(셰퍼슈투베), Whymper-Stube(윔퍼 슈투베), Grampi’s(그람피스) 중 컨디션과 취향에 맞춰 선택 가능합니다. 식사 후 Riffelalp(리펠알프) 복귀 구간권만 구매해 올라오면 됩니다.</div>
+          <div class="rest-sub">7일차 오후에 체르마트 시내까지 내려가면 Schäferstube(셰퍼슈투베), Whymper-Stube(윔퍼 슈투베), Grampi’s(그람피스) 중 컨디션과 취향에 맞춰 선택 가능합니다. 식사 후 Zermatt(체르마트) ➔ Riffelalp(리펠알프) 복귀 구간권만 구매해 올라오면 됩니다. 당일 막차 시간은 SBB 앱에서 확인하세요.</div>
         </div>
       </div>
     </div>
@@ -891,7 +921,7 @@ header {
         <span class="rest-badge rb-lunch">점심 ✅강력 추천</span>
         <div class="rest-info">
           <div class="rest-name">🍽 Kornhauskeller (콘하우스켈러)</div>
-          <div class="rest-sub">베른의 웅장한 지하 곡물창고를 개조한 레스토랑. 화려한 바로크 양식 천장 아래에서의 귀국 전 최고 만찬 장소.</div>
+          <div class="rest-sub">베른의 웅장한 지하 곡물창고를 개조한 레스토랑. 화려한 바로크 양식 천장 아래에서의 귀국 전 최고 만찬 장소. <b>Kornhauskeller는 12:30~13:00 예약 권장, 15:30 전에는 반드시 베른 출발.</b></div>
         </div>
       </div>
     </div>
@@ -931,7 +961,7 @@ function toggleEditMode() {
 function saveDocument() {
     if(isEditMode) toggleEditMode(); 
     const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '스위스_일정표_최종본_v9.html'; a.click();
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '스위스_일정표_최종본_v11.html'; a.click();
     alert("저장되었습니다!");
 }
 
