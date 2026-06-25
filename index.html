@@ -267,6 +267,26 @@ header {
 .rest-name, .rest-sub { display: block; width: 100%; word-break: keep-all; }
 @media (min-width: 700px) { .rest-card-head { display: block !important; } }
 
+
+/* ── WEATHER SEARCH & WEBCAM CARD ── */
+.weather-webcam-card{
+  background:#FFFFFF;
+  border:1px solid var(--border-light);
+  border-left:4px solid #00A676;
+  border-radius:0 14px 14px 0;
+  padding:16px 18px;
+  margin:16px 24px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,.035);
+}
+.ww-title{font-size:.85rem;font-weight:900;color:#00695C;margin-bottom:10px;letter-spacing:.5px;}
+.ww-row{font-size:.87rem;color:var(--text-sub);line-height:1.7;margin-top:6px;}
+.ww-row b{color:var(--text-main);}
+.ww-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px;}
+.ww-tag{display:inline-flex;align-items:center;background:#E8F5E9;color:#1B5E20;border:1px solid #C8E6C9;border-radius:999px;padding:3px 9px;font-size:.78rem;font-weight:700;}
+.ww-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;}
+.ww-link{display:inline-flex;align-items:center;gap:4px;background:#E3F2FD;color:#0D47A1;border:1px solid #BBDEFB;border-radius:999px;padding:5px 10px;font-size:.78rem;font-weight:800;text-decoration:none;}
+.ww-link:hover{background:#BBDEFB;}
+
 </style>
 </head>
 <body>
@@ -358,7 +378,16 @@ header {
       <span class="hotel-name">🏨 Radisson Blu Hotel Lucerne</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">이동 경로 및 소요 시간</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Zürich Flughafen</span><span class="ww-tag">Zürich</span><span class="ww-tag">Luzern</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.luzern.com/en/information/planning/weather-webcams" target="_blank" rel="noopener noreferrer">🔗 루체른 공식 웹캠</a><a class="ww-link" href="https://www.flughafen-zuerich.ch/en/passengers/fly/flightinformation/departures" target="_blank" rel="noopener noreferrer">🔗 취리히공항 출도착/상태</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 도착일은 Luzern보다 Zürich Flughafen 날씨와 항공/열차 지연을 먼저 확인</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">이동 경로 및 소요 시간</div>
       <div class="weather-tag editable">🌡️ 예상: 22~28°C | 👕 옷차림: 가벼운 여름 옷, 얇은 가디건</div>
       <div class="route-box editable">
           • <b>17:40</b> 취리히 공항 ZRH(취리히공항) 도착 및 입국 심사, 수하물 수령 (약 1시간 소요 예상)<br>
@@ -389,7 +418,16 @@ header {
       <span class="hotel-name">🏨 Radisson Blu Hotel Lucerne (연박)</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전: 리기산 등정 및 하이킹 (타임라인)</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Luzern</span><span class="ww-tag">Vitznau</span><span class="ww-tag">Rigi Kulm</span><span class="ww-tag">Rigi Kaltbad</span><span class="ww-tag">Weggis</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.rigi.ch/en/inform/webcams" target="_blank" rel="noopener noreferrer">🔗 Rigi 공식 웹캠</a><a class="ww-link" href="https://www.luzern.com/en/information/planning/weather-webcams" target="_blank" rel="noopener noreferrer">🔗 루체른/베기스 웹캠</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> Rigi Kulm 구름·시야가 가장 중요. 산 정상 시야가 흐리면 루체른 시내 관광 비중을 늘리기</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">오전: 리기산 등정 및 하이킹 (타임라인)</div>
       <div class="weather-tag editable">🌡️ 산 정상: 10~15°C | 👕 옷차림: 얇은 긴팔 + 바람막이 필수</div>
       <div class="route-box editable">
           • <b>07:00 ~ 08:00</b> 호텔 조식<br>
@@ -478,7 +516,16 @@ header {
       <span class="hotel-name">🏨 Grindelwald Belvedere</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전: 가이드 차량 이동 및 등정</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Luzern</span><span class="ww-tag">Brienz</span><span class="ww-tag">Brienzer Rothorn</span><span class="ww-tag">Grindelwald</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://soerenberg.roundshot.com/rothorn/#/" target="_blank" rel="noopener noreferrer">🔗 Brienzer Rothorn 웹캠</a><a class="ww-link" href="https://www.jungfrau.ch/en-gb/live/webcams/" target="_blank" rel="noopener noreferrer">🔗 Jungfrau Region 웹캠</a><a class="ww-link" href="https://www.jungfrau.ch/en-gb/live/operating-info/" target="_blank" rel="noopener noreferrer">🔗 Jungfrau 운행 정보</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 로트호른 정상 시야와 바람 확인. 오후에는 다음날 융프라우 운행 상태도 미리 체크</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">오전: 가이드 차량 이동 및 등정</div>
       <div class="weather-tag editable">🌡️ 로트호른 정상: 10~14°C | 👕 옷차림: 긴팔, 바람막이 필수 (탁 트인 산정상)</div>
       <div class="route-box editable">
           • <b>07:00 ~ 08:10 기상 및 체크아웃 (미리 요청한 조식 도시락 수령)</b><br>
@@ -542,7 +589,16 @@ header {
       <span class="hotel-name">🏨 Grindelwald Belvedere (연박)</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전: 융프라우요흐 등정 및 37번 하이킹으로 자연스럽게 하산</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Grindelwald</span><span class="ww-tag">Grindelwald Terminal</span><span class="ww-tag">Jungfraujoch</span><span class="ww-tag">Eigergletscher</span><span class="ww-tag">Kleine Scheidegg</span><span class="ww-tag">Lauterbrunnen</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.jungfrau.ch/en-gb/live/webcams/" target="_blank" rel="noopener noreferrer">🔗 Jungfrau 공식 웹캠</a><a class="ww-link" href="https://www.jungfrau.ch/en-gb/live/operating-info/" target="_blank" rel="noopener noreferrer">🔗 Jungfrau 운행 정보</a><a class="ww-link" href="https://jungfrauregion.swiss/en/summer/travel-information/operating-info/" target="_blank" rel="noopener noreferrer">🔗 하이킹/운행 상태</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 융프라우 정상보다 Eigergletscher·Kleine Scheidegg 구간 시야와 바람도 함께 확인</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">오전: 융프라우요흐 등정 및 37번 하이킹으로 자연스럽게 하산</div>
       <div class="weather-tag editable">🌡️ 융프라우 정상: -2~5°C / 37번 하이킹 구간: 5~15°C | 👕 옷차림: 경량 패딩, 바람막이, 선글라스 필수. 하이킹 중 더우면 겉옷을 벗어 조절</div>
       <div class="route-box editable">
           • <b>07:00 ~ 07:45</b> 호텔 조식<br>
@@ -632,7 +688,16 @@ header {
     <span class="day-title-text">7/18 (토) <b>피르스트</b>(오픈런) & 패러글라이딩</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전: 피르스트 오픈런 — 글라이더 + 마운틴 카트</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Grindelwald</span><span class="ww-tag">Grindelwald First</span><span class="ww-tag">Schreckfeld</span><span class="ww-tag">Bort</span><span class="ww-tag">Bachalpsee</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.jungfrau.ch/en-gb/live/webcams/" target="_blank" rel="noopener noreferrer">🔗 Jungfrau First 웹캠</a><a class="ww-link" href="https://jungfrau.roundshot.com/first-schreckfeld/#/" target="_blank" rel="noopener noreferrer">🔗 First-Schreckfeld 웹캠</a><a class="ww-link" href="https://www.jungfrau.ch/en-gb/live/operating-info/" target="_blank" rel="noopener noreferrer">🔗 Jungfrau 운행 정보</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 강풍이면 Glider·Mountain Cart·패러글라이딩이 취소될 수 있으니 액티비티 운영 상태와 업체 연락을 같이 확인</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">오전: 피르스트 오픈런 — 글라이더 + 마운틴 카트</div>
       <div class="weather-tag editable">🌡️ 피르스트: 10~15°C | 👕 옷차림: 활동하기 편한 긴팔 + 겉옷</div>
       <div class="route-box editable">
           • <b>07:20</b> 기상 및 프론트에서 <b>조식 도시락 수령</b><br>
@@ -700,7 +765,16 @@ header {
       <span class="hotel-name">🏨 Riffelalp Resort 2222m (마터호른 주니어 스위트)</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">이동 경로 및 수하물 서비스 (타임라인)</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Grindelwald</span><span class="ww-tag">Blausee</span><span class="ww-tag">Kandersteg</span><span class="ww-tag">Oeschinensee</span><span class="ww-tag">Täsch</span><span class="ww-tag">Zermatt</span><span class="ww-tag">Riffelalp</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.oeschinensee.ch/en/webcams/" target="_blank" rel="noopener noreferrer">🔗 Oeschinensee 공식 웹캠</a><a class="ww-link" href="https://zermatt.swiss/en/info/webcams" target="_blank" rel="noopener noreferrer">🔗 Zermatt 공식 웹캠</a><a class="ww-link" href="https://www.matterhornparadise.ch/en/information/webcams" target="_blank" rel="noopener noreferrer">🔗 Matterhorn Paradise 웹캠</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 외쉬넨은 케이블카·전기셔틀·토보건 운영 여부, 체르마트는 저녁 Riffelalp행 열차 시간을 확인</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">이동 경로 및 수하물 서비스 (타임라인)</div>
       <div class="weather-tag editable">🌡️ 외쉬넨호수·블라우호수·체르마트: 15~20°C | 👕 옷차림: 얇은 긴팔, 접지 좋은 신발</div>
       <div class="route-box editable">
           • <b>07:00 ~ 08:00</b> 호텔 조식 및 체크아웃<br>
@@ -798,7 +872,16 @@ header {
       <span class="hotel-name">🏨 Riffelalp Resort 2222m (연박)</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">등정 및 호수 하이킹 (대략 시간표)</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Riffelalp</span><span class="ww-tag">Gornergrat</span><span class="ww-tag">Rotenboden</span><span class="ww-tag">Riffelsee</span><span class="ww-tag">Riffelberg</span><span class="ww-tag">Zermatt</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.gornergrat.ch/en/stories/webcam" target="_blank" rel="noopener noreferrer">🔗 Gornergrat 공식 웹캠</a><a class="ww-link" href="https://zermatt.swiss/en/info/webcams" target="_blank" rel="noopener noreferrer">🔗 Zermatt 공식 웹캠</a><a class="ww-link" href="https://www.matterhornparadise.ch/en/information/webcams" target="_blank" rel="noopener noreferrer">🔗 Matterhorn Paradise 웹캠</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 마터호른 반영은 오전·무풍일수록 유리. 흐리면 리펠제/리펠베르크 하이킹을 줄이고 리조트 휴식</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">등정 및 호수 하이킹 (대략 시간표)</div>
       <div class="weather-tag editable">🌡️ 고르너그라트 정상: 0~8°C | 👕 옷차림: 경량 패딩, 바람막이, 선글라스 필수</div>
       <div class="route-box editable">
           • <b>07:00 ~ 08:00</b> Riffelalp Resort(리펠알프 리조트) 조식<br>
@@ -885,7 +968,16 @@ header {
     <span class="day-title-text">7/21 (화) <b>베른</b> 관광 후 귀국 출발</span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">오전 이동 및 수하물 서비스</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Riffelalp</span><span class="ww-tag">Zermatt</span><span class="ww-tag">Täsch</span><span class="ww-tag">Bern</span><span class="ww-tag">Zürich Flughafen</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://zermatt.swiss/en/info/webcams" target="_blank" rel="noopener noreferrer">🔗 Zermatt 공식 웹캠</a><a class="ww-link" href="https://bern.com/en/inform/webcams" target="_blank" rel="noopener noreferrer">🔗 Bern 공식 웹캠</a><a class="ww-link" href="https://www.flughafen-zuerich.ch/en/passengers/fly/flightinformation/departures" target="_blank" rel="noopener noreferrer">🔗 취리히공항 출도착/상태</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 마지막 날은 산 날씨보다 도로·카트레인·공항 도착 시간을 우선 확인</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">오전 이동 및 수하물 서비스</div>
       <div class="route-box editable">
           • <b>07:00 ~ 08:00 리조트 조식</b><br>
           • <b>[수하물]</b> 리조트 체크아웃 시, 호텔 직원이 무거운 캐리어를 체르마트 역까지 대신 옮겨주는 딜리버리 서비스를 이용합니다.<br>
@@ -934,7 +1026,16 @@ header {
     <span class="day-title-text" style="color: #FFFFFF;">7/22 (수) <b>한국 무사 도착!</b></span>
   </div>
 
-  <div class="sec"><div class="sec-title editable">도착 및 귀가 정보</div>
+    <div class="weather-webcam-card editable">
+      <div class="ww-title">🌦️ 날씨 검색 지역명 & 웹캠</div>
+      <div class="ww-row"><b>MeteoSwiss / SRF Meteo 검색어:</b></div>
+      <div class="ww-tags"><span class="ww-tag">Incheon International Airport</span><span class="ww-tag">Incheon</span><span class="ww-tag">Seoul</span><span class="ww-tag">Namyangju</span></div>
+      <div class="ww-row"><b>웹캠 바로가기:</b></div>
+      <div class="ww-links"><a class="ww-link" href="https://www.airport.kr/ap/en/dep/depPasSchList.do" target="_blank" rel="noopener noreferrer">🔗 인천공항 운항 정보</a><a class="ww-link" href="https://www.weather.go.kr/" target="_blank" rel="noopener noreferrer">🔗 기상청 날씨누리</a></div>
+      <div class="ww-row"><b>확인 포인트:</b> 도착 후 한국 날씨와 귀가 교통 상황 확인</div>
+  </div>
+
+<div class="sec"><div class="sec-title editable">도착 및 귀가 정보</div>
       <div class="route-box editable" style="background:#E3F2FD; border-color:#90CAF9; color:#0D47A1; border-left: 4px solid #0D47A1;">
           • <b>🛬 14:10 인천국제공항(ICN) 도착</b><br>
           • 입국 심사 및 수하물 수령<br>
@@ -961,7 +1062,7 @@ function toggleEditMode() {
 function saveDocument() {
     if(isEditMode) toggleEditMode(); 
     const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '스위스_일정표_최종본_v11.html'; a.click();
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '스위스_일정표_최종본_v12.html'; a.click();
     alert("저장되었습니다!");
 }
 
